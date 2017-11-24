@@ -3,7 +3,7 @@
  * App - Lotto Main
  */
 import React, { Component } from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import UnlockDrawsCard from "../../components/UnlockDrawsCard";
 import LottoCard from "../../components/LottoCard";
 import BonusNaira from "../../components/BonusNaira";

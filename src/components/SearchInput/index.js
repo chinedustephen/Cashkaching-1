@@ -3,7 +3,7 @@
  * App - Lotto Main
  */
 import React, { Component } from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import SearchImg from "./images/search.svg";
 const Search = styled.div``;
 

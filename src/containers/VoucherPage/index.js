@@ -31,9 +31,7 @@ const Mainpanel = styled.div`
 	}
 `;
 
-const Search = styled.div`
-	background-color: grey;
-`;
+
 
 const Adplacement = styled.div`
 	display: grid;

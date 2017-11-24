@@ -3,7 +3,7 @@
  * App - Lotto Main
  */
 import React, { Component } from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 const Cardcontainer = styled.div`
 	background: #6ca516;

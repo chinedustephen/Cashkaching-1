@@ -7,24 +7,14 @@ import styled from "styled-components";
 import DiscoverCard from "../../components/DiscoverCard";
 import VoucherCard from "../../components/VoucherCard";
 
-const Smallcardcontainers = styled.div`
-	background-color: beige;
-`;
+
 const CatagoryContainer = styled.div`
 	display: grid;
 	grid-template-columns: 80% 1fr;
 	border-bottom: 1px solid #5e8a1c;
 `;
 
-const Nested = styled.div`
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-auto-rows: minmax(93px, auto);
-	grid-gap: 1em;
-	@media only screen and (max-width: 724px) {
-		grid-template-columns: 1fr;
-	}
-`;
+
 const NestedHalfCards = styled.div`
 	display: grid;
 	grid-template-columns: 1fr 1fr;

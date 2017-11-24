@@ -6,7 +6,7 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import { Link } from "react-router-dom";
-import Img from "react-image";
+
 
 const Nav = styled.ul`
 	list-style-type: none;

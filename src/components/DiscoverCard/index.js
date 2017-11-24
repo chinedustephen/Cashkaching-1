@@ -3,7 +3,7 @@
  * App - Lotto Main
  */
 import React, { Component } from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import ImgBk1 from "./images/imgBk1.png";
 import ImgBk2 from "./images/imgBk2.png";
 import ImgBk3 from "./images/imgBk3.png";
