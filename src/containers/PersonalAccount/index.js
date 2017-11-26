@@ -10,7 +10,6 @@ import Navigation from "../../components/Navigation";
 import Lotto from "../LottoPage";
 import Vouchers from "../VoucherPage";
 import ProfilePage from "../ProfilePage";
-import LandingPage from "../LandingPage";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 class PersonalAccount extends Component {
@@ -19,10 +18,9 @@ class PersonalAccount extends Component {
 			<Router>
 				<div>
 					<Navigation />
-					<Route exact path="/lotto" component={Lotto} />
+					<Route path="/lotto" component={Lotto} />
 					<Route path="/vouchers" component={Vouchers} />
 					<Route path="/profilePage" component={ProfilePage} />
-					<Route path="/landingPage" component={LandingPage} />
 				</div>
 			</Router>
 		);
