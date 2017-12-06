@@ -17,7 +17,7 @@ const VoucherNav = styled.ul`
 const ListNavigation = styled.li`
 	float: left;
 `;
-const Tablinks = styled.a`
+const Tablinks = styled(NavLink)`
 	display: block;
 	color: white;
 	text-align: center;
@@ -28,9 +28,14 @@ const Tablinks = styled.a`
 	color: #212121;
 	letter-spacing: 0.29px;
 	&:hover {
-		border-bottom: 3px solid #5e8a1c;
+
 	}
+	 &.active {
+		 border-bottom: 3px solid #5e8a1c;
+	 }
 `;
+
+
 
 class VoucherNavigation extends Component {
 	render() {
@@ -38,19 +43,20 @@ class VoucherNavigation extends Component {
 			<div>
 				<VoucherNav>
 					<ListNavigation>
-						<Tablinks>
-							<NavLink to="/vouchers/vouchersDiscover">Discover</NavLink>
-						</Tablinks>
+
+							<Tablinks to="/personalaccount/vouchers" exact  >Discover</Tablinks>
+
 					</ListNavigation>
 					<ListNavigation>
-						<Tablinks>
-							<NavLink to="/vouchers/vouchersAll">All vouchers</NavLink>
-						</Tablinks>
+
+							<Tablinks to="/personalaccount/vouchers/vouchersall" exact >All</Tablinks>
+
+
 					</ListNavigation>
 					<ListNavigation>
-						<Tablinks>
-							<NavLink to="/vouchers/vouchersFavourites">Favourites</NavLink>
-						</Tablinks>
+
+							<Tablinks to="/personalaccount/vouchers/vouchersfavourites" exact >Favourites</Tablinks>
+
 					</ListNavigation>
 				</VoucherNav>
 			</div>

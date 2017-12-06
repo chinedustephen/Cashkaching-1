@@ -24,11 +24,12 @@ const Nav = styled.ul`
 const ListNavigation = styled.li`
 	float: left;
 	margin-top: 37px;
+	    margin-right: 8px;
 	@media only screen and (max-width: 500px) {
 		margin-top: 0;
 	}
 `;
-const Tablinks = styled.a`
+const Tablinks = styled(NavLink)`
 	display: block;
 	text-align: center;
 	padding: 14px 16px;
@@ -42,9 +43,12 @@ const Tablinks = styled.a`
 		background-color: #5e8a1c;
 		/* Rectangle 20: */
 	}
+	&.active {
+		background-color: #5e8a1c;
+	}
 `;
 
-const Logout = styled.a`
+const Logout = styled(Link)`
 	float: right;
 	font-family: Roboto-Regular;
 	font-size: 14px;
@@ -108,31 +112,29 @@ class Navigation extends Component {
 						<Brandimg src={require("./images/Logo.png")} />
 					</NavBrandContainer>
 					<NavLogoutcontainer>
-						<Link to="/landingPage">
-							<Logout>Logout</Logout>
-						</Link>
+						<Logout to="/landingPage">
+							Logout
+						</Logout>
 					</NavLogoutcontainer>
 					<NavMainContainer>
 						<Nav>
 							<ListNavigation>
-								<NavLink to="/personalaccount" exact activeClassName="active">
+								<Tablinks to="/personalaccount" exact >
 
-									<Tablinks>Lotto</Tablinks>
-								</NavLink>
+									Lotto
+								</Tablinks>
 							</ListNavigation>
 							<ListNavigation>
-								<NavLink to="/personalaccount/vouchers" exact activeClassName="active">
-									<Tablinks>Vouchers</Tablinks>
-								</NavLink>
+								<Tablinks to="/personalaccount/vouchers" exact >
+									Vouchers
+								</Tablinks>
 							</ListNavigation>
 							<ListNavigation>
-								<NavLink to="/personalaccount/profilepage" exact activeClassName="active">
-									<Tablinks>Profile</Tablinks>
-								</NavLink>
+								<Tablinks to="/personalaccount/profilepage" exact >
+									Profile
+								</Tablinks>
 							</ListNavigation>
-							<ListNavigation>
-								<Tablinks>blog</Tablinks>
-							</ListNavigation>
+
 						</Nav>
 					</NavMainContainer>
 				</NavBackground>

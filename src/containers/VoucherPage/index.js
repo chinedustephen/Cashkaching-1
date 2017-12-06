@@ -6,9 +6,11 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import VoucherNavigation from "../../components/VoucherNavigation";
 import VouchersDiscover from "../VouchersDiscover";
+import VouchersFavourites from "../VouchersFavourites"
+import VouchersAll from "../VouchersAll"
 import BonusNaira from "../../components/BonusNaira";
 import SearchInput from "../../components/SearchInput";
-
+import { Switch, Route } from "react-router-dom";
 
 
 
@@ -24,9 +26,6 @@ const Mainpanel = styled.div`
 `;
 
 
-
-
-
 class Vouchers extends Component {
 	render() {
 		return (
@@ -38,8 +37,13 @@ class Vouchers extends Component {
 							<SearchInput />
 							<VoucherNavigation />
 
-							<VouchersDiscover/>
-							
+							<Switch>
+								<Route path="/personalaccount/vouchers" exact component={VouchersDiscover} />
+								<Route path="/personalaccount/vouchers/vouchersall" component={VouchersAll} />
+								<Route path="/personalaccount/vouchers/vouchersfavourites" component={VouchersFavourites} />
+
+							</Switch>
+
 						</Mainpanel>
 
 

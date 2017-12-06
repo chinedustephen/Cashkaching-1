@@ -10,7 +10,10 @@ import Navigation from "../../components/Navigation";
 import Lotto from "../LottoPage";
 import Vouchers from "../VoucherPage";
 import ProfilePage from "../ProfilePage"
-import { Switch, Route, Redirect } from "react-router-dom";
+
+import {
+  Route, Switch, Redirect
+} from 'react-router-dom';
 import styled from "styled-components";
 
 

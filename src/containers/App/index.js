@@ -8,19 +8,22 @@
 import React, { Component } from "react";
 import LandingPage from "../LandingPage";
 import PersonalAccount from "../PersonalAccount";
-import { BrowserRouter, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route
+} from 'react-router-dom';
 
 class PersonalAccountApp extends Component {
 	render() {
 		return (
-			<BrowserRouter>
+			<Router>
 				<div>
 					<Route exact path="/" component={LandingPage} />
 
 					<Route path="/personalaccount" component={PersonalAccount} />
 
 				</div>
-			</BrowserRouter>
+			</Router>
 		);
 	}
 }
