@@ -115,17 +115,18 @@ class Navigation extends Component {
 					<NavMainContainer>
 						<Nav>
 							<ListNavigation>
-								<NavLink to="/lotto">
+								<NavLink to="/personalaccount" exact activeClassName="active">
+
 									<Tablinks>Lotto</Tablinks>
 								</NavLink>
 							</ListNavigation>
 							<ListNavigation>
-								<NavLink to="/vouchers/vouchersDiscover">
+								<NavLink to="/personalaccount/vouchers" exact activeClassName="active">
 									<Tablinks>Vouchers</Tablinks>
 								</NavLink>
 							</ListNavigation>
 							<ListNavigation>
-								<NavLink to="/profilePage/profile">
+								<NavLink to="/personalaccount/profilepage" exact activeClassName="active">
 									<Tablinks>Profile</Tablinks>
 								</NavLink>
 							</ListNavigation>

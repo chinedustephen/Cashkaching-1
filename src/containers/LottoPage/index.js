@@ -8,13 +8,9 @@ import UnlockDrawsCard from "../../components/UnlockDrawsCard";
 import LottoCard from "../../components/LottoCard";
 import BonusNaira from "../../components/BonusNaira";
 
-const Aside = styled.div`
-	@media only screen and (max-width: 1000px) {
-		div {
-			display: none;
-		}
-	}
-`;
+
+
+
 const Mainpanel = styled.div`
 	margin-top: 30px;
 	@media only screen and (max-width: 1000px) {
@@ -35,23 +31,7 @@ const Headercontent = styled.h1`
 	letter-spacing: 0.43px;
 `;
 
-const Adplacement = styled.div`
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-auto-rows: minmax(400px, auto);
-	margin-top: 3em;
-	margin-bottom: 2em;
-`;
-const Contentwrapper = styled.div`
-	display: grid;
-	grid-template-columns: 20% 57.5% 20%;
-	grid-column-gap: 1em;
-	@media only screen and (max-width: 1000px) {
-		display: grid;
-		grid-template-columns: 1fr;
-		justify-items: center;
-	}
-`;
+
 const Nested = styled.div`
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -65,25 +45,22 @@ const Nested = styled.div`
 class Lotto extends Component {
 	render() {
 		return (
-			<Contentwrapper>
-				<Aside>
-					<Adplacement>ads here</Adplacement>
-					<Adplacement>ads here</Adplacement>
-				</Aside>
-				<Mainpanel>
-					<BonusNaira />
-					<Headercontent>Lotto</Headercontent>
-					<Nested>
-						<UnlockDrawsCard />
-						<UnlockDrawsCard />
-					</Nested>
-					<LottoCard />
-				</Mainpanel>
-				<Aside>
-					<Adplacement>ads here</Adplacement>
-					<Adplacement>ads here</Adplacement>
-				</Aside>
-			</Contentwrapper>
+			<div>
+
+					<Mainpanel>
+						<BonusNaira />
+						<Headercontent>Lotto</Headercontent>
+						<Nested>
+							<UnlockDrawsCard />
+							<UnlockDrawsCard />
+						</Nested>
+
+
+					<LottoCard/>
+
+					</Mainpanel>
+
+			</div>
 		);
 	}
 }

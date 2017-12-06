@@ -3,7 +3,6 @@
  * App - Lotto Main
  */
 import React, { Component } from "react";
-import Sections from "../LandingPage";
 import LandingPageNavigation from "../../components/LandingPageNavigation";
 
 class LandingPage extends Component {
@@ -11,7 +10,7 @@ class LandingPage extends Component {
 		return (
 			<div>
 				<LandingPageNavigation />
-				<Sections />
+				no sections
 			</div>
 		);
 	}
