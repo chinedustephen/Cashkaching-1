@@ -5,6 +5,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import Modal from "../LottoModal";
+import LottoWizard from "../LottoWizard";
 
 const Cardcontainer = styled.div`
   background: #6ca516;
@@ -223,6 +224,7 @@ class LottoCard extends Component {
         </Cardcontainer>
         <Modal show={this.state.isOpen} onClose={this.toggleModal}>
           `Here's some content for the modal`
+          <LottoWizard show={this.state.isOpen} onClose={this.toggleModal} />
         </Modal>
       </Cardlayout>
     );
