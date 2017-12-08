@@ -1,4 +1,4 @@
-/**
+/*
  *
  * App - Navigation
  */
@@ -111,7 +111,9 @@ class Navigation extends Component {
             <Brandimg src={require("./images/Logo.png")} />
           </NavBrandContainer>
           <NavLogoutcontainer>
-            <Logout to="/landingPage">Logout</Logout>
+            <Logout to="/" exact>
+              Logout
+            </Logout>
           </NavLogoutcontainer>
           <NavMainContainer>
             <Nav>

@@ -10,12 +10,6 @@ const Background = styled.div`
 	}
 `;
 
-const SvgCircle = styled.div`
-  height: 500px;
-  width: 500px;
-  position: absolute;
-`;
-
 class SectionOneAndTwoBackground extends Component {
   render() {
     return (

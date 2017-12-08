@@ -4,6 +4,7 @@
  */
 import React, { Component } from "react";
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 
 const Nav = styled.ul`
   list-style-type: none;
@@ -35,6 +36,20 @@ const Tablinks = styled.a`
     background-color: red;
   }
 `;
+const LandingNavLink = styled(NavLink)`
+  display: block;
+  font-family: Roboto-Medium;
+  font-size: 14px;
+  color: #212121;
+  letter-spacing: 0.78px;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  margin-top: 16px;
+  &:hover {
+    background-color: red;
+  }
+`;
 
 class LandingPageNavigation extends Component {
   render() {
@@ -43,7 +58,9 @@ class LandingPageNavigation extends Component {
         <Nav>
           <BrandImg src={require("./images/logo.svg")} />
           <ListNavigation>
-            <Tablinks>Register</Tablinks>
+            <LandingNavLink to="/personalaccount" exact>
+              Login
+            </LandingNavLink>
           </ListNavigation>
           <ListNavigation>
             <Tablinks>Blog</Tablinks>
