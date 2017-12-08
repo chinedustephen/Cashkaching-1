@@ -3,17 +3,16 @@
  * App - Lotto Main
  */
 import React, { Component } from "react";
-import LandingPageNavigation from "../../components/LandingPageNavigation";
+import SectionOneAndTwoBackground from "../../components/SectionOneAndTwoBackground";
 
 class LandingPage extends Component {
-	render() {
-		return (
-			<div>
-				<LandingPageNavigation />
-				no sections
-			</div>
-		);
-	}
+  render() {
+    return (
+      <div>
+        <SectionOneAndTwoBackground />
+      </div>
+    );
+  }
 }
 
 export default LandingPage;

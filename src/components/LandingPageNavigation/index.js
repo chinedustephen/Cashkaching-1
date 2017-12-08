@@ -6,51 +6,61 @@ import React, { Component } from "react";
 import styled from "styled-components";
 
 const Nav = styled.ul`
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	overflow: hidden;
-	background-color: #333;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+
+  margin-right: 112px;
 `;
 
 const ListNavigation = styled.li`
-	float: right;
+  float: right;
+`;
+const BrandImg = styled.img`
+  margin-left: 128px;
+  margin-top: 18px;
 `;
 const Tablinks = styled.a`
-	display: block;
-	color: white;
-	text-align: center;
-	padding: 14px 16px;
-	text-decoration: none;
-	&:hover {
-		background-color: red;
-	}
+  display: block;
+  font-family: Roboto-Medium;
+  font-size: 14px;
+  color: #212121;
+  letter-spacing: 0.78px;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  margin-top: 16px;
+  &:hover {
+    background-color: red;
+  }
 `;
 
 class LandingPageNavigation extends Component {
-	render() {
-		return (
-			<div>
-				<Nav>
-					<ListNavigation>
-						<Tablinks>Register</Tablinks>
-					</ListNavigation>
-					<ListNavigation>
-						<Tablinks>Blog</Tablinks>
-					</ListNavigation>
-					<ListNavigation>
-						<Tablinks>How it works</Tablinks>
-					</ListNavigation>
-					<ListNavigation>
-						<Tablinks>For business</Tablinks>
-					</ListNavigation>
-					<ListNavigation>
-						<Tablinks>How it works</Tablinks>
-					</ListNavigation>
-				</Nav>
-			</div>
-		);
-	}
+  render() {
+    return (
+      <div>
+        <Nav>
+          <BrandImg src={require("./images/logo.svg")} />
+          <ListNavigation>
+            <Tablinks>Register</Tablinks>
+          </ListNavigation>
+          <ListNavigation>
+            <Tablinks>Blog</Tablinks>
+          </ListNavigation>
+          <ListNavigation>
+            <Tablinks>How it works</Tablinks>
+          </ListNavigation>
+          <ListNavigation>
+            <Tablinks>For business</Tablinks>
+          </ListNavigation>
+          <ListNavigation>
+            <Tablinks>How it works</Tablinks>
+          </ListNavigation>
+        </Nav>
+      </div>
+    );
+  }
 }
 
 export default LandingPageNavigation;
