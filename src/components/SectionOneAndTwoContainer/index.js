@@ -29,7 +29,7 @@ class SectionContainer extends Component {
           <HeaderContent />
           <TimerHeaderContent />
         </SectionOne>
-        <SectionTwo />
+        <SectionTwo>section two</SectionTwo>
       </Container>
     );
   }
