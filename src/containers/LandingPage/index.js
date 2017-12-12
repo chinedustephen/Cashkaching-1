@@ -9,6 +9,8 @@ import SectionFour from "./LandingPageSections/SectionFour";
 import SectionFive from "./LandingPageSections/SectionFive";
 import SectionSix from "./LandingPageSections/SectionSix";
 import SectionSeven from "./LandingPageSections/SectionSeven";
+import SectionEight from "./LandingPageSections/SectionEight";
+import Footer from "./LandingPageSections/Footer";
 
 class LandingPage extends Component {
   render() {
@@ -20,6 +22,8 @@ class LandingPage extends Component {
         <SectionFive />
         <SectionSix />
         <SectionSeven />
+        <SectionEight />
+        <Footer />
       </div>
     );
   }
