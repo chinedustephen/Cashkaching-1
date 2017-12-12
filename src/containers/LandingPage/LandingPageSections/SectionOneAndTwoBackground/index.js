@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import SectionContainer from "../SectionOneAndTwoContainer";
-import LandingPageNavigation from "../LandingPageNavigation";
+import SectionContainer from "../SectionOne";
+import SectionTwo from "../SectionTwo";
+import LandingPageNavigation from "../../../../components/LandingPageNavigation";
 import BackgroundSVG from "./images/BackgroundSVG.svg";
 
 const Background = styled.div`
@@ -16,6 +17,7 @@ class SectionOneAndTwoBackground extends Component {
       <Background>
         <LandingPageNavigation />
         <SectionContainer />
+        <SectionTwo />
       </Background>
     );
   }

@@ -3,7 +3,7 @@
  * App - Lotto Main
  */
 import React, { Component } from "react";
-import SectionOneAndTwoBackground from "../../components/SectionOneAndTwoBackground";
+import SectionOneAndTwoBackground from "./LandingPageSections/SectionOneAndTwoBackground";
 
 class LandingPage extends Component {
   render() {

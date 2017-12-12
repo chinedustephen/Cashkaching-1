@@ -1,24 +1,21 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import TimerHeaderContent from "../HeaderTimerSection";
-import HeaderContent from "../HeaderContentSection";
+import TimerHeaderContent from "../../../../components/HeaderTimerSection";
+import HeaderContent from "../../../../components/HeaderContentSection";
 
 const Container = styled.div`
-  margin-left: 128px;
-  margin-right: 128px;
+  display: grid;
+  grid-template-columns: 1fr 83% 1fr;
   margin-top: 130px;
+  grid-template-areas: ". sectionone .";
 `;
 const SectionOne = styled.div`
   display: grid;
   grid-template-columns: 50% 50%;
   height: 50%;
   width: 100%;
-
+  grid-area: sectionone;
 	}
-`;
-
-const SectionTwo = styled.div`
-  height: 80px;
 `;
 
 class SectionContainer extends Component {
@@ -29,7 +26,6 @@ class SectionContainer extends Component {
           <HeaderContent />
           <TimerHeaderContent />
         </SectionOne>
-        <SectionTwo>section two</SectionTwo>
       </Container>
     );
   }
