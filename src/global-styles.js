@@ -10,11 +10,19 @@ WebFont.load({
 });
 WebFont.load({
   custom: {
-    families: ["Campton-BoldDEMO", "Campton-LightDEMO", "Campton-Medium"],
+    families: [
+      "Campton-BoldDEMO",
+      "Campton-LightDEMO",
+      "Campton-Medium",
+      "Campton-Bold",
+      "Campton-Book"
+    ],
     urls: [
       "./Fonts/Campton-BoldDEMO",
       "./Fonts/Campton-LightDEMO",
-      "./Fonts/Compton/Campton-Medium"
+      "./Fonts/Compton/Campton-Medium",
+      "./Fonts/Compton/Campton-Bold",
+      "./Fonts/Compton/Campton-Book"
     ]
   }
 });
