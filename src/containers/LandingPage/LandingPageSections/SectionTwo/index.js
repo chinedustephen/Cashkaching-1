@@ -1,6 +1,11 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 
+const Hold = styled.div`
+  display: grid;
+  height: 491px;
+`;
+
 const Container = styled.div`
   display: grid;
   grid-template-columns: 1fr 83% 1fr;
@@ -16,19 +21,21 @@ const SectionTwoContainer = styled.div`
 `;
 
 const Carousel = styled.div``;
-const CurveImg = styled.img``;
+const CurveImg = styled.img`
+  align-self: end;
+`;
 
 class SectionTwo extends Component {
   render() {
     return (
-      <div>
+      <Hold>
         <Container>
           <SectionTwoContainer>
             <Carousel>Carousel</Carousel>
           </SectionTwoContainer>
         </Container>
         <CurveImg src={require("./images/Curve.svg")} />
-      </div>
+      </Hold>
     );
   }
 }

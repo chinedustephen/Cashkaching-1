@@ -4,15 +4,19 @@ import WebFont from "webfontloader";
 /* eslint no-unused-expressions: 0 */
 
 WebFont.load({
-	google: {
-		families: ["Roboto:300,400,500", "sans-serif"]
-	}
+  google: {
+    families: ["Roboto:300,400,500", "sans-serif"]
+  }
 });
 WebFont.load({
-	custom: {
-		families: ["Campton-BoldDEMO", "Campton-LightDEMO"],
-		urls: ["./Fonts/Campton-BoldDEMO", "./Fonts/Campton-LightDEMO"]
-	}
+  custom: {
+    families: ["Campton-BoldDEMO", "Campton-LightDEMO", "Campton-Medium"],
+    urls: [
+      "./Fonts/Campton-BoldDEMO",
+      "./Fonts/Campton-LightDEMO",
+      "./Fonts/Compton/Campton-Medium"
+    ]
+  }
 });
 
 injectGlobal`
