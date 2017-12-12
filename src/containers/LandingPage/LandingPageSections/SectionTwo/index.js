@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const Hold = styled.div`
   display: grid;
-  height: 491px;
+  height: 415px;
 `;
 
 const Container = styled.div`
@@ -21,9 +21,7 @@ const SectionTwoContainer = styled.div`
 `;
 
 const Carousel = styled.div``;
-const CurveImg = styled.img`
-  align-self: end;
-`;
+const CurveImg = styled.img``;
 
 class SectionTwo extends Component {
   render() {

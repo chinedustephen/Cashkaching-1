@@ -6,9 +6,8 @@ import LandingPageNavigation from "../../../../components/LandingPageNavigation"
 import BackgroundSVG from "./images/BackgroundSVG.svg";
 
 const Background = styled.div`
-	height: 1120px;
-	background-image: url(${BackgroundSVG});
-	}
+  height: 1012px;
+  background-image: url(${BackgroundSVG});
 `;
 
 class SectionOneAndTwoBackground extends Component {

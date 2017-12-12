@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import Paragraph from "./P";
+import SectionFourHeader from "./Header";
 
 const Container = styled.div`
   display: grid;
@@ -12,7 +13,7 @@ const SectionThreeContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-area: sectionthree;
-  
+
 	}
 `;
 
@@ -21,12 +22,8 @@ const ContentContainer = styled.div`
 `;
 
 const HeaderContainer = styled.div``;
-const SectionFourHeader = styled.p`
-  font-family: Campton-Bold;
-  font-size: 32px;
-  color: #ffffff;
-  line-height: 42px;
-`;
+const ImgContainer = styled.div``;
+const Img = styled.img``;
 
 class SectionFour extends Component {
   render() {
@@ -35,13 +32,15 @@ class SectionFour extends Component {
         <SectionThreeContainer>
           <ContentContainer>
             <HeaderContainer>
-              <SectionFourHeader>NOT CONVINCED ?</SectionFourHeader>
+              <SectionFourHeader />
             </HeaderContainer>
             <HeaderContainer>
               <Paragraph />
             </HeaderContainer>
           </ContentContainer>
-          <div>img</div>
+          <ImgContainer>
+            <Img src={require("./images/RewardBox.svg")} />
+          </ImgContainer>
         </SectionThreeContainer>
       </Container>
     );
