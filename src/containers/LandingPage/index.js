@@ -7,6 +7,7 @@ import SectionOneAndTwoBackground from "./LandingPageSections/SectionOneAndTwoBa
 import SectionThree from "./LandingPageSections/SectionThree";
 import SectionFour from "./LandingPageSections/SectionFour";
 import SectionFive from "./LandingPageSections/SectionFive";
+import SectionSix from "./LandingPageSections/SectionSix";
 
 class LandingPage extends Component {
   render() {
@@ -16,6 +17,7 @@ class LandingPage extends Component {
         <SectionThree />
         <SectionFour />
         <SectionFive />
+        <SectionSix />
       </div>
     );
   }
