@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1280px" height="141px" viewBox="0 0 1280 141" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>Rectangle 7</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M160,117.70479 C373.333333,-39.1777445 800,-39.1777445 1440,117.70479 L1440,1059 L160,1059 C-53.3333333,588.352395 -53.3333333,274.587325 160,117.70479 Z" id="path-1"></path>
+    </defs>
+    <g id="Main-Expeiance" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop_LandingPage" transform="translate(0.000000, -951.000000)">
+            <g id="Group-4" transform="translate(-160.000000, 951.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Rectangle-7" fill="#6CA516" xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>

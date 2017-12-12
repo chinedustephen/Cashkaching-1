@@ -15,12 +15,20 @@ const SectionTwoContainer = styled.div`
 	}
 `;
 
+const Carousel = styled.div``;
+const CurveImg = styled.img``;
+
 class SectionTwo extends Component {
   render() {
     return (
-      <Container>
-        <SectionTwoContainer>Section two</SectionTwoContainer>
-      </Container>
+      <div>
+        <Container>
+          <SectionTwoContainer>
+            <Carousel>Carousel</Carousel>
+          </SectionTwoContainer>
+        </Container>
+        <CurveImg src={require("./images/Curve.svg")} />
+      </div>
     );
   }
 }
