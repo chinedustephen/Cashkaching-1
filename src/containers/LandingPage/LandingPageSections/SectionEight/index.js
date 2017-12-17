@@ -12,8 +12,8 @@ const Container = styled.div`
 `;
 const SectionThreeContainer = styled.div`
   display: grid;
-
   grid-area: sectionthree;
+  justify-items: center;
 `;
 const Header = styled.p`
   font-family: Campton-BoldDEMO;
@@ -21,6 +21,8 @@ const Header = styled.p`
   color: #212121;
   letter-spacing: -1.6px;
   line-height: 48px;
+  text-align: center;
+  margin-bottom: 0px;
 `;
 
 const SubText = styled.p`
@@ -30,6 +32,9 @@ const SubText = styled.p`
   color: #212121;
   letter-spacing: 0;
   line-height: 24px;
+  text-align: center;
+  width: 555px;
+  margin-top: 0px;
 `;
 
 const Button = styled.div``;
