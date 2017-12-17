@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
+import Header from "./sectionTwoHeader";
+import SmallCardWinner from "./winnerCard";
 
 const Hold = styled.div`
   display: grid;
@@ -15,13 +17,23 @@ const Container = styled.div`
 const SectionTwoContainer = styled.div`
   display: grid;
   grid-area: sectiontwo;
-  height: 80px;
-  background-color: blue;
+      height: 228px;
 	}
 `;
 
 const Carousel = styled.div``;
 const CurveImg = styled.img``;
+const CardsContainer = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+`;
+
+const EndContainer = styled.div`
+  justify-self: end;
+`;
+const CenterContainer = styled.div`
+  justify-self: center;
+`;
 
 class SectionTwo extends Component {
   render() {
@@ -29,7 +41,25 @@ class SectionTwo extends Component {
       <Hold>
         <Container>
           <SectionTwoContainer>
-            <Carousel>Carousel</Carousel>
+            <Carousel>
+              <div>
+                <Header />
+              </div>
+              <CardsContainer>
+                <div>
+                  <SmallCardWinner />
+                </div>
+                <CenterContainer>
+                  <SmallCardWinner />
+                </CenterContainer>
+                <CenterContainer>
+                  <SmallCardWinner />
+                </CenterContainer>
+                <EndContainer>
+                  <SmallCardWinner />
+                </EndContainer>
+              </CardsContainer>
+            </Carousel>
           </SectionTwoContainer>
         </Container>
         <CurveImg src={require("./images/Curve.svg")} />

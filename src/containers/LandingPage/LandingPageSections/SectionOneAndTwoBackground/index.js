@@ -6,7 +6,7 @@ import LandingPageNavigation from "../../../../components/LandingPageNavigation"
 import BackgroundSVG from "./images/BackgroundSVG.svg";
 
 const Background = styled.div`
-  height: 1012px;
+  height: 1121px;
   background-image: url(${BackgroundSVG});
 `;
 
