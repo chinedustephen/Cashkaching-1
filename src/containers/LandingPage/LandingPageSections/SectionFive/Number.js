@@ -6,6 +6,8 @@ const Number = styled.p`
   font-size: 64px;
   color: #212121;
   letter-spacing: 0;
+  margin: 0px;
+  text-align: center;
 `;
 
 class Stat extends React.Component {

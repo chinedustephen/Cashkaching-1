@@ -8,6 +8,7 @@ const Text = styled.p`
   color: #212121;
   letter-spacing: 1.11px;
   line-height: 30px;
+  text-align: center;
 `;
 
 class StatText extends React.Component {

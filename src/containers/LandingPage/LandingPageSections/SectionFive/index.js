@@ -18,6 +18,11 @@ const SectionThreeContainer = styled.div`
 `;
 const StatsContainer = styled.div`
   display: grid;
+  grid-template-rows: 50% 50%;
+`;
+
+const NumberStat = styled.div`
+  align-self: end;
 `;
 
 class SectionFive extends Component {
@@ -26,25 +31,25 @@ class SectionFive extends Component {
       <Container>
         <SectionThreeContainer>
           <StatsContainer>
-            <div>
+            <NumberStat>
               <Stat number="3000" />
-            </div>
+            </NumberStat>
             <div>
               <StatText text="REGISTERD USERS" />
             </div>
           </StatsContainer>
           <StatsContainer>
-            <div>
+            <NumberStat>
               <Stat number="4000" />
-            </div>
+            </NumberStat>
             <div>
               <StatText text="CASHED OUT" />
             </div>
           </StatsContainer>
           <StatsContainer>
-            <div>
+            <NumberStat>
               <Stat number="10000" />
-            </div>
+            </NumberStat>
             <div>
               <StatText text="WON LOTTERIES" />
             </div>
