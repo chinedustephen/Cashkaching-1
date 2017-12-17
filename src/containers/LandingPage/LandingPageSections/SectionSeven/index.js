@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
+import TestimonialCard from "./TestimonialCard";
 
 const Container = styled.div`
   display: grid;
@@ -10,9 +11,8 @@ const Container = styled.div`
 const SectionSevenContainer = styled.div`
   display: grid;
   grid-area: sectionthree;
-  background-color: blue;
   height: 300px;
-
+margin-bottom: 160px;
 	}
 `;
 
@@ -21,6 +21,18 @@ const Header = styled.div`
   font-family: Campton-Bold;
   font-size: 20px;
   color: #ffffff;
+`;
+const TestimonialContainer = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+`;
+
+const Middle = styled.div`
+  justify-self: center;
+`;
+
+const End = styled.div`
+  justify-self: end;
 `;
 
 class SectionSeven extends Component {
@@ -31,7 +43,17 @@ class SectionSeven extends Component {
           <HeaderContainer>
             <Header>Our daily and monthly winners</Header>
           </HeaderContainer>
-          <div>Carsoul</div>
+          <TestimonialContainer>
+            <div>
+              <TestimonialCard />
+            </div>
+            <Middle>
+              <TestimonialCard />
+            </Middle>
+            <End>
+              <TestimonialCard />
+            </End>
+          </TestimonialContainer>
         </SectionSevenContainer>
       </Container>
     );
