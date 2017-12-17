@@ -25,7 +25,10 @@ const ItemsContainer3 = styled.div`
   justify-self: end;
 `;
 
-const Icon = styled.img``;
+const Icon = styled.img`
+  margin-top: 71px;
+  margin-left: 116px;
+`;
 const CircleContainer = styled.div`
   background-image: url(${Circles});
   background-repeat: no-repeat;
@@ -39,6 +42,10 @@ const LottoText = styled.p`
   color: #ffffff;
   letter-spacing: 0.78px;
   line-height: 15px;
+  width: 179px;
+  text-align: center;
+  margin-left: 57px;
+  margin-top: 31px;
 `;
 
 class SectionThree extends Component {
