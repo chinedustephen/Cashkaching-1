@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const Text = styled.p`
   font-family: Campton-Book;
-  font-size: 16px;
+  font-size: 13px;
   color: #000000;
   letter-spacing: 0;
   line-height: 24px;
@@ -12,7 +12,7 @@ const Container = styled.div``;
 const User = styled.p`
   /* @Gideonkazura: */
   font-family: Campton-Medium;
-  font-size: 12px;
+  font-size: 10px;
   color: #000000;
   letter-spacing: 0.87px;
 `;

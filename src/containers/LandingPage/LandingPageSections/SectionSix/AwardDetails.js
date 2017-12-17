@@ -7,7 +7,6 @@ const Container = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
-  background-color: blue;
 `;
 
 const WinnerImg = styled.img``;
@@ -27,6 +26,7 @@ const SecondContainer = styled.div`
   grid-row-start: 1;
   z-index: 1;
   grid-column-start: 1;
+  padding-left: 147px;
 `;
 
 const AwardDetails = () => (

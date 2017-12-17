@@ -19,17 +19,16 @@ const SectionThreeContainer = styled.div`
 
 const HeaderContainer = styled.div`
   grid-column-end: span 3;
-  background-color: blue;
 `;
 const BackgroundTextContainer = styled.div`
   grid-column-end: span 3;
-  background-color: red;
 `;
 
 const AwardContainer = styled.div`
   display: grid;
   grid-column-end: span 3;
   grid-template-columns: 35% 1fr;
+  margin-bottom: 117px;
 `;
 
 const Award = styled.div``;
