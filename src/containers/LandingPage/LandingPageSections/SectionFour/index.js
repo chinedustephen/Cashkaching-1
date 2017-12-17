@@ -11,9 +11,10 @@ const Container = styled.div`
 `;
 const SectionThreeContainer = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 427px 1fr;
   grid-area: sectionthree;
-
+  margin-bottom: 164px;
+  margin-top: 112px;
 	}
 `;
 
@@ -22,7 +23,10 @@ const ContentContainer = styled.div`
 `;
 
 const HeaderContainer = styled.div``;
-const ImgContainer = styled.div``;
+const ImgContainer = styled.div`
+  justify-self: end;
+  align-self: end;
+`;
 const Img = styled.img``;
 
 class SectionFour extends Component {
