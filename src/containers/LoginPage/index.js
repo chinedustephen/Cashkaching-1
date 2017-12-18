@@ -103,7 +103,7 @@ class RegisterPage extends Component {
           <BrandLogo />
         </BrandContianer>
         <div>
-          <Header>SignIn</Header>
+          <Header>LogIn</Header>
         </div>
         <ButtonContainer>
           <ButtonLanding primary>
