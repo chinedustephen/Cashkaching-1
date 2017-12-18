@@ -3,6 +3,7 @@ import styled from "styled-components";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import TextField from "material-ui/TextField";
 import BrandLogo from "../../components/BrandImg";
+import Button from "../../components/Buttons/Button";
 
 const AuthenticationContianer = styled.div`
   display: grid;
@@ -25,7 +26,7 @@ const BrandContianer = styled.div`
 const ButtonContainer = styled.div`
   display: grid;
   justify-items: center;
-  grid-template-rows: 80px 80px 40px;
+  grid-template-rows: 80px 80px 40px 40px;
 `;
 
 const CancelContainer = styled.div`
@@ -94,7 +95,9 @@ const EmailLoginPage = () => {
             }}
             underlineFocusStyle={{ borderColor: "#ffffff" }}
           />
-
+          <div>
+            <Button name="GET ME BACK IN" />
+          </div>
           <div>
             <SubFormText>
               Not registered yet? <span>register here</span>

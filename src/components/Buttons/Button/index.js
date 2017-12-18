@@ -4,25 +4,21 @@ import styled, { css } from "styled-components";
 const ButtonLanding = styled.button`
   display: block;
   border: 0px;
+  background: #f25500;
   border-radius: 8px;
-  border-bottom: 3px solid #6f6d6f;
+  border-bottom: 3px solid #c44500;
   color: #ffffff;
   font-family: Campton-BoldDEMO;
   font-size: 12px;
   letter-spacing: 1.37px;
   width: 237px;
   height: 45px;
-  ${props =>
-    props.primary &&
-    css`
-      background: #4a4a4a;
-    `};
 `;
 
-class EmailButton extends Component {
+class Button extends Component {
   render() {
-    return <ButtonLanding primary>{this.props.buttonType}</ButtonLanding>;
+    return <ButtonLanding>{this.props.name}</ButtonLanding>;
   }
 }
 
-export default EmailButton;
+export default Button;
