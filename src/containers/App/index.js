@@ -8,6 +8,7 @@ import PersonalAccount from "../PersonalAccount";
 import RegisterPage from "../RegisterPage";
 import LoginPage from "../LoginPage";
 import ForgotPasswordPage from "../ForgotPasswordPage";
+import EmailLoginPage from "../EmailLogin";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 class PersonalAccountApp extends Component {
@@ -18,6 +19,7 @@ class PersonalAccountApp extends Component {
           <Route exact path="/" component={LandingPage} />
           <Route path="/register" component={RegisterPage} />
           <Route path="/login" component={LoginPage} />
+          <Route path="/emaillogin" component={EmailLoginPage} />
           <Route path="/forgotpassword" component={ForgotPasswordPage} />
           <Route path="/personalaccount" component={PersonalAccount} />
         </div>
