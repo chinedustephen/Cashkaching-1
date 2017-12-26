@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="189px" height="189px" viewBox="0 0 189 189" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="147px" height="148px" viewBox="0 0 147 148" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
     <title>Group 3</title>
     <desc>Created with Sketch.</desc>
     <defs>
-        <rect id="path-1" x="16.4444444" y="16.4444444" width="115.625" height="115.625" rx="57.8125"></rect>
-        <filter x="-67.9%" y="-41.1%" width="235.8%" height="238.4%" filterUnits="objectBoundingBox" id="filter-2">
+        <rect id="path-1" x="10.609319" y="10.609319" width="74.5967742" height="74.5967742" rx="37.2983871"></rect>
+        <filter x="-105.2%" y="-63.7%" width="310.5%" height="314.5%" filterUnits="objectBoundingBox" id="filter-2">
             <feOffset dx="0" dy="19" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
             <feGaussianBlur stdDeviation="19" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
             <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.22 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
@@ -17,8 +17,8 @@
                 <feMergeNode in="shadowMatrixOuter2"></feMergeNode>
             </feMerge>
         </filter>
-        <rect id="path-3" x="35.4583333" y="35.4583333" width="77.0833333" height="77.0833333" rx="38.5416667"></rect>
-        <filter x="-101.8%" y="-61.6%" width="303.7%" height="307.6%" filterUnits="objectBoundingBox" id="filter-4">
+        <rect id="path-3" x="22.8763441" y="22.8763441" width="49.7311828" height="49.7311828" rx="24.8655914"></rect>
+        <filter x="-157.8%" y="-95.5%" width="415.7%" height="421.7%" filterUnits="objectBoundingBox" id="filter-4">
             <feOffset dx="0" dy="19" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
             <feGaussianBlur stdDeviation="19" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
             <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.22 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
@@ -32,25 +32,21 @@
         </filter>
     </defs>
     <g id="Main-Expeiance" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Desktop_Lottery-Copy-10" transform="translate(-771.000000, -346.000000)">
-            <g id="Group-6" transform="translate(256.000000, 276.000000)">
-                <g id="Group-10" transform="translate(516.000000, 41.000000)">
-                    <g id="Group-5" transform="translate(15.000000, 30.000000)">
-                        <g id="Group-3" transform="translate(4.000000, 0.000000)">
-                            <g id="Group-2" fill="#F95800">
-                                <g id="Group">
-                                    <path d="M74,-6.31439345e-15 L74,-6.31439345e-15 L74,0 C114.869071,-7.5078832e-15 148,33.1309285 148,74 L148,74 C123.675926,74 99.0312633,74 74.0660121,74 C74.0206579,94.5555556 74.0206579,118.480218 74.0660121,145.773988 L74,148 L74,148 L74,148 C33.1309285,148 -4.39613623e-14,114.869071 -8.52651283e-14,74 L-9.19785081e-14,74 L-8.52651283e-14,74 C-9.02698055e-14,33.1309285 33.1309285,7.5078832e-15 74,0 Z" id="Rectangle-6-Copy-5"></path>
-                                </g>
-                            </g>
-                            <g id="Rectangle-6-Copy">
-                                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
-                                <use fill="#C82F28" fill-rule="evenodd" xlink:href="#path-1"></use>
-                            </g>
-                            <g id="Rectangle-6-Copy-2">
-                                <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
-                                <use fill="#EE452D" fill-rule="evenodd" xlink:href="#path-3"></use>
-                            </g>
+        <g id="Desktop_CardCountDown" transform="translate(-834.000000, -371.000000)">
+            <g id="Waiting-card" transform="translate(256.000000, 198.000000)">
+                <g id="Group-3" transform="translate(603.580645, 180.000000)">
+                    <g id="Group-2" fill="#F95800">
+                        <g id="Group">
+                            <path d="M47.7419355,-1.32316033e-15 L47.7419355,-1.32316033e-15 L47.7419355,0 C74.1090784,-4.84378163e-15 95.483871,21.3747926 95.483871,47.7419355 L95.483871,47.7419355 C79.79092,47.7419355 63.8911376,47.7419355 47.7845239,47.7419355 C47.7552632,61.0035842 47.7552632,76.4388505 47.7845239,94.0477344 L47.7419355,95.483871 L47.7419355,95.483871 L47.7419355,95.483871 C21.3747926,95.483871 -3.01954642e-14,74.1090784 -5.68434189e-14,47.7419355 L-5.33817782e-14,47.7419355 L-5.68434189e-14,47.7419355 C-6.00726066e-14,21.3747926 21.3747926,1.1949209e-14 47.7419355,7.10542736e-15 Z" id="Rectangle-6-Copy-5"></path>
                         </g>
+                    </g>
+                    <g id="Rectangle-6-Copy-6">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                        <use fill="#C82F28" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    </g>
+                    <g id="Rectangle-6-Copy-7">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+                        <use fill="#EE452D" fill-rule="evenodd" xlink:href="#path-3"></use>
                     </g>
                 </g>
             </g>

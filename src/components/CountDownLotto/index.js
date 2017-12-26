@@ -111,6 +111,31 @@ const Figure = styled.p`
   color: #fafafa;
   letter-spacing: 1.43px;
 `;
+const TimeImgContainer = styled.div`
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+`;
+const Img = styled.img`
+  grid-row-start: 1;
+  grid-column-start: 1;
+  z-index: 1;
+`;
+
+const TimerText = styled.p`
+  font-family: Campton-Book;
+  font-size: 24px;
+  color: #ffffff;
+  grid-row-start: 1;
+  grid-column-start: 1;
+  z-index: 2;
+`;
+
+const TimerSubHeader = styled.p`
+  font-family: Campton-Light;
+  font-size: 12px;
+  color: #fafafa;
+  grid-row-start: 2;
+`;
 
 class CountDownLottoCard extends Component {
   render() {
@@ -144,10 +169,11 @@ class CountDownLottoCard extends Component {
                   <TopText>Daily count down</TopText>
                   <Figure>N 500, 000</Figure>
                 </div>
-                <div>
-                  <div>timeer img</div>
-                  <div>timer time</div>
-                </div>
+                <TimeImgContainer>
+                  <Img src={require("./images/countdowntimer.svg")} />
+                  <TimerText>00:00:00</TimerText>
+                  <TimerSubHeader>Count down</TimerSubHeader>
+                </TimeImgContainer>
               </TimerTextContainer>
             </ContentContainer>
           </CardContent>
