@@ -4,8 +4,6 @@
  */
 import React, { Component } from "react";
 import styled from "styled-components";
-import Modal from "../LottoModal";
-import LottoWizard from "../LottoWizard";
 
 const Cardcontainer = styled.div`
   background: #6ca516;
@@ -99,23 +97,6 @@ const DrawAmount = styled.p`
   }
 `;
 
-const TimeLeft = styled.p`
-  /* Days Left: */
-  font-family: Roboto-Regular;
-  font-size: 16px;
-  color: #ffffff;
-  text-align: center;
-
-  grid-column-start: 1;
-  grid-column-end: 4;
-  @media only screen and (max-width: 500px) {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    margin-top: 65px;
-    margin-left: 22px;
-  }
-`;
-
 const TimerImg = styled.img`
   grid-column-start: 1;
   grid-column-end: 4;
@@ -141,30 +122,6 @@ const Counter = styled.p`
     grid-column-end: 4;
     grid-row-start: 1;
     margin-left: 81px;
-  }
-`;
-
-const ButtonMain = styled.button`
-  background-color: red;
-  display: block;
-
-  border: 0px;
-  background: #f25500;
-  border-radius: 8px;
-  border-bottom: 3px solid #c44500;
-  color: #ffffff;
-  font-family: Campton-BoldDEMO;
-  font-size: 12px;
-  letter-spacing: 0.87px;
-  width: 184px;
-  height: 45px;
-  grid-column-start: 1;
-  grid-column-end: 4;
-  @media only screen and (max-width: 500px) {
-    width: 120px;
-    height: 45px;
-    margin-bottom: 24px;
-    margin-right: 27px;
   }
 `;
 

@@ -267,7 +267,7 @@ class EmailRegisterPage extends Component {
                     <Button name="GET ME STARTED" />
                     <p>
                       <a
-                        href="#"
+                        href=""
                         onClick={event => {
                           event.preventDefault();
                           this.setState({ stepIndex: 0, finished: false });

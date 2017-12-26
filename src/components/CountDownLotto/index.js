@@ -4,8 +4,6 @@
  */
 import React, { Component } from "react";
 import styled from "styled-components";
-import Modal from "../LottoModal";
-import LottoWizard from "../LottoWizard";
 
 const Cardcontainer = styled.div`
   display: grid;
@@ -146,7 +144,10 @@ class CountDownLottoCard extends Component {
                   <TopText>Daily count down</TopText>
                   <Figure>N 500, 000</Figure>
                 </div>
-                <div>timer</div>
+                <div>
+                  <div>timeer img</div>
+                  <div>timer time</div>
+                </div>
               </TimerTextContainer>
             </ContentContainer>
           </CardContent>
