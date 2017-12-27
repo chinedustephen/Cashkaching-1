@@ -7,7 +7,6 @@ import styled from "styled-components";
 import Profile from "../Profile";
 
 const Mainpanel = styled.div`
-  background-color: pink;
   @media only screen and (max-width: 1000px) {
     grid-auto-columns: minmax(700px, auto);
     width: 724px;

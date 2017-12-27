@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="36px" height="35px" viewBox="0 0 36 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>diamond</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-1.7%" y="-2.8%" width="103.5%" height="106.0%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.27587183 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Main-Expeiance" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop_ProfileMain" transform="translate(-428.000000, -381.000000)" fill-rule="nonzero">
+            <g id="Group" filter="url(#filter-1)" transform="translate(278.000000, 211.000000)">
+                <g id="Group-6">
+                    <g id="diamond" transform="translate(157.000000, 177.000000)">
+                        <path d="M15.5,6.5 L11,20 C11.155275,20 11.30176,19.92798 11.39624,19.80493 L21.614775,6.52081 L21.601655,6.5 L15.5,6.5 Z" id="Shape" fill="#9BCED3"></path>
+                        <polygon id="Shape" fill="#76B5B5" points="21.601655 6.5 17.5 0 15.5 6.5"></polygon>
+                        <polygon id="Shape" fill="#BFDEE0" points="4.5 0 0.398345 6.5 6.5 6.5"></polygon>
+                        <path d="M0.398345,6.5 L0.38522,6.520815 L10.603755,19.804935 C10.69824,19.92798 10.844725,20 11,20 L6.5,6.5 L0.398345,6.5 Z" id="Shape" fill="#9BCED3"></path>
+                        <polygon id="Shape" fill="#9BCED3" points="11 0 4.5 0 6.5 6.5"></polygon>
+                        <polygon id="Shape" fill="#76B5B5" points="6.5 6.5 11 20 15.5 6.5"></polygon>
+                        <polygon id="Shape" fill="#9BCED3" points="17.5 0 11 0 15.5 6.5"></polygon>
+                        <polygon id="Shape" fill="#BFDEE0" points="15.5 6.5 11 0 6.5 6.5"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
