@@ -126,7 +126,7 @@ class Navigation extends Component {
                 <Tablinks to="/personalaccount/vouchers">Vouchers</Tablinks>
               </ListNavigation>
               <ListNavigation>
-                <Tablinks to="/personalaccount/profilepage">Profile</Tablinks>
+                <Tablinks to="/personalaccount/profile">Profile</Tablinks>
               </ListNavigation>
             </Nav>
           </NavMainContainer>
