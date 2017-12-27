@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>ic_stars_white_48px</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Main-Expeiance" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop_Profile_BadgeCollection" transform="translate(-315.000000, -253.000000)">
+            <g id="star" transform="translate(303.000000, 241.000000)">
+                <g id="ic_stars_white_48px" transform="translate(8.000000, 8.000000)">
+                    <polygon id="Shape" points="0 0 48 0 48 48 0 48"></polygon>
+                    <path d="M23.98,4 C12.94,4 4,12.96 4,24 C4,35.04 12.94,44 23.98,44 C35.04,44 44,35.04 44,24 C44,12.96 35.04,4 23.98,4 Z M32.46,36 L24,30.9 L15.54,36 L17.78,26.38 L10.32,19.92 L20.16,19.08 L24,10 L27.84,19.06 L37.68,19.9 L30.22,26.36 L32.46,36 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
