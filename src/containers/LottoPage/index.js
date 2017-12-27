@@ -9,6 +9,7 @@ import LottoCard from "../../components/LottoCard";
 import PlayedLottoCard from "../../components/PlayedLottoCard";
 import CountDownLottoCard from "../../components/CountDownLotto";
 import CongratulationsLottoCard from "../../components/CongratulationsLottoCard";
+import AdvertCard from "../../components/AdvertCard";
 import BonusNaira from "../../components/BonusNaira";
 
 const Mainpanel = styled.div`
@@ -57,6 +58,7 @@ class Lotto extends Component {
           <PlayedLottoCard />
           <CountDownLottoCard />
           <CongratulationsLottoCard />
+          <AdvertCard />
         </Mainpanel>
       </div>
     );
