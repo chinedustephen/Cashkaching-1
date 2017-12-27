@@ -41,15 +41,6 @@ const LabelText = styled.div`
   margin-left: 40px;
 `;
 
-const Share = styled.img`
-  float: right;
-`;
-
-const WinnerContainer = styled.div`
-  display: grid;
-  grid-template-columns: 25% 50%;
-`;
-
 const ConentContainer = styled.div`
   display: grid;
   grid-template-columns: 75% 25%;
@@ -77,8 +68,6 @@ const NumbersContainer = styled.div`
 `;
 const Refresh = styled.img``;
 const NumberInputContainer = styled.div``;
-
-const NumberButtons = styled.div``;
 
 const NumberButton = styled.button`
   /* Oval 6 Copy 91: */
