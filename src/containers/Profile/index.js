@@ -30,9 +30,7 @@ class Profile extends Component {
       <div>
         <Mainpanel>
           <BonusNaira />
-
           <ProfileNavigation />
-
           <Switch>
             <Route
               path="/personalaccount/profile"
