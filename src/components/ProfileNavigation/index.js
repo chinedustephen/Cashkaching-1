@@ -51,6 +51,11 @@ class ProfileNavigation extends Component {
             </Tablinks>
           </ListNavigation>
           <ListNavigation>
+            <Tablinks to="/personalaccount/profile/share" exact>
+              Share
+            </Tablinks>
+          </ListNavigation>
+          <ListNavigation>
             <Tablinks to="/personalaccount/profile/settings" exact>
               Settings
             </Tablinks>

@@ -10,6 +10,7 @@ import ProfileMain from "../ProfileMain";
 import Badges from "../Badges";
 import Activity from "../Activity";
 import Settings from "../Settings";
+import ShareCardPage from "../Share";
 import BonusNaira from "../../components/BonusNaira";
 import { Switch, Route } from "react-router-dom";
 
@@ -45,6 +46,10 @@ class Profile extends Component {
             <Route
               path="/personalaccount/profile/settings"
               component={Settings}
+            />
+            <Route
+              path="/personalaccount/profile/share"
+              component={ShareCardPage}
             />
           </Switch>
         </Mainpanel>
