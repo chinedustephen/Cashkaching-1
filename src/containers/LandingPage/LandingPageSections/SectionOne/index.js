@@ -9,7 +9,7 @@ const Container = styled.div`
   margin-top: 130px;
   grid-template-areas: ". sectionone .";
 `;
-const SectionOne = styled.div`
+const SectionWrapper = styled.div`
   display: grid;
   grid-template-columns: 50% 50%;
   height: 50%;
@@ -18,17 +18,17 @@ const SectionOne = styled.div`
 	}
 `;
 
-class SectionContainer extends Component {
+class SectionOne extends Component {
   render() {
     return (
       <Container>
-        <SectionOne>
+        <SectionWrapper>
           <HeaderContent />
           <TimerHeaderContent />
-        </SectionOne>
+        </SectionWrapper>
       </Container>
     );
   }
 }
 
-export default SectionContainer;
+export default SectionOne;

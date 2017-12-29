@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import SectionContainer from "../SectionOne";
+import SectionOne from "../SectionOne";
 import SectionTwo from "../SectionTwo";
 import LandingPageNavigation from "../../../../components/LandingPageNavigation";
 import BackgroundSVG from "./images/BackgroundSVG.svg";
@@ -15,7 +15,7 @@ class SectionOneAndTwoBackground extends Component {
     return (
       <Background>
         <LandingPageNavigation />
-        <SectionContainer />
+        <SectionOne />
         <SectionTwo />
       </Background>
     );
