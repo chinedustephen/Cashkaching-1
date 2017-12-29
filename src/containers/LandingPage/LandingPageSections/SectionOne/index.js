@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import styled from "styled-components";
 import TimerHeaderContent from "../../../../components/HeaderTimerSection";
 import HeaderContent from "../../../../components/HeaderContentSection";
@@ -15,20 +15,15 @@ const SectionWrapper = styled.div`
   height: 50%;
   width: 100%;
   grid-area: sectionone;
-	}
 `;
 
-class SectionOne extends Component {
-  render() {
-    return (
-      <Container>
-        <SectionWrapper>
-          <HeaderContent />
-          <TimerHeaderContent />
-        </SectionWrapper>
-      </Container>
-    );
-  }
-}
+const SectionOne = () => (
+  <Container>
+    <SectionWrapper>
+      <HeaderContent />
+      <TimerHeaderContent />
+    </SectionWrapper>
+  </Container>
+);
 
 export default SectionOne;

@@ -26,23 +26,17 @@ const SubHeaderText = styled.p`
 
 const ButtonLanding = styled(ButtonMain)``;
 
-class HeaderContent extends Component {
-  render() {
-    return (
-      <div>
-        <HeaderTextContainer>
-          <MainHeaderText>
-            The first free Lotto in Africa Its free
-          </MainHeaderText>
-          <SubHeaderText>
-            Just enter your phone number and email address to enter today's
-            draw. IT'S FREE Register now!
-          </SubHeaderText>
-          <ButtonLanding />
-        </HeaderTextContainer>
-      </div>
-    );
-  }
-}
+const HeaderContent = () => (
+  <div>
+    <HeaderTextContainer>
+      <MainHeaderText>The first free Lotto in Africa Its free</MainHeaderText>
+      <SubHeaderText>
+        Just enter your phone number and email address to enter today's draw.
+        IT'S FREE Register now!
+      </SubHeaderText>
+      <ButtonLanding />
+    </HeaderTextContainer>
+  </div>
+);
 
 export default HeaderContent;

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import styled from "styled-components";
 import SectionOne from "../SectionOne";
 import SectionTwo from "../SectionTwo";
@@ -10,16 +10,12 @@ const Background = styled.div`
   background-image: url(${BackgroundSVG});
 `;
 
-class SectionOneAndTwoBackground extends Component {
-  render() {
-    return (
-      <Background>
-        <LandingPageNavigation />
-        <SectionOne />
-        <SectionTwo />
-      </Background>
-    );
-  }
-}
+const SectionOneAndTwoBackground = () => (
+  <Background>
+    <LandingPageNavigation />
+    <SectionOne />
+    <SectionTwo />
+  </Background>
+);
 
 export default SectionOneAndTwoBackground;

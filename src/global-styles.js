@@ -43,7 +43,7 @@ injectGlobal`
     font-size: 10px;
   }
 
-  a{
+  a {
     text-decoration: none;
 		color: #212121;
   }

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import styled from "styled-components";
 
 const ButtonLanding = styled.button`
@@ -15,10 +15,6 @@ const ButtonLanding = styled.button`
   height: 45px;
 `;
 
-class Button extends Component {
-  render() {
-    return <ButtonLanding>{this.props.name}</ButtonLanding>;
-  }
-}
+const Button = () => <ButtonLanding>{this.props.name}</ButtonLanding>;
 
 export default Button;
