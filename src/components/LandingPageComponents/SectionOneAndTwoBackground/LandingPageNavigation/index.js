@@ -27,7 +27,7 @@ const Tablinks = styled.a`
   text-decoration: none;
   margin-top: 16px;
   &:hover {
-    background-color: red;
+    border-bottom: 3px solid #5e8a1c;
   }
 `;
 const LandingNavLink = styled(NavLink)`
@@ -41,7 +41,7 @@ const LandingNavLink = styled(NavLink)`
   text-decoration: none;
   margin-top: 16px;
   &:hover {
-    background-color: red;
+    border-bottom: 3px solid #5e8a1c;
   }
 `;
 
@@ -75,8 +75,6 @@ const NavItems = Links.map(list => (
     <Tablinks>{list.text}</Tablinks>
   </ListNavigation>
 ));
-
-console.log(NavItems);
 
 const LandingPageNavigation = () => (
   <div>
