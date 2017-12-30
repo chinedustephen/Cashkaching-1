@@ -1,10 +1,7 @@
-/**
- *
- * App - Navigation
- */
-import React, { Component } from "react";
+import React from "react";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
+import BrandLogo from "./BrandLogo";
 
 const Nav = styled.ul`
   list-style-type: none;
@@ -18,10 +15,7 @@ const Nav = styled.ul`
 const ListNavigation = styled.li`
   float: right;
 `;
-const BrandImg = styled.img`
-  margin-left: 128px;
-  margin-top: 18px;
-`;
+
 const Tablinks = styled.a`
   display: block;
   font-family: Roboto-Medium;
@@ -82,12 +76,12 @@ const NavItems = Links.map(list => (
   </ListNavigation>
 ));
 
-console.log(Content);
+console.log(NavItems);
 
 const LandingPageNavigation = () => (
   <div>
     <Nav>
-      <BrandImg src={require("./images/logo.svg")} />
+      <BrandLogo />
       <ListNavigation>
         <LandingNavLink to={LandingLinks.Login.link} exact>
           {LandingLinks.Login.text}
