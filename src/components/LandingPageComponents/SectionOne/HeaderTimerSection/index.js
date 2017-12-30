@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import TimerHeader from "./TimerHeader";
 import TimerHeaderImg from "./TimerImg";
+import TimerCountDown from "./TimerText";
+import Linktext from "./LinkText";
 
 const Timer = styled.div`
   display: grid;
@@ -18,26 +20,13 @@ const TimerText = styled.p`
   grid-row-start: 3;
   grid-row-end: span 1;
 `;
-const TimerClock = styled.h3`
-  font-family: Campton-BoldDEMO;
-  font-size: 64px;
-  color: #000000;
-  letter-spacing: -1.31px;
-  line-height: 48px;
-  margin-top: 91px;
-  text-align: center;
-  grid-row-start: 2;
-  grid-row-end: span 1;
-  grid-column-start: 1;
-  z-index: 1;
-`;
 
 const TimerHeaderContent = () => (
   <Timer>
     <TimerHeader timerHeader="timer header" />
     <TimerHeaderImg />
-    <TimerClock>4:30:5</TimerClock>
-    <TimerText>Sign in if you have already registered.</TimerText>
+    <TimerCountDown time="40:30" />
+    <Linktext text="text test" />
   </Timer>
 );
 
