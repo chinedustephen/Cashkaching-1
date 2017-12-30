@@ -1,19 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import TimerHeader from "./TimerHeader";
+import TimerHeaderImg from "./TimerImg";
 
 const Timer = styled.div`
   display: grid;
   justify-items: center;
 `;
 
-const TimerHeaderImg = styled.img`
-  width: 288px;
-  height: 288px;
-  grid-row-start: 2;
-  grid-row-end: span 1;
-  grid-column-start: 1;
-`;
 const TimerText = styled.p`
   font-family: Roboto-Medium;
   font-size: 16px;
@@ -40,8 +34,8 @@ const TimerClock = styled.h3`
 
 const TimerHeaderContent = () => (
   <Timer>
-    <TimerHeader timerHeader="test" />
-    <TimerHeaderImg src={require("./images/timeer.svg")} />
+    <TimerHeader timerHeader="timer header" />
+    <TimerHeaderImg />
     <TimerClock>4:30:5</TimerClock>
     <TimerText>Sign in if you have already registered.</TimerText>
   </Timer>
