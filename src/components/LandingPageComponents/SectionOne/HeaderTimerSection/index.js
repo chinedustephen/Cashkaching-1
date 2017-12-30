@@ -10,13 +10,20 @@ const TimerLayout = styled.div`
   justify-items: center;
 `;
 
-const TimerHeaderContent = () => (
+// Timer section conetent object
+const TimerContent = {
+  timerHeader: "header test",
+  time: "40:30",
+  text: "test"
+};
+
+const HeaderTimerSection = () => (
   <TimerLayout>
-    <TimerHeader timerHeader="timer header" />
+    <TimerHeader timerHeader={TimerContent.timerHeader} />
     <TimerHeaderImg />
-    <TimerCountDown time="40:30" />
-    <Linktext text="text test" />
+    <TimerCountDown time={TimerContent.time} />
+    <Linktext text={TimerContent.text} />
   </TimerLayout>
 );
 
-export default TimerHeaderContent;
+export default HeaderTimerSection;

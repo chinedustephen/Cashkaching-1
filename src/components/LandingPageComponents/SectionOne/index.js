@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import TimerHeaderContent from "./HeaderTimerSection";
+import HeaderTimerSection from "./HeaderTimerSection";
 import HeaderContentSection from "./HeaderContentSection";
 
 const Container = styled.div`
@@ -21,7 +21,7 @@ const SectionOne = () => (
   <Container>
     <SectionWrapper>
       <HeaderContentSection />
-      <TimerHeaderContent />
+      <HeaderTimerSection />
     </SectionWrapper>
   </Container>
 );
