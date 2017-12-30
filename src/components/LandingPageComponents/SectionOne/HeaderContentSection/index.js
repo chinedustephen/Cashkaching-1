@@ -1,10 +1,9 @@
 import React from "react";
-import styled from "styled-components";
 import ButtonMain from "./Button";
 import Header from "./Header";
 import Subheader from "./Subheader";
 
-const HeaderTextContainer = styled.div``;
+// Landingpage header section content
 
 const Content = {
   header: "test",
@@ -13,14 +12,12 @@ const Content = {
   button: "GET STARTED"
 };
 
-const HeaderContent = () => (
+const HeaderContentSection = () => (
   <div>
-    <HeaderTextContainer>
-      <Header landingheader={Content.header} />
-      <Subheader subHeader={Content.subheader} />
-      <ButtonMain buttonName={Content.button} />
-    </HeaderTextContainer>
+    <Header landingheader={Content.header} />
+    <Subheader subHeader={Content.subheader} />
+    <ButtonMain buttonName={Content.button} />
   </div>
 );
 
-export default HeaderContent;
+export default HeaderContentSection;

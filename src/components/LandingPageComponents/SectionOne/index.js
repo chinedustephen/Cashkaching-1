@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import TimerHeaderContent from "./HeaderTimerSection";
-import HeaderContent from "./HeaderContentSection";
+import HeaderContentSection from "./HeaderContentSection";
 
 const Container = styled.div`
   display: grid;
@@ -20,7 +20,7 @@ const SectionWrapper = styled.div`
 const SectionOne = () => (
   <Container>
     <SectionWrapper>
-      <HeaderContent header="test" subHeader="test3" />
+      <HeaderContentSection />
       <TimerHeaderContent />
     </SectionWrapper>
   </Container>
