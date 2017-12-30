@@ -17,8 +17,7 @@ const Container = styled.div`
 const SectionTwoContainer = styled.div`
   display: grid;
   grid-area: sectiontwo;
-      height: 228px;
-	}
+  height: 228px;
 `;
 
 const Carousel = styled.div``;

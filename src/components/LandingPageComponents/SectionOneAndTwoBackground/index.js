@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import SectionOne from "../SectionOne";
 import SectionTwo from "../SectionTwo";
-import LandingPageNavigation from "../../LandingPageNavigation";
+import LandingPageNavigation from "./LandingPageNavigation";
 import BackgroundSVG from "./images/BackgroundSVG.svg";
 
 const Background = styled.div`
