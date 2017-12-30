@@ -1,16 +1,10 @@
-import React, { Component } from "react";
+import React from "react";
 import styled from "styled-components";
+import TimerHeader from "./TimerHeader";
 
 const Timer = styled.div`
   display: grid;
   justify-items: center;
-`;
-const TimerHeader = styled.h4`
-  font-family: Campton-BoldDEMO;
-  font-size: 24px;
-  color: #212121;
-  letter-spacing: 0.43px;
-  text-align: center;
 `;
 
 const TimerHeaderImg = styled.img`
@@ -44,19 +38,13 @@ const TimerClock = styled.h3`
   z-index: 1;
 `;
 
-class TimerHeaderContent extends Component {
-  render() {
-    return (
-      <div>
-        <Timer>
-          <TimerHeader>Dont miss the next draw register now</TimerHeader>
-          <TimerHeaderImg src={require("./images/timeer.svg")} />
-          <TimerClock>4:30:5</TimerClock>
-          <TimerText>Sign in if you have already registered.</TimerText>
-        </Timer>
-      </div>
-    );
-  }
-}
+const TimerHeaderContent = () => (
+  <Timer>
+    <TimerHeader timerHeader="test" />
+    <TimerHeaderImg src={require("./images/timeer.svg")} />
+    <TimerClock>4:30:5</TimerClock>
+    <TimerText>Sign in if you have already registered.</TimerText>
+  </Timer>
+);
 
 export default TimerHeaderContent;
