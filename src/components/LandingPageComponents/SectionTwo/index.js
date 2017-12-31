@@ -4,6 +4,7 @@ import Header from "./Header";
 import DailyCard from "./DailyCard";
 import WeeklyCard from "./WeeklyCard";
 import MonthlyCard from "./MonthlyCard";
+import CurveImg from "./images/Curve.svg";
 
 const Hold = styled.div`
   display: grid;
@@ -22,7 +23,7 @@ const SectionTwoContainer = styled.div`
   height: 228px;
 `;
 
-const CurveImg = styled.img``;
+const Img = styled.img``;
 const CardsContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -66,7 +67,7 @@ const SectionTwo = () => (
         </CardsContainer>
       </SectionTwoContainer>
     </Container>
-    <CurveImg src={require("./images/Curve.svg")} />
+    <Img src={CurveImg} />
   </Hold>
 );
 

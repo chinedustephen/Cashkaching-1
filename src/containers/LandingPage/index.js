@@ -1,7 +1,7 @@
 import React from "react";
 
 import SectionOneAndTwoBackground from "../../components/LandingPageComponents/SectionOneAndTwoBackground";
-import SectionThree from "./LandingPageSections/SectionThree";
+import SectionThree from "../../components/LandingPageComponents/SectionThree";
 import SectionFour from "./LandingPageSections/SectionFour";
 import SectionFive from "./LandingPageSections/SectionFive";
 import SectionSix from "./LandingPageSections/SectionSix";
