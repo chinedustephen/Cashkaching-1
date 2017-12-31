@@ -6,7 +6,7 @@ import SectionFour from "../../components/LandingPageComponents/SectionFour";
 import SectionFive from "../../components/LandingPageComponents/SectionFive";
 import SectionSix from "../../components/LandingPageComponents/SectionSix";
 import SectionSeven from "../../components/LandingPageComponents/SectionSeven";
-import SectionEight from "./LandingPageSections/SectionEight";
+import SectionEight from "../../components/LandingPageComponents/SectionEight";
 import Footer from "./LandingPageSections/Footer";
 
 const LandingPage = () => (
