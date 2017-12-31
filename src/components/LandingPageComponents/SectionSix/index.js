@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import styled from "styled-components";
 import Header from "./Header";
 import Congratulations from "./Congratulations";
@@ -17,13 +17,6 @@ const SectionThreeContainer = styled.div`
   grid-area: sectionthree;
 `;
 
-const HeaderContainer = styled.div`
-  grid-column-end: span 3;
-`;
-const BackgroundTextContainer = styled.div`
-  grid-column-end: span 3;
-`;
-
 const AwardContainer = styled.div`
   display: grid;
   grid-column-end: span 3;
@@ -31,33 +24,17 @@ const AwardContainer = styled.div`
   margin-bottom: 117px;
 `;
 
-const Award = styled.div``;
-
-const ProfileImageContainer = styled.div``;
-
-class SectionSix extends Component {
-  render() {
-    return (
-      <Container>
-        <SectionThreeContainer>
-          <HeaderContainer>
-            <Header />
-          </HeaderContainer>
-          <BackgroundTextContainer>
-            <Congratulations />
-          </BackgroundTextContainer>
-          <AwardContainer>
-            <ProfileImageContainer>
-              <Profile />
-            </ProfileImageContainer>
-            <Award>
-              <AwardDetails />
-            </Award>
-          </AwardContainer>
-        </SectionThreeContainer>
-      </Container>
-    );
-  }
-}
+const SectionSix = () => (
+  <Container>
+    <SectionThreeContainer>
+      <Header sectionheader="This months winner" />
+      <Congratulations />
+      <AwardContainer>
+        <Profile />
+        <AwardDetails />
+      </AwardContainer>
+    </SectionThreeContainer>
+  </Container>
+);
 
 export default SectionSix;

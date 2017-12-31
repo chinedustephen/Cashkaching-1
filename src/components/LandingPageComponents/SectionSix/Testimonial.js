@@ -17,18 +17,11 @@ const User = styled.p`
   letter-spacing: 0.87px;
 `;
 
-class Testimonial extends React.Component {
-  render() {
-    return (
-      <Container>
-        <Text>
-          Type something our lucky day comes! Check Rules and FAQs for more
-          information…
-        </Text>
-        <User>Gideonkazura</User>
-      </Container>
-    );
-  }
-}
+const Testimonial = props => (
+  <Container>
+    <Text>{props.comment}</Text>
+    <User>{props.user}</User>
+  </Container>
+);
 
 export default Testimonial;

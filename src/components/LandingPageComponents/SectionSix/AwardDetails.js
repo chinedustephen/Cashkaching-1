@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Amount from "./Amount";
 import Testimonial from "./Testimonial";
+import WinnerDp from "./images/Winner.svg";
 
 const Container = styled.div`
   display: grid;
@@ -28,18 +29,21 @@ const SecondContainer = styled.div`
   grid-column-start: 1;
   padding-left: 147px;
 `;
+const Award = styled.div``;
 
-const AwardDetails = () => (
-  <Container>
-    <FirstContainer>
-      <WinnerImg src={require("./images/Winner.svg")} />
-    </FirstContainer>
-    <SecondContainer>
-      <SubText>I HAVE JUST WON</SubText>
-      <Amount />
-      <Testimonial />
-    </SecondContainer>
-  </Container>
+const AwardDetails = props => (
+  <Award>
+    <Container>
+      <FirstContainer>
+        <WinnerImg src={WinnerDp} />
+      </FirstContainer>
+      <SecondContainer>
+        <SubText>{props.subWinnerText}</SubText>
+        <Amount reward="100 000" />
+        <Testimonial comment="comment" user="Gideon" />
+      </SecondContainer>
+    </Container>
+  </Award>
 );
 
 export default AwardDetails;

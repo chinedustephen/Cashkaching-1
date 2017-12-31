@@ -9,6 +9,15 @@ const P = styled.p`
   margin: 0;
   margin-left: 65px;
 `;
-const Congratulations = () => <P>Congratulations</P>;
+
+const BackgroundTextContainer = styled.div`
+  grid-column-end: span 3;
+`;
+
+const Congratulations = () => (
+  <BackgroundTextContainer>
+    <P>Congratulations</P>
+  </BackgroundTextContainer>
+);
 
 export default Congratulations;

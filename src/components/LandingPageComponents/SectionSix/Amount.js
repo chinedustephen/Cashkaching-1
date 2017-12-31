@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import NairaImg from "./images/Naira.svg";
+import LineImg from "./images/Line.svg";
 
 const P = styled.p`
   font-family: Campton-Bold;
@@ -19,17 +21,17 @@ const Digit = styled.div``;
 const Naira = styled.img``;
 const Line = styled.img``;
 
-const Amount = () => (
+const Amount = props => (
   <div>
     <Container>
       <Sign>
-        <Naira src={require("./images/Naira.svg")} />
+        <Naira src={NairaImg} />
       </Sign>
       <Digit>
-        <P>100,000 </P>
+        <P>{props.reward}</P>
       </Digit>
     </Container>
-    <Line src={require("./images/Line.svg")} />
+    <Line src={LineImg} />
   </div>
 );
 

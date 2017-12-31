@@ -32,12 +32,15 @@ const ProfileCirlce = styled.div`
   grid-row-start: 1;
   z-index: 1;
 `;
+const ProfileImageContainer = styled.div``;
 
 const Profile = () => (
-  <Container>
-    <ProfileCirlce />
-    <ProfileImg />
-  </Container>
+  <ProfileImageContainer>
+    <Container>
+      <ProfileCirlce />
+      <ProfileImg />
+    </Container>
+  </ProfileImageContainer>
 );
 
 export default Profile;

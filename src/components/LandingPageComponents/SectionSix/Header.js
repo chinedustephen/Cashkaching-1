@@ -7,6 +7,15 @@ const P = styled.p`
   color: #ffffff;
   margin-left: 75px;
 `;
-const Header = () => <P>This months winner </P>;
+
+const HeaderContainer = styled.div`
+  grid-column-end: span 3;
+`;
+
+const Header = props => (
+  <HeaderContainer>
+    <P>{props.sectionheader} </P>
+  </HeaderContainer>
+);
 
 export default Header;
