@@ -1,7 +1,9 @@
-import React, { Component } from "react";
+import React from "react";
 import styled from "styled-components";
-import Header from "./sectionTwoHeader";
-import SmallCardWinner from "./winnerCard";
+import Header from "./Header";
+import DailyCard from "./DailyCard";
+import WeeklyCard from "./WeeklyCard";
+import MonthlyCard from "./MonthlyCard";
 
 const Hold = styled.div`
   display: grid;
@@ -20,11 +22,10 @@ const SectionTwoContainer = styled.div`
   height: 228px;
 `;
 
-const Carousel = styled.div``;
 const CurveImg = styled.img``;
 const CardsContainer = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
 `;
 
 const EndContainer = styled.div`
@@ -34,37 +35,39 @@ const CenterContainer = styled.div`
   justify-self: center;
 `;
 
-class SectionTwo extends Component {
-  render() {
-    return (
-      <Hold>
-        <Container>
-          <SectionTwoContainer>
-            <Carousel>
-              <div>
-                <Header />
-              </div>
-              <CardsContainer>
-                <div>
-                  <SmallCardWinner />
-                </div>
-                <CenterContainer>
-                  <SmallCardWinner />
-                </CenterContainer>
-                <CenterContainer>
-                  <SmallCardWinner />
-                </CenterContainer>
-                <EndContainer>
-                  <SmallCardWinner />
-                </EndContainer>
-              </CardsContainer>
-            </Carousel>
-          </SectionTwoContainer>
-        </Container>
-        <CurveImg src={require("./images/Curve.svg")} />
-      </Hold>
-    );
-  }
-}
+const SectionTwo = () => (
+  <Hold>
+    <Container>
+      <SectionTwoContainer>
+        <Header />
+        <CardsContainer>
+          <DailyCard
+            theme={{ main: "darkorange" }}
+            amount="N50 000"
+            text="Play the daily draw three time and qualify for the weekly draw"
+            time="4:30:1"
+          />
+          <CenterContainer>
+            <WeeklyCard
+              theme={{ main: "darkorange" }}
+              amount="N100 000"
+              text="Play the daily draw three time and qualify for the weekly draw"
+              time="4:30:1"
+            />
+          </CenterContainer>
+          <EndContainer>
+            <MonthlyCard
+              theme={{ main: "darkorange" }}
+              amount="N500 000"
+              text="Play the daily draw three time and qualify for the weekly draw"
+              time="4:30:1"
+            />
+          </EndContainer>
+        </CardsContainer>
+      </SectionTwoContainer>
+    </Container>
+    <CurveImg src={require("./images/Curve.svg")} />
+  </Hold>
+);
 
 export default SectionTwo;
