@@ -52,22 +52,19 @@ const Name = styled.p`
   letter-spacing: 1.16px;
 `;
 
-const TestimonialCard = () => (
+const TestimonialCard = props => (
   <Card>
     <AmountContainer>
       <Amount>
-        <AmountNumber>N100 000</AmountNumber>
+        <AmountNumber>{props.amount}</AmountNumber>
       </Amount>
     </AmountContainer>
     <CardContent>
       <div>
-        <TestimonialQuote>
-          Type something our lucky day comes! Check Rules and FAQs for more
-          information…
-        </TestimonialQuote>
+        <TestimonialQuote>{props.usertestimonial}</TestimonialQuote>
       </div>
       <div>
-        <Name>@GideonKadzura</Name>
+        <Name>{props.username}</Name>
       </div>
     </CardContent>
   </Card>

@@ -5,7 +5,7 @@ import SectionThree from "../../components/LandingPageComponents/SectionThree";
 import SectionFour from "../../components/LandingPageComponents/SectionFour";
 import SectionFive from "../../components/LandingPageComponents/SectionFive";
 import SectionSix from "../../components/LandingPageComponents/SectionSix";
-import SectionSeven from "./LandingPageSections/SectionSeven";
+import SectionSeven from "../../components/LandingPageComponents/SectionSeven";
 import SectionEight from "./LandingPageSections/SectionEight";
 import Footer from "./LandingPageSections/Footer";
 

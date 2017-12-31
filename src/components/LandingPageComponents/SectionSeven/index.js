@@ -1,6 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 import styled from "styled-components";
 import TestimonialCard from "./TestimonialCard";
+import SectionHeader from "./Header";
 
 const Container = styled.div`
   display: grid;
@@ -12,16 +13,9 @@ const SectionSevenContainer = styled.div`
   display: grid;
   grid-area: sectionthree;
   height: 300px;
-margin-bottom: 160px;
-	}
+  margin-bottom: 160px;
 `;
 
-const HeaderContainer = styled.div``;
-const Header = styled.div`
-  font-family: Campton-Bold;
-  font-size: 20px;
-  color: #ffffff;
-`;
 const TestimonialContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -35,29 +29,35 @@ const End = styled.div`
   justify-self: end;
 `;
 
-class SectionSeven extends Component {
-  render() {
-    return (
-      <Container>
-        <SectionSevenContainer>
-          <HeaderContainer>
-            <Header>Our daily and monthly winners</Header>
-          </HeaderContainer>
-          <TestimonialContainer>
-            <div>
-              <TestimonialCard />
-            </div>
-            <Middle>
-              <TestimonialCard />
-            </Middle>
-            <End>
-              <TestimonialCard />
-            </End>
-          </TestimonialContainer>
-        </SectionSevenContainer>
-      </Container>
-    );
-  }
-}
+const SectionSeven = () => (
+  <Container>
+    <SectionSevenContainer>
+      <SectionHeader header="test" />
+      <TestimonialContainer>
+        <div>
+          <TestimonialCard
+            amount="2"
+            usertestimonial="testmonial"
+            username="Gideon"
+          />
+        </div>
+        <Middle>
+          <TestimonialCard
+            amount="2"
+            usertestimonial="testmonial"
+            username="Gideon"
+          />
+        </Middle>
+        <End>
+          <TestimonialCard
+            amount="2"
+            usertestimonial="testmonial"
+            username="Gideon"
+          />
+        </End>
+      </TestimonialContainer>
+    </SectionSevenContainer>
+  </Container>
+);
 
 export default SectionSeven;
