@@ -1,6 +1,6 @@
 import React from "react";
 
-import SectionOneAndTwoBackground from "../../components/LandingPageComponents/SectionOneAndTwoBackground";
+import SectionOneAndTwo from "../../components/LandingPageComponents/SectionOneAndTwo";
 import SectionThree from "../../components/LandingPageComponents/SectionThree";
 import SectionFour from "../../components/LandingPageComponents/SectionFour";
 import SectionFive from "../../components/LandingPageComponents/SectionFive";
@@ -11,7 +11,7 @@ import Footer from "./LandingPageSections/Footer";
 
 const LandingPage = () => (
   <div>
-    <SectionOneAndTwoBackground />
+    <SectionOneAndTwo />
     <SectionThree />
     <SectionFour />
     <SectionFive />

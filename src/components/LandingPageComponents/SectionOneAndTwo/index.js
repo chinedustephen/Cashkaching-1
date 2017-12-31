@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import SectionOne from "../SectionOne";
-import SectionTwo from "../SectionTwo";
+import SectionOne from "./SectionOne";
+import SectionTwo from "./SectionTwo";
 import LandingPageNavigation from "./LandingPageNavigation";
 import BackgroundSVG from "./images/BackgroundSVG.svg";
 
@@ -10,7 +10,7 @@ const Background = styled.div`
   background-image: url(${BackgroundSVG});
 `;
 
-const SectionOneAndTwoBackground = () => (
+const SectionOneAndTwo = () => (
   <Background>
     <LandingPageNavigation />
     <SectionOne />
@@ -18,4 +18,4 @@ const SectionOneAndTwoBackground = () => (
   </Background>
 );
 
-export default SectionOneAndTwoBackground;
+export default SectionOneAndTwo;

@@ -11,6 +11,6 @@ const Text = styled.p`
   text-align: center;
 `;
 
-const StatText = () => <Text>{this.props.text}</Text>;
+const StatText = props => <Text>{props.text}</Text>;
 
 export default StatText;
