@@ -27,17 +27,29 @@ const ItemsContainer3 = styled.div`
   justify-self: end;
 `;
 
+const CircleContent = {
+  Launch: {
+    text: "test 1"
+  },
+  Voucher: {
+    text: "test 2"
+  },
+  Money: {
+    text: "test 3"
+  }
+};
+
 const SectionThree = () => (
   <Container>
     <SectionThreeContainer>
       <ItemsContainer1>
-        <Circle icon={Launch} text="test" />
+        <Circle icon={Launch} text={CircleContent.Launch.text} />
       </ItemsContainer1>
       <ItemsContainer2>
-        <Circle icon={Voucher} text="test2" />
+        <Circle icon={Voucher} text={CircleContent.Voucher.text} />
       </ItemsContainer2>
       <ItemsContainer3>
-        <Circle icon={Money} text="test3" />
+        <Circle icon={Money} text={CircleContent.Money.text} />
       </ItemsContainer3>
     </SectionThreeContainer>
   </Container>
