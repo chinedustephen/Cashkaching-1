@@ -7,6 +7,6 @@ const P = styled.p`
   color: #ffffff;
   letter-spacing: 0;
 `;
-const SectionFourHeader = () => <P>NOT CONVINCED</P>;
+const Header = props => <P>{props.header}</P>;
 
-export default SectionFourHeader;
+export default Header;
