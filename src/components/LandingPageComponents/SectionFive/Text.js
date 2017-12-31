@@ -11,10 +11,6 @@ const Text = styled.p`
   text-align: center;
 `;
 
-class StatText extends React.Component {
-  render() {
-    return <Text>{this.props.text}</Text>;
-  }
-}
+const StatText = () => <Text>{this.props.text}</Text>;
 
 export default StatText;

@@ -1,8 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 import styled from "styled-components";
 import SectionFiveBackground from "./images/SectionFiveBackground.svg";
-import Stat from "./Number";
-import StatText from "./Text";
+import Stats from "./Stats";
 
 const Container = styled.div`
   display: grid;
@@ -16,48 +15,15 @@ const SectionThreeContainer = styled.div`
   grid-template-columns: 1fr 1fr 1fr;
   grid-area: sectionthree;
 `;
-const StatsContainer = styled.div`
-  display: grid;
-  grid-template-rows: 50% 50%;
-`;
 
-const NumberStat = styled.div`
-  align-self: end;
-`;
-
-class SectionFive extends Component {
-  render() {
-    return (
-      <Container>
-        <SectionThreeContainer>
-          <StatsContainer>
-            <NumberStat>
-              <Stat number="3000" />
-            </NumberStat>
-            <div>
-              <StatText text="REGISTERD USERS" />
-            </div>
-          </StatsContainer>
-          <StatsContainer>
-            <NumberStat>
-              <Stat number="4000" />
-            </NumberStat>
-            <div>
-              <StatText text="CASHED OUT" />
-            </div>
-          </StatsContainer>
-          <StatsContainer>
-            <NumberStat>
-              <Stat number="10000" />
-            </NumberStat>
-            <div>
-              <StatText text="WON LOTTERIES" />
-            </div>
-          </StatsContainer>
-        </SectionThreeContainer>
-      </Container>
-    );
-  }
-}
+const SectionFive = () => (
+  <Container>
+    <SectionThreeContainer>
+      <Stats figure="1000" subtext="USERS" />
+      <Stats figure="4000" subtext="CASHED OUT" />
+      <Stats figure="10000" subtext="WON LOTTERIES" />
+    </SectionThreeContainer>
+  </Container>
+);
 
 export default SectionFive;

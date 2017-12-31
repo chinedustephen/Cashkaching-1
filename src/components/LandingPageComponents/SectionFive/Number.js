@@ -10,10 +10,6 @@ const Number = styled.p`
   text-align: center;
 `;
 
-class Stat extends React.Component {
-  render() {
-    return <Number>{this.props.number}</Number>;
-  }
-}
+const Stat = props => <Number>{props.number}</Number>;
 
 export default Stat;
