@@ -45,31 +45,27 @@ const Nested = styled.div`
   }
 `;
 
-class Lotto extends Component {
-  render() {
-    return (
-      <div>
-        <Mainpanel>
-          <BonusNaira />
-          <Headercontent>Lotto</Headercontent>
-          <Nested>
-            <UnlockDrawsCard />
-            <UnlockDrawsCard />
-          </Nested>
+const Lotto = () => (
+  <div>
+    <Mainpanel>
+      <BonusNaira />
+      <Headercontent>Lotto</Headercontent>
+      <Nested>
+        <UnlockDrawsCard />
+        <UnlockDrawsCard />
+      </Nested>
 
-          <LottoCard />
-          <PlayedLottoCard />
-          <CountDownLottoCard />
-          <CongratulationsLottoCard />
+      <LottoCard />
+      <PlayedLottoCard />
+      <CountDownLottoCard />
+      <CongratulationsLottoCard />
 
-          <AdvertCard />
-          <PlayLottoNumbers />
-          <NumberConfirmationCard />
-          <ShareCard />
-        </Mainpanel>
-      </div>
-    );
-  }
-}
+      <AdvertCard />
+      <PlayLottoNumbers />
+      <NumberConfirmationCard />
+      <ShareCard />
+    </Mainpanel>
+  </div>
+);
 
 export default Lotto;

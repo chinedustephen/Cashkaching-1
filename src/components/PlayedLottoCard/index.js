@@ -1,9 +1,6 @@
-/**
- *
- * App - Lotto Main
- */
-import React, { Component } from "react";
+import React from "react";
 import styled from "styled-components";
+import CardLabel from "./CardLabel";
 
 const Cardcontainer = styled.div`
   background: #6ca516;
@@ -24,39 +21,19 @@ const CardContent = styled.div`
   grid-template-columns: 50% 50% 1fr;
 `;
 
-const CardLabel = styled.div`
-  grid-column-start: 1;
-  grid-column-end: 4;
-`;
-
 const CardDescription = styled.div`
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
   @media only screen and (max-width: 500px) {
     grid-column-start: 1;
     grid-column-end: 4;
   }
 `;
 
-const CardTimer = styled.div``;
-
-const LabelText = styled.div`
-  background: #5e8a1c;
-  display: inline-block;
-  font-family: Campton-BoldDEMO;
-  font-size: 11px;
-  color: #ffffff;
-  -webkit-letter-spacing: 0.8px;
-  -moz-letter-spacing: 0.8px;
-  -ms-letter-spacing: 0.8px;
-  letter-spacing: 0.8px;
-  height: 15px;
-  padding-top: 6px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border-bottom-right-radius: 4px;
-  border-bottom-left-radius: 4px;
-  margin-left: 40px;
+const CardTimer = styled.div`
+  display: grid;
+  display: grid;
+  align-self: center;
+  justify-self: end;
 `;
 
 const CardDescriptionText = styled.p`
@@ -86,15 +63,7 @@ const DrawAmount = styled.p`
   color: #fafafa;
   letter-spacing: 1.43px;
   margin-top: 0px;
-  margin-left: 24px;
-  margin-bottom: 88px;
-  @media only screen and (max-width: 500px) {
-    font-family: Campton-BoldDEMO;
-    font-size: 25px;
-    color: #fafafa;
-    letter-spacing: 0.89px;
-    margin-bottom: 20px;
-  }
+  margin-bottom: 24px;
 `;
 
 const TimerImg = styled.img`
@@ -127,19 +96,15 @@ const Counter = styled.p`
 
 const CardTimerContainer = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
   float: right;
-  @media only screen and (max-width: 500px) {
-    grid-template-columns: 1fr 50% 50% 50%;
-    justify-items: none;
-    float: none;
-  }
+  margin-right: 24px;
 `;
 
 const HeaderContainer = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 25% 1fr;
 `;
 
 const GirlImg = styled.img``;
@@ -169,53 +134,52 @@ const CashDrawText = styled.div`
   grid-column-end: 4;
 `;
 
-const Share = styled.img`
-  float: right;
+const ImgContainer = styled.div`
+  margin-left: 24px;
+`;
+const DecscritpionContianer = styled.div`
+  margin-left: 24px;
+`;
+const RewardContianer = styled.div`
+  margin-left: 24px;
 `;
 
-class PlayedLottoCard extends Component {
-  render() {
-    return (
-      <Cardlayout>
-        <Cardcontainer>
-          <CardContent>
-            <CardLabel>
-              <LabelText>PLAYED DAILY DRAW</LabelText>
-              <Share src={require("./images/share.svg")} />
-            </CardLabel>
-            <CardDescription>
-              <HeaderContainer>
-                <div>
-                  <GirlImg src={require("./images/Girl.svg")} />
-                </div>
-                <div>
-                  <PlayedHeader>PATIENCE!</PlayedHeader>
-                </div>
-              </HeaderContainer>
-              <div>
-                <CardDescriptionText>
-                  Your dashboard is updated daily so remeber to keep an eye on
-                  it. Click Play to enter the monthly draw
-                </CardDescriptionText>
-                <HashTag>#CashkachingJokes</HashTag>
-              </div>
-              <div>
-                <SubText>You are in the Day Draw for:</SubText>
-                <DrawAmount>N 10 000, 000</DrawAmount>
-              </div>
-            </CardDescription>
-            <CardTimer>
-              <CardTimerContainer>
-                <TimerImg src={require("./images/TimerPatient.svg")} />
-                <Counter>4:30:1</Counter>
-                <CashDrawText>Till cash draw</CashDrawText>
-              </CardTimerContainer>
-            </CardTimer>
-          </CardContent>
-        </Cardcontainer>
-      </Cardlayout>
-    );
-  }
-}
+const PlayedLottoCard = () => (
+  <Cardlayout>
+    <Cardcontainer>
+      <CardContent>
+        <CardLabel />
+        <CardDescription>
+          <HeaderContainer>
+            <ImgContainer>
+              <GirlImg src={require("./images/Girl.svg")} />
+            </ImgContainer>
+            <div>
+              <PlayedHeader>PATIENCE!</PlayedHeader>
+            </div>
+          </HeaderContainer>
+          <DecscritpionContianer>
+            <CardDescriptionText>
+              Your dashboard is updated daily so remeber to keep an eye on it.
+              Click Play to enter the monthly draw
+            </CardDescriptionText>
+            <HashTag>#CashkachingJokes</HashTag>
+          </DecscritpionContianer>
+          <RewardContianer>
+            <SubText>You are in the Day Draw for:</SubText>
+            <DrawAmount>N 10 000, 000</DrawAmount>
+          </RewardContianer>
+        </CardDescription>
+        <CardTimer>
+          <CardTimerContainer>
+            <TimerImg src={require("./images/TimerPatient.svg")} />
+            <Counter>4:30:1</Counter>
+            <CashDrawText>Till cash draw</CashDrawText>
+          </CardTimerContainer>
+        </CardTimer>
+      </CardContent>
+    </Cardcontainer>
+  </Cardlayout>
+);
 
 export default PlayedLottoCard;
