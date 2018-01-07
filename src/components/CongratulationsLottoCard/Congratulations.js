@@ -7,7 +7,6 @@ const P = styled.p`
   font-size: 80px;
   color: #ffffff;
   margin: 0;
-  margin-left: 65px;
 `;
 const Congratulations = () => <P>Congratulations</P>;
 

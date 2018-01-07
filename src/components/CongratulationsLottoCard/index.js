@@ -2,11 +2,12 @@
  *
  * App - Lotto Main
  */
-import React, { Component } from "react";
+import React from "react";
 import styled from "styled-components";
 import Congratulations from "./Congratulations";
 import Profile from "./Profile";
 import AwardDetails from "./AwardDetails";
+import CardLabel from "./CardLabel";
 
 const Cardcontainer = styled.div`
   display: grid;
@@ -25,74 +26,49 @@ const Cardlayout = styled.div`
 
 const CardContent = styled.div`
   display: grid;
-`;
-
-const CardLabel = styled.div`
-  grid-column-start: 1;
-  grid-column-end: 4;
-`;
-
-const LabelText = styled.div`
-  background: #5e8a1c;
-  display: inline-block;
-  font-family: Campton-BoldDEMO;
-  font-size: 11px;
-  color: #ffffff;
-  -webkit-letter-spacing: 0.8px;
-  -moz-letter-spacing: 0.8px;
-  -ms-letter-spacing: 0.8px;
-  letter-spacing: 0.8px;
-  height: 15px;
-  padding-top: 6px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border-bottom-right-radius: 4px;
-  border-bottom-left-radius: 4px;
-  margin-left: 40px;
-`;
-
-const Share = styled.img`
-  float: right;
+  justify-self: center;
+  margin-bottom: 24px;
 `;
 
 const WinnerContainer = styled.div`
   display: grid;
-  grid-template-columns: 25% 50%;
+  grid-template-columns: 25% 75%;
+  grid-row-start: 1;
+  grid-column-start: 1;
+  z-index: 2;
+  margin-top: 85px;
 `;
 
 const ConentContainer = styled.div`
   display: grid;
-  grid-area: sectionthree;
+`;
+const CongratulationsContainer = styled.div`
+  grid-row-start: 1;
+  grid-column-start: 1;
+  z-index: 1;
 `;
 
-class CongratulationsLottoCard extends Component {
-  render() {
-    return (
-      <Cardlayout>
-        <Cardcontainer>
-          <CardContent>
-            <CardLabel>
-              <LabelText>DAILY LOTTO WINNER</LabelText>
-              <Share src={require("./images/share.svg")} />
-            </CardLabel>
-            <ConentContainer>
-              <div>
-                <Congratulations />
-              </div>
-              <WinnerContainer>
-                <div>
-                  <Profile />
-                </div>
-                <div>
-                  <AwardDetails />
-                </div>
-              </WinnerContainer>
-            </ConentContainer>
-          </CardContent>
-        </Cardcontainer>
-      </Cardlayout>
-    );
-  }
-}
+const CongratulationsLottoCard = () => (
+  <Cardlayout>
+    <Cardcontainer>
+      <CardLabel />
+      <CardContent>
+        <ConentContainer>
+          <CongratulationsContainer>
+            <Congratulations />
+          </CongratulationsContainer>
+          <WinnerContainer>
+            <div>
+              <Profile />
+            </div>
+            <div>
+              <AwardDetails />
+            </div>
+          </WinnerContainer>
+        </ConentContainer>
+      </CardContent>
+    </Cardcontainer>
+  </Cardlayout>
+);
 
 export default CongratulationsLottoCard;

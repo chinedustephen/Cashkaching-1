@@ -19,12 +19,14 @@ const SubText = styled.p`
 const FirstContainer = styled.div`
   grid-row-start: 1;
   grid-column-start: 1;
+  justify-self: center;
 `;
 const SecondContainer = styled.div`
   grid-row-start: 1;
   z-index: 1;
   grid-column-start: 1;
   padding-left: 147px;
+  margin-top: 33px;
 `;
 
 const AwardDetails = () => (
