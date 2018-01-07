@@ -18,6 +18,9 @@ const Cardlayout = styled.div`
 
 const CardContent = styled.div`
   display: grid;
+  margin-left: 24px;
+  margin-right: 24px;
+  margin-bottom: 24px;
 `;
 
 const BonusTextInfo = styled.p`
@@ -26,6 +29,13 @@ const BonusTextInfo = styled.p`
   color: #ffffff;
   letter-spacing: 0;
   line-height: 21px;
+  margin: 0px;
+`;
+
+const TextInfoContainer = styled.div`
+  margin-top: 31px;
+  margin-bottom: 16px;
+  width: 378px;
 `;
 
 const NumbersSent = styled.p`
@@ -34,10 +44,12 @@ const NumbersSent = styled.p`
   color: #ffffff;
   letter-spacing: 0;
   line-height: 25px;
+  width: 478px;
 `;
 const Numbers = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  margin-bottom: 25px;
 `;
 const NumberBubble = styled.div`
   display: grid;
@@ -52,6 +64,8 @@ const LottoNumber = styled.div`
   justify-self: center;
   align-self: center;
   grid-column-start: 1;
+  margin-left: 10px;
+  margin-top: 9px;
 `;
 
 const NumberText = styled.p`
@@ -79,48 +93,89 @@ const GotIt = styled.button`
   letter-spacing: 0.87px;
   border: none;
   border-bottom: 2px solid #eee6e6;
+  width: 120px;
+  height: 41px;
 `;
 
-class NumberConfirmationCard extends Component {
-  render() {
-    return (
-      <Cardlayout>
-        <Cardcontainer>
-          <CardContent>
-            <div>
-              <BonusTextInfo>
-                Well played N20 bonus points for playing. Fingers crossed.
-              </BonusTextInfo>
-            </div>
-            <div>
-              <NumbersSent>
-                These are your numbers we will send you an email for your own
-                records
-              </NumbersSent>
-            </div>
-            <Numbers>
-              <div>
-                <NumberBubble>
-                  <NumberImg src={require("./images/NumberImg.svg")} />
-                  <LottoNumber>
-                    <NumberText>1</NumberText>
-                  </LottoNumber>
-                </NumberBubble>
-              </div>
-              <div>2</div>
-              <div>3</div>
-              <div>4</div>
-              <div>5</div>
-              <div>6</div>
-            </Numbers>
-            <div>
-              <GotIt>Play</GotIt>
-            </div>
-          </CardContent>
-        </Cardcontainer>
-      </Cardlayout>
-    );
-  }
-}
+const ButtonContianer = styled.div`
+  justify-self: end;
+  margin-right: 23px;
+`;
+const Sentcontianer = styled.div`
+  margin-bottom: 24px;
+`;
+
+const NumberConfirmationCard = () => (
+  <Cardlayout>
+    <Cardcontainer>
+      <CardContent>
+        <TextInfoContainer>
+          <BonusTextInfo>
+            Well played N20 bonus points for playing. Fingers crossed.
+          </BonusTextInfo>
+        </TextInfoContainer>
+        <Sentcontianer>
+          <NumbersSent>
+            These are your numbers we will send you an email for your own
+            records
+          </NumbersSent>
+        </Sentcontianer>
+        <Numbers>
+          <div>
+            <NumberBubble>
+              <NumberImg src={require("./images/NumberImg.svg")} />
+              <LottoNumber>
+                <NumberText>1</NumberText>
+              </LottoNumber>
+            </NumberBubble>
+          </div>
+          <div>
+            <NumberBubble>
+              <NumberImg src={require("./images/NumberImg.svg")} />
+              <LottoNumber>
+                <NumberText>34</NumberText>
+              </LottoNumber>
+            </NumberBubble>
+          </div>
+          <div>
+            <NumberBubble>
+              <NumberImg src={require("./images/NumberImg.svg")} />
+              <LottoNumber>
+                <NumberText>2</NumberText>
+              </LottoNumber>
+            </NumberBubble>
+          </div>
+          <div>
+            <NumberBubble>
+              <NumberImg src={require("./images/NumberImg.svg")} />
+              <LottoNumber>
+                <NumberText>1</NumberText>
+              </LottoNumber>
+            </NumberBubble>
+          </div>
+          <div>
+            <NumberBubble>
+              <NumberImg src={require("./images/NumberImg.svg")} />
+              <LottoNumber>
+                <NumberText>33</NumberText>
+              </LottoNumber>
+            </NumberBubble>
+          </div>
+          <div>
+            <NumberBubble>
+              <NumberImg src={require("./images/NumberImg.svg")} />
+              <LottoNumber>
+                <NumberText>1</NumberText>
+              </LottoNumber>
+            </NumberBubble>
+          </div>
+        </Numbers>
+        <ButtonContianer>
+          <GotIt>Play</GotIt>
+        </ButtonContianer>
+      </CardContent>
+    </Cardcontainer>
+  </Cardlayout>
+);
 
 export default NumberConfirmationCard;
