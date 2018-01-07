@@ -15,18 +15,16 @@ const CatagoryContainer = styled.div`
   grid-template-columns: 80% 1fr;
   border-bottom: 1px solid #666666;
 `;
-class Activity extends Component {
-  render() {
-    return (
-      <div>
-        <ActivityCard />
-        <CatagoryContainer>
-          <Catagory>History</Catagory>
-        </CatagoryContainer>
-        <History />
-      </div>
-    );
-  }
-}
+
+const Activity = () => (
+  <div>
+    <ActivityCard />
+    <CatagoryContainer>
+      <Catagory>History</Catagory>
+    </CatagoryContainer>
+    <History />
+    <History />
+  </div>
+);
 
 export default Activity;
