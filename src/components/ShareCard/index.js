@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import styled from "styled-components";
 
 const Cardcontainer = styled.div`
@@ -23,6 +23,7 @@ const CardContent = styled.div`
 const ContentContianer = styled.div`
   display: grid;
   grid-template-columns: 50% 50%;
+  margin: 24px;
 `;
 
 const BonusEarnings = styled.p`
@@ -59,6 +60,8 @@ const ShareContainer = styled.div`
   background: #e99c45;
   border: 1px dashed #fafafa;
   border-radius: 4px;
+  width: 254px;
+  padding-left: 25px;
 `;
 const ShareLink = styled.p`
   font-family: Roboto-Regular;
@@ -75,52 +78,93 @@ const Terms = styled.p`
 `;
 
 const ShareImg = styled.img``;
+const BonusPointsContainer = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 30%;
+`;
+const TextContainer = styled.div`
+  align-self: center;
+`;
+const AdBonusText = styled.p`
+  font-family: Campton-ExtraLight;
+  font-size: 13px;
+  color: #ffffff;
+  letter-spacing: 0;
+  line-height: 16px;
+`;
+const BadgeContainer = styled.div`
+  align-self: center;
+  justify-self: end
+  margin-bottom: 4px;
 
-class ShareCard extends Component {
-  render() {
-    return (
-      <Cardlayout>
-        <Cardcontainer>
-          <CardContent>
-            <ContentContianer>
-              <div>
-                <ShareImg src={require("./images/ShareImg.svg")} />
-              </div>
-              <div>
-                <div>
-                  <BonusEarnings>One time share bonus</BonusEarnings>
-                </div>
-                <div>
-                  <Header>Share the fun</Header>
-                </div>
-                <div>
-                  <Txt>
-                    By sharing with your friends you get a one time sharing and
-                    a life time bonus points on any bonus they make.What are you
-                    waiting for, Lets get sharing.
-                  </Txt>
-                </div>
-                <div>
-                  <CopyText>
-                    Copy link below or go share using the links below
-                  </CopyText>
-                  <ShareContainer>
-                    <ShareLink>http://nftletsshare.com/gideon</ShareLink>
-                  </ShareContainer>
-                </div>
-              </div>
-            </ContentContianer>
+`;
+const BonusBadge = styled.div`
+  /* Rectangle 10: */
+  background: #ffffff;
+  border-radius: 4px;
+  height: 21px;
+  display: inline-block;
+  padding: 3px;
+`;
+const BonusFigure = styled.p`
+  font-family: Campton-Medium;
+  font-size: 10px;
+  color: #000000;
+  letter-spacing: 0.13px;
+  margin: 0px;
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+`;
+const ImgContainer = styled.div`
+  justify-self: center;
+  align-self: center;
+`;
+
+const ShareCard = () => (
+  <Cardlayout>
+    <Cardcontainer>
+      <CardContent>
+        <ContentContianer>
+          <ImgContainer>
+            <ShareImg src={require("./images/ShareImg.svg")} />
+          </ImgContainer>
+          <div>
             <div>
-              <div>
-                <Terms>terms conditions</Terms>
-              </div>
-              <div>arrow img</div>
+              <BonusPointsContainer>
+                <TextContainer>
+                  <AdBonusText>One time sharing bonus naira</AdBonusText>
+                </TextContainer>
+                <BadgeContainer>
+                  <BonusBadge>
+                    <BonusFigure>+ N 50</BonusFigure>
+                  </BonusBadge>
+                </BadgeContainer>
+              </BonusPointsContainer>
             </div>
-          </CardContent>
-        </Cardcontainer>
-      </Cardlayout>
-    );
-  }
-}
+            <div>
+              <Header>Share the fun</Header>
+            </div>
+            <div>
+              <Txt>
+                By sharing with your friends you get a one time sharing and a
+                life time bonus points on any bonus they make.What are you
+                waiting for, Lets get sharing.
+              </Txt>
+            </div>
+            <div>
+              <CopyText>
+                Copy link below or go share using the links below
+              </CopyText>
+              <ShareContainer>
+                <ShareLink>http://nftletsshare.com/gideon</ShareLink>
+              </ShareContainer>
+            </div>
+          </div>
+        </ContentContianer>
+      </CardContent>
+    </Cardcontainer>
+  </Cardlayout>
+);
 
 export default ShareCard;
