@@ -19,6 +19,8 @@ const Cardlayout = styled.div`
 const CardContent = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
 `;
 const IconContainer = styled.div`
   width: 72px;
@@ -27,30 +29,53 @@ const IconContainer = styled.div`
   border: 6px solid #c1e190;
   background-color: #6ca516;
 `;
-const Icon = styled.img``;
+const Icon = styled.img`
+  margin-left: 15px;
+  margin-top: 15px;
+`;
 
-class BadgesCard extends Component {
-  render() {
-    return (
-      <Cardlayout>
-        <Cardcontainer>
-          <CardContent>
-            <div>
-              <IconContainer>
-                <Icon src={require("./images/star.svg")} />
-              </IconContainer>
-            </div>
-            <div>2</div>
-            <div>3</div>
-            <div>4</div>
-            <div>5</div>
-            <div>6</div>
-            <div>7</div>
-          </CardContent>
-        </Cardcontainer>
-      </Cardlayout>
-    );
-  }
-}
+const BadgesCard = () => (
+  <Cardlayout>
+    <Cardcontainer>
+      <CardContent>
+        <div>
+          <IconContainer>
+            <Icon src={require("./images/star.svg")} />
+          </IconContainer>
+        </div>
+        <div>
+          <IconContainer>
+            <Icon src={require("./images/star.svg")} />
+          </IconContainer>
+        </div>
+        <div>
+          <IconContainer>
+            <Icon src={require("./images/star.svg")} />
+          </IconContainer>
+        </div>
+        <div>
+          <IconContainer>
+            <Icon src={require("./images/star.svg")} />
+          </IconContainer>
+        </div>
+        <div>
+          <IconContainer>
+            <Icon src={require("./images/star.svg")} />
+          </IconContainer>
+        </div>
+        <div>
+          <IconContainer>
+            <Icon src={require("./images/star.svg")} />
+          </IconContainer>
+        </div>
+        <div>
+          <IconContainer>
+            <Icon src={require("./images/star.svg")} />
+          </IconContainer>
+        </div>
+      </CardContent>
+    </Cardcontainer>
+  </Cardlayout>
+);
 
 export default BadgesCard;
