@@ -8,6 +8,7 @@ const VoucherNav = styled.ul`
   padding: 0;
   overflow: hidden;
   margin-bottom: 10px;
+  margin-top: 24px;
 `;
 
 const ListNavigation = styled.li`
