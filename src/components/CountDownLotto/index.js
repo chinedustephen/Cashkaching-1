@@ -2,8 +2,9 @@
  *
  * App - Lotto Main
  */
-import React, { Component } from "react";
+import React from "react";
 import styled from "styled-components";
+import CardLabel from "./CardLabel";
 
 const Cardcontainer = styled.div`
   display: grid;
@@ -24,42 +25,17 @@ const CardContent = styled.div`
   display: grid;
 `;
 
-const CardLabel = styled.div`
-  grid-column-start: 1;
-  grid-column-end: 4;
-`;
-
-const LabelText = styled.div`
-  background: #5e8a1c;
-  display: inline-block;
-  font-family: Campton-BoldDEMO;
-  font-size: 11px;
-  color: #ffffff;
-  -webkit-letter-spacing: 0.8px;
-  -moz-letter-spacing: 0.8px;
-  -ms-letter-spacing: 0.8px;
-  letter-spacing: 0.8px;
-  height: 15px;
-  padding-top: 6px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border-bottom-right-radius: 4px;
-  border-bottom-left-radius: 4px;
-  margin-left: 40px;
-`;
-
-const Share = styled.img`
-  float: right;
-`;
 const Numbers = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 `;
 const ContentContainer = styled.div`
   display: grid;
-
   grid-column-start: 1;
   grid-column-end: 4;
+  margin-left: 24px;
+  margin-right: 24px;
+  margin-bottom: 24px;
 `;
 
 const TimerTextContainer = styled.div`
@@ -85,6 +61,8 @@ const LottoNumber = styled.div`
   justify-self: center;
   align-self: center;
   grid-column-start: 1;
+  margin-left: 8px;
+  margin-top: 9px;
 `;
 
 const NumberText = styled.p`
@@ -110,10 +88,11 @@ const Figure = styled.p`
   font-size: 40px;
   color: #fafafa;
   letter-spacing: 1.43px;
+  margin: 0px;
 `;
 const TimeImgContainer = styled.div`
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  justify-items: center;
 `;
 const Img = styled.img`
   grid-row-start: 1;
@@ -125,6 +104,7 @@ const TimerText = styled.p`
   font-family: Campton-Book;
   font-size: 24px;
   color: #ffffff;
+  margin-top: 38px;
   grid-row-start: 1;
   grid-column-start: 1;
   z-index: 2;
@@ -134,53 +114,98 @@ const TimerSubHeader = styled.p`
   font-family: Campton-Light;
   font-size: 12px;
   color: #fafafa;
-  grid-row-start: 2;
+  grid-row-start: 1;
+  grid-column-start: 1;
+  margin-top: 116px;
+`;
+const FirstNumber = styled.div``;
+const LastNumber = styled.div`
+  justify-self: end;
+`;
+const NumberContainer = styled.div`
+  justify-self: center;
+`;
+const RewardContianer = styled.div`
+  margin-top: 48px;
+`;
+const TimerContainer = styled.div`
+  justify-self: end;
+  margin-top: 18px;
 `;
 
-class CountDownLottoCard extends Component {
-  render() {
-    return (
-      <Cardlayout>
-        <Cardcontainer>
-          <CardContent>
-            <CardLabel>
-              <LabelText>DAILY LOTTO COUNT DOWN</LabelText>
-              <Share src={require("./images/share.svg")} />
-            </CardLabel>
-            <ContentContainer>
-              <Numbers>
-                <div>
-                  <NumberBubble>
-                    <NumberImg src={require("./images/NumberImg.svg")} />
-                    <LottoNumber>
-                      <NumberText>1</NumberText>
-                    </LottoNumber>
-                  </NumberBubble>
-                </div>
-                <div>2</div>
-                <div>3</div>
-                <div>4</div>
-                <div>5</div>
-                <div>6</div>
-                <div>7</div>
-              </Numbers>
-              <TimerTextContainer>
-                <div>
-                  <TopText>Daily count down</TopText>
-                  <Figure>N 500, 000</Figure>
-                </div>
-                <TimeImgContainer>
-                  <Img src={require("./images/countdowntimer.svg")} />
-                  <TimerText>00:00:00</TimerText>
-                  <TimerSubHeader>Count down</TimerSubHeader>
-                </TimeImgContainer>
-              </TimerTextContainer>
-            </ContentContainer>
-          </CardContent>
-        </Cardcontainer>
-      </Cardlayout>
-    );
-  }
-}
+const CountDownLottoCard = () => (
+  <Cardlayout>
+    <Cardcontainer>
+      <CardContent>
+        <CardLabel />
+        <ContentContainer>
+          <Numbers>
+            <FirstNumber>
+              <NumberBubble>
+                <NumberImg src={require("./images/NumberImg.svg")} />
+                <LottoNumber>
+                  <NumberText>1</NumberText>
+                </LottoNumber>
+              </NumberBubble>
+            </FirstNumber>
+            <NumberContainer>
+              <NumberBubble>
+                <NumberImg src={require("./images/NumberImg.svg")} />
+                <LottoNumber>
+                  <NumberText>23</NumberText>
+                </LottoNumber>
+              </NumberBubble>
+            </NumberContainer>
+            <NumberContainer>
+              <NumberBubble>
+                <NumberImg src={require("./images/NumberImg.svg")} />
+                <LottoNumber>
+                  <NumberText>3</NumberText>
+                </LottoNumber>
+              </NumberBubble>
+            </NumberContainer>
+            <NumberContainer>
+              <NumberBubble>
+                <NumberImg src={require("./images/NumberImg.svg")} />
+                <LottoNumber>
+                  <NumberText>8</NumberText>
+                </LottoNumber>
+              </NumberBubble>
+            </NumberContainer>
+            <NumberContainer>
+              <NumberBubble>
+                <NumberImg src={require("./images/NumberImg.svg")} />
+                <LottoNumber>
+                  <NumberText>55</NumberText>
+                </LottoNumber>
+              </NumberBubble>
+            </NumberContainer>
+            <LastNumber>
+              <NumberBubble>
+                <NumberImg src={require("./images/NumberImg.svg")} />
+                <LottoNumber>
+                  <NumberText>9</NumberText>
+                </LottoNumber>
+              </NumberBubble>
+            </LastNumber>
+          </Numbers>
+          <TimerTextContainer>
+            <RewardContianer>
+              <TopText>Daily count down</TopText>
+              <Figure>N 500, 000</Figure>
+            </RewardContianer>
+            <TimerContainer>
+              <TimeImgContainer>
+                <Img src={require("./images/countdowntimer.svg")} />
+                <TimerText>00:00:00</TimerText>
+                <TimerSubHeader>Count down</TimerSubHeader>
+              </TimeImgContainer>
+            </TimerContainer>
+          </TimerTextContainer>
+        </ContentContainer>
+      </CardContent>
+    </Cardcontainer>
+  </Cardlayout>
+);
 
 export default CountDownLottoCard;

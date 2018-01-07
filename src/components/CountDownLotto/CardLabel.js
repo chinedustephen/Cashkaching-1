@@ -33,7 +33,7 @@ const Share = styled.img`
 
 const CardLabel = () => (
   <CardLabelContainer>
-    <LabelText>COUNT DOWN DAILY DRAW</LabelText>
+    <LabelText>PLAYED DAILY DRAW</LabelText>
     <Share src={require("./images/share.svg")} />
   </CardLabelContainer>
 );

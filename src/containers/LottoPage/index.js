@@ -1,8 +1,4 @@
-/**
- *
- * App - Lotto Main
- */
-import React, { Component } from "react";
+import React from "react";
 import styled from "styled-components";
 import UnlockDrawsCard from "../../components/UnlockDrawsCard";
 import LottoCard from "../../components/LottoCard";
