@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 
 const TimerText = styled.p`
   font-family: Roboto-Medium;
@@ -12,6 +13,17 @@ const TimerText = styled.p`
   grid-row-end: span 1;
 `;
 
-const Linktext = props => <TimerText>{props.text}</TimerText>;
+const LogInLink = styled(NavLink)`
+  color: #9d241e;
+`;
+
+const Linktext = props => (
+  <TimerText>
+    <LogInLink to="/login" exact>
+      {props.login}
+    </LogInLink>
+    {props.text}
+  </TimerText>
+);
 
 export default Linktext;

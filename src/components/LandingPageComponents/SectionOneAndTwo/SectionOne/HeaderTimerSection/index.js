@@ -12,9 +12,10 @@ const TimerLayout = styled.div`
 
 // Timer section conetent object
 const TimerContent = {
-  timerHeader: "header test",
+  timerHeader: "Dont miss the next draw register now",
   time: "40:30",
-  text: "test"
+  login: "Login",
+  text: " if you have already registered"
 };
 
 const HeaderTimerSection = () => (
@@ -22,7 +23,7 @@ const HeaderTimerSection = () => (
     <TimerHeader timerHeader={TimerContent.timerHeader} />
     <TimerHeaderImg />
     <TimerCountDown time={TimerContent.time} />
-    <Linktext text={TimerContent.text} />
+    <Linktext text={TimerContent.text} login={TimerContent.login} />
   </TimerLayout>
 );
 

@@ -29,13 +29,13 @@ const ItemsContainer3 = styled.div`
 
 const CircleContent = {
   Launch: {
-    text: "test 1"
+    text: "PLAY THE LOTTO FOR DRAWS FREE"
   },
   Voucher: {
-    text: "test 2"
+    text: "GET DEAL COUPONS AND MORE FOR FREE"
   },
   Money: {
-    text: "test 3"
+    text: "GET PAID TO ANSWER QUESTIONS AND WATCH VIDEOS"
   }
 };
 
