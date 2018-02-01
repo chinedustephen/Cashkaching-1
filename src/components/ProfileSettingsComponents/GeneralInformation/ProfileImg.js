@@ -5,6 +5,7 @@ import ProImg from "./images/ProImg.png";
 const Container = styled.div`
   display: grid;
   grid-template-columns: 80% 1fr;
+  margin-top: 40px;
 `;
 const ProfileContainer = styled.div`
   display: grid;

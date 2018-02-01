@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const text = styled.p`
+const Text = styled.p`
   opacity: 0.56;
   font-family: Campton-Book;
   font-size: 12px;
@@ -11,9 +11,9 @@ const text = styled.p`
 `;
 const Description = () => (
   <div>
-    <text>
+    <Text>
       Input all your details and recieve full account information bonus
-    </text>
+    </Text>
   </div>
 );
 
