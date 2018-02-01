@@ -15,6 +15,6 @@ const ButtonLanding = styled.button`
   height: 45px;
 `;
 
-const Button = () => <ButtonLanding>{this.props.name}</ButtonLanding>;
+const Button = props => <ButtonLanding>{props.name}</ButtonLanding>;
 
 export default Button;
