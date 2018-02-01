@@ -1,10 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import GeneralInformation from "../../components/ProfileSettingsComponents/GeneralInformation";
+import OtherInformation from "../../components/ProfileSettingsComponents/OtherInformation";
 
 const Settingscontainer = styled.div`
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 48.5% 48.5%;
   grid-column-gap: 19px;
 `;
 const Container = styled.div`
@@ -21,7 +22,9 @@ const Settings = () => (
     <Container>
       <GeneralInformation />
     </Container>
-    <Container>2</Container>
+    <Container>
+      <OtherInformation />
+    </Container>
   </Settingscontainer>
 );
 
