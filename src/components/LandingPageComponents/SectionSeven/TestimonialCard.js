@@ -14,6 +14,7 @@ const Card = styled.div`
 `;
 
 const CardContent = styled.div`
+  display: grid;
   padding-left: 16px;
   padding-right: 16px;
   margin-top: 28px;
@@ -50,6 +51,10 @@ const Name = styled.p`
   font-size: 16px;
   color: #000000;
   letter-spacing: 1.16px;
+  align-self: end;
+`;
+const NameContainer = styled.div`
+  display: grid;
 `;
 
 const TestimonialCard = props => (
@@ -63,9 +68,9 @@ const TestimonialCard = props => (
       <div>
         <TestimonialQuote>{props.usertestimonial}</TestimonialQuote>
       </div>
-      <div>
+      <NameContainer>
         <Name>{props.username}</Name>
-      </div>
+      </NameContainer>
     </CardContent>
   </Card>
 );

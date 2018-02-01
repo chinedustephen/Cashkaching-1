@@ -32,26 +32,27 @@ const End = styled.div`
 const SectionSeven = () => (
   <Container>
     <SectionSevenContainer>
-      <SectionHeader header="test" />
+      <SectionHeader header="Our recent winners" />
       <TestimonialContainer>
         <div>
           <TestimonialCard
-            amount="2"
-            usertestimonial="testmonial"
+            amount="100 000"
+            usertestimonial="happy that this actually happened"
             username="Gideon"
           />
         </div>
         <Middle>
           <TestimonialCard
-            amount="2"
-            usertestimonial="testmonial"
-            username="Gideon"
+            amount="50 000"
+            usertestimonial="that moment when you second guessing then you end up winning.
+             Im actually enjoying this"
+            username="Taku"
           />
         </Middle>
         <End>
           <TestimonialCard
-            amount="2"
-            usertestimonial="testmonial"
+            amount="200 000"
+            usertestimonial="Winning winning thats all i can say"
             username="Gideon"
           />
         </End>
