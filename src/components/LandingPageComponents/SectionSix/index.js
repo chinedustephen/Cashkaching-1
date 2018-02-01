@@ -24,14 +24,14 @@ const AwardContainer = styled.div`
   margin-bottom: 117px;
 `;
 
-const SectionSix = () => (
+const SectionSix = props => (
   <Container>
     <SectionThreeContainer>
       <Header sectionheader="This months winner" />
       <Congratulations />
       <AwardContainer>
         <Profile />
-        <AwardDetails />
+        <AwardDetails comment={props.comment} name={props.name} />
       </AwardContainer>
     </SectionThreeContainer>
   </Container>

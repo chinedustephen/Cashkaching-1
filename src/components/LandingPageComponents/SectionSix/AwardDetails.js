@@ -40,7 +40,7 @@ const AwardDetails = props => (
       <SecondContainer>
         <SubText>{props.subWinnerText}</SubText>
         <Amount reward="100 000" />
-        <Testimonial comment="comment" user="Gideon" />
+        <Testimonial comment={props.comment} user={props.name} />
       </SecondContainer>
     </Container>
   </Award>
