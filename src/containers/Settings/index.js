@@ -7,6 +7,7 @@ const Settingscontainer = styled.div`
   display: grid;
   grid-template-columns: 48.5% 48.5%;
   grid-column-gap: 19px;
+  margin-top: 28px;
 `;
 const Container = styled.div`
   background-color: red;

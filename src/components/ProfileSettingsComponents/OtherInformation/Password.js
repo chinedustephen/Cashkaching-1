@@ -8,6 +8,7 @@ import Arrow from "./images/arrow.svg";
 const Container = styled.div`
   display: grid;
   grid-template-columns: 1fr 60% 1fr;
+  margin-top: 28px;
 `;
 
 const PointContainer = styled.div`
@@ -39,6 +40,7 @@ const ArrrowImg = styled.img``;
 const ArrowContainer = styled.div`
   display: grid;
   align-items: center;
+  justify-items: end;
 `;
 
 const Password = () => (
