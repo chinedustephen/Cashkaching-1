@@ -6,6 +6,7 @@ module.exports = {
     quotes: 0,
     "react/prop-types": 0,
     "comma-dangle": 0,
+    "object-curly-newline": 0,
     "arrow-parens": 0
   },
   globals: {
