@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import Prof from "./images/Prof.png";
+//import Prof from "./images/Prof.png";
 
-const ProfileImg = styled.div`
+const ProfileImg = styled.img`
   border-radius: 50%;
   width: 288px;
   height: 288px;
@@ -12,7 +12,6 @@ const ProfileImg = styled.div`
   z-index: 2;
   justify-self: end;
   align-self: end;
-  background-image: url(${Prof});
 `;
 const Container = styled.div`
   display: grid;
@@ -34,11 +33,11 @@ const ProfileCirlce = styled.div`
 `;
 const ProfileImageContainer = styled.div``;
 
-const Profile = () => (
+const Profile = props => (
   <ProfileImageContainer>
     <Container>
       <ProfileCirlce />
-      <ProfileImg />
+      <ProfileImg src={props.recentWinnerImg} />
     </Container>
   </ProfileImageContainer>
 );

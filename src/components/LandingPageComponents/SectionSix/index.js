@@ -30,7 +30,7 @@ const SectionSix = props => (
       <Header sectionheader="This months winner" />
       <Congratulations />
       <AwardContainer>
-        <Profile />
+        <Profile recentWinnerImg={props.recentWinnerImg} />
         <AwardDetails comment={props.comment} name={props.name} />
       </AwardContainer>
     </SectionThreeContainer>

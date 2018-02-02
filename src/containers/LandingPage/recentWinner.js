@@ -20,12 +20,16 @@ class RecentWinner extends Component {
 
   render() {
     const { recentWinner } = this.state;
-
+    console.log(recentWinner);
     return (
       <div>
         {recentWinner.map((winner, index) => (
           <div key={index}>
-            <SectionSix comment={winner.testimonials} name={winner.name} />
+            <SectionSix
+              recentWinnerImg={winner.image}
+              comment={winner.testimonials}
+              name={winner.name}
+            />
           </div>
         ))}
       </div>
