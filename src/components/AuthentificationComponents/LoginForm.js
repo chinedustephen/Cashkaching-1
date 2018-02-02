@@ -98,7 +98,7 @@ const LoginForm = ({ onSubmit, onChange, errors, user }) => (
           />
           <TextField
             hintText="Confirm your password"
-            loatingLabelText="Password"
+            floatingLabelText="Password"
             type="password"
             name="password"
             onChange={onChange}
