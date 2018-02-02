@@ -1,108 +1,70 @@
 import React from "react";
-import styled from "styled-components";
-import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
-import TextField from "material-ui/TextField";
-import BrandLogo from "../../components/BrandImg";
-import Button from "../../components/Buttons/Button";
-import Logo from "../../components/Icons/Cancel.svg";
+import PropTypes from "prop-types";
+import RegisterForm from "../../components/AuthentificationComponents/EmailRegistration";
 
-const AuthenticationContianer = styled.div`
-  display: grid;
+class EmailRegisterPage extends React.Component {
+  /**
+   * Class constructor.
+   */
+  constructor(props) {
+    super(props);
 
-  justify-items: center;
-  background-color: #6ca516;
-  min-height: 768px;
-  max-height: auto;
-`;
+    // set the initial component state
+    this.state = {
+      errors: {},
+      user: {
+        email: "",
+        name: "",
+        password: ""
+      }
+    };
 
-const Header = styled.p`
-  font-family: Campton-Bold;
-  font-size: 24px;
-  color: #ffffff;
-`;
+    this.processForm = this.processForm.bind(this);
+    this.changeUser = this.changeUser.bind(this);
+  }
 
-const BrandContianer = styled.div`
-  align-self: end;
-`;
+  /**
+   * Change the user object.
+   *
+   * @param {object} event - the JavaScript event object
+   */
+  changeUser(event) {
+    const field = event.target.name;
+    const user = this.state.user;
+    user[field] = event.target.value;
 
-const CancelContainer = styled.div`
-  display: grid;
-  justify-self: left;
-  align-self: center;
-  margin-left: 100px;
-`;
-const Cancel = styled.div``;
-const CancelImg = styled.img``;
-const FormControl = styled.div`
-  display: grid;
-  justify-items: center;
-`;
+    this.setState({
+      user
+    });
+  }
 
-const SubFormText = styled.p`
-  font-family: Campton-Book;
-  font-size: 13px;
-  color: #ffffff;
-  letter-spacing: 0;
-  text-align: center;
-`;
+  /**
+   * Process the form.
+   *
+   * @param {object} event - the JavaScript event object
+   */
+  processForm(event) {
+    // prevent default action. in this case, action is the form submission event
+    event.preventDefault();
 
-const EmailRegisterPage = () => (
-  <MuiThemeProvider>
-    <AuthenticationContianer>
-      <CancelContainer>
-        <Cancel>
-          <CancelImg src={Logo} />
-        </Cancel>
-      </CancelContainer>
-      <BrandContianer>
-        <BrandLogo />
-      </BrandContianer>
-      <div>
-        <Header>Register</Header>
-      </div>
-      <FormControl>
-        <TextField
-          hintText="Confirm your password"
-          hintStyle={{ fontFamily: "Campton-Book" }}
-          floatingLabelText="Confirm password"
-          floatingLabelStyle={{
-            fontFamily: "Campton-Book",
-            fontSize: "12px",
-            color: "#ffffff"
-          }}
-          inputStyle={{
-            fontFamily: "Campton-Medium",
-            color: "#ffffff",
-            fontSize: "16px"
-          }}
-          underlineFocusStyle={{ borderColor: "#ffffff" }}
-        />
-        <TextField
-          hintText="Type your Email"
-          hintStyle={{ fontFamily: "Campton-Book" }}
-          floatingLabelText="Email address"
-          floatingLabelStyle={{
-            fontFamily: "Campton-Book",
-            fontSize: "12px",
-            color: "#ffffff"
-          }}
-          inputStyle={{
-            fontFamily: "Campton-Medium",
-            color: "#ffffff",
-            fontSize: "16px"
-          }}
-          underlineFocusStyle={{ borderColor: "#ffffff" }}
-        />
-      </FormControl>
-      <div>
-        <Button name="REGISTER" />
-      </div>
-      <div>
-        <SubFormText>
-          Aready registered? <span>login here</span>
-        </SubFormText>
-      </div>
-    </AuthenticationContianer>
-  </MuiThemeProvider>
-);
+    console.log("name:", this.state.user.name);
+    console.log("email:", this.state.user.email);
+    console.log("password:", this.state.user.password);
+  }
+
+  /**
+   * Render the component.
+   */
+  render() {
+    return (
+      <RegisterForm
+        onSubmit={this.processForm}
+        onChange={this.changeUser}
+        errors={this.state.errors}
+        user={this.state.user}
+      />
+    );
+  }
+}
+
 export default EmailRegisterPage;

@@ -1,7 +1,8 @@
-import React, { Component } from "react";
+import React from "react";
 import styled from "styled-components";
 import ProfileBk from "./images/ProfileBk.png";
 import ProImg from "./images/ProImg.png";
+import DaimondImg from "./images/diamond.svg";
 
 const Cardcontainer = styled.div`
   display: grid;
@@ -167,7 +168,7 @@ const ProfileMainCard = () => (
         <ProfileDetails>
           <RankContianer>
             <Rank>Diamond Rank</Rank>
-            <RankImg src={require("./images/diamond.svg")} />
+            <RankImg src={DaimondImg} />
           </RankContianer>
           <Subheader>READY CASHOUT MONEY</Subheader>
           <CashOutAmount>N 100 000</CashOutAmount>

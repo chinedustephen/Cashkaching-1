@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import styled from "styled-components";
 import ActivityCard from "../../components/ActivityCard";
 import History from "../../components/History";

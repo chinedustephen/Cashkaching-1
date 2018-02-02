@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import TextField from "material-ui/TextField";
 import BrandLogo from "../BrandImg";
@@ -67,7 +67,7 @@ const HintStyle = {
   fontFamily: "Campton-Book"
 };
 
-const RegisterForm = ({ onSubmit, onChange, errors, user }) => (
+const LoginForm = ({ onSubmit, onChange, errors, user }) => (
   <MuiThemeProvider>
     <AuthenticationContianer>
       <CancelContainer>
@@ -86,18 +86,6 @@ const RegisterForm = ({ onSubmit, onChange, errors, user }) => (
           {errors.summary && <p className="error-message">{errors.summary}</p>}
           <TextField
             hintText="Confirm your password"
-            floatingLabelText="Name"
-            name="name"
-            errorText={errors.name}
-            onChange={onChange}
-            value={user.name}
-            hintStyle={HintStyle}
-            floatingLabelStyle={LabelStyle}
-            inputStyle={InputStyle}
-            underlineFocusStyle={UnderlineFocusStyle}
-          />
-          <TextField
-            hintText="Confirm your password"
             floatingLabelText="Email"
             name="email"
             errorText={errors.email}
@@ -110,7 +98,7 @@ const RegisterForm = ({ onSubmit, onChange, errors, user }) => (
           />
           <TextField
             hintText="Confirm your password"
-            floatingLabelText="Password"
+            loatingLabelText="Password"
             type="password"
             name="password"
             onChange={onChange}
@@ -127,7 +115,7 @@ const RegisterForm = ({ onSubmit, onChange, errors, user }) => (
         </div>
         <div>
           <SubFormText>
-            Aready registered? <Link to={"/login"}>Log in</Link>
+            Dont have account? <Link to={"/register"}>Register here</Link>
           </SubFormText>
         </div>
       </form>
@@ -135,11 +123,11 @@ const RegisterForm = ({ onSubmit, onChange, errors, user }) => (
   </MuiThemeProvider>
 );
 
-RegisterForm.propTypes = {
+LoginForm.propTypes = {
   onSubmit: PropTypes.func.isRequired,
   onChange: PropTypes.func.isRequired,
   errors: PropTypes.object.isRequired,
   user: PropTypes.object.isRequired
 };
 
-export default RegisterForm;
+export default LoginForm;

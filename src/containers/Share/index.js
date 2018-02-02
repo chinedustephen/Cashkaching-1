@@ -1,16 +1,10 @@
-import React, { Component } from "react";
-import styled from "styled-components";
+import React from "react";
 import ShareCard from "../../components/ShareCard";
 
-class ShareCardPage extends Component {
-  render() {
-    return (
-      <div>
-        <ShareCard />
-      </div>
-    );
-  }
-}
+const ShareCardPage = () => (
+  <div>
+    <ShareCard />
+  </div>
+);
 
 export default ShareCardPage;
-

@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import SharedImg from "./images/ShareImg.svg";
 
 const Cardcontainer = styled.div`
   display: grid;
@@ -26,14 +27,6 @@ const ContentContianer = styled.div`
   margin: 24px;
 `;
 
-const BonusEarnings = styled.p`
-  /* One time sharing bon: */
-  font-family: Campton-Light;
-  font-size: 16px;
-  color: #ffffff;
-  letter-spacing: 0;
-  line-height: 21px;
-`;
 const Header = styled.p`
   /* SHARE THE FUN: */
   font-family: Campton-Bold;
@@ -68,13 +61,6 @@ const ShareLink = styled.p`
   font-size: 12px;
   color: #fafafa;
   letter-spacing: 0.16px;
-`;
-
-const Terms = styled.p`
-  font-family: Campton-light;
-  font-size: 12px;
-  color: #ffffff;
-  line-height: 24px;
 `;
 
 const ShareImg = styled.img``;
@@ -127,7 +113,7 @@ const ShareCard = () => (
       <CardContent>
         <ContentContianer>
           <ImgContainer>
-            <ShareImg src={require("./images/ShareImg.svg")} />
+            <ShareImg src={SharedImg} />
           </ImgContainer>
           <div>
             <div>

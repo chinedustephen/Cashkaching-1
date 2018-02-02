@@ -1,15 +1,10 @@
-import React, { Component } from "react";
-import styled from "styled-components";
+import React from "react";
 import ProfileMainCard from "../../components/ProfileMainCard";
 
-class ProfileMain extends Component {
-  render() {
-    return (
-      <div>
-        <ProfileMainCard />
-      </div>
-    );
-  }
-}
+const ProfileMain = () => (
+  <div>
+    <ProfileMainCard />
+  </div>
+);
 
 export default ProfileMain;

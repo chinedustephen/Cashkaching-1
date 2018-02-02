@@ -1,10 +1,5 @@
-/**
- *
- * App - Lotto Main
- */
-import React, { Component } from "react";
+import React from "react";
 import styled from "styled-components";
-import Ad from "./images/AdImg.png";
 
 const Cardcontainer = styled.div`
   background: #6ca516;
