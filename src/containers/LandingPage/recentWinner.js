@@ -11,9 +11,10 @@ class RecentWinner extends Component {
   componentDidMount() {
     this.getRecentWinner();
   }
+
   getRecentWinner() {
     getRecentWinnerData().then(recentWinner => {
-      this.setState({ recentWinner });
+      this.setState(recentWinner);
     });
   }
 
@@ -22,7 +23,11 @@ class RecentWinner extends Component {
 
     return (
       <div>
-        <SectionSix comment="this is what i am saying" name="Gideon" />
+        {recentWinner.map((winner, index) => (
+          <div key={index}>
+            <SectionSix comment={winner.testimonials} name={winner.name} />
+          </div>
+        ))}
       </div>
     );
   }
