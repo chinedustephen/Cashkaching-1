@@ -6,7 +6,7 @@ import RegisterPage from "../RegisterPage";
 import LoginPage from "../LoginPage";
 import ForgotPasswordPage from "../ForgotPasswordPage";
 import EmailLoginPage from "../EmailLogin";
-import EmailRegisterPage from "../EmailRegister";
+import RegisterForm from "../../components/AuthentificationComponents/EmailRegistration";
 
 const PersonalAccountAppRoutes = () => (
   <Router>
@@ -15,7 +15,7 @@ const PersonalAccountAppRoutes = () => (
       <Route path="/register" component={RegisterPage} />
       <Route path="/login" component={LoginPage} />
       <Route path="/emaillogin" component={EmailLoginPage} />
-      <Route path="/emailregister" component={EmailRegisterPage} />
+      <Route path="/emailregister" component={RegisterForm} />
       <Route path="/forgotpassword" component={ForgotPasswordPage} />
       <Route path="/personalaccount" component={PersonalAccount} />
     </div>
