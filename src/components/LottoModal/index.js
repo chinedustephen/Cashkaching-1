@@ -29,7 +29,7 @@ const Cardcontainer = styled.div`
   border-bottom: 8px solid #5e8a1c;
   box-shadow: 0 9px 16px 0 rgba(5, 2, 7, 0.35);
   width: 736px;
-  height: 346px;
+  height: auto;
   justify-self: center;
 `;
 /**const Cardlayout = styled.div`

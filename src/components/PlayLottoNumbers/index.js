@@ -1,20 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 
-const Cardcontainer = styled.div`
-  display: grid;
-  background: #6ca516;
-  border-radius: 4px;
-  border-bottom: 8px solid #5e8a1c;
-  box-shadow: 0 9px 16px 0 rgba(5, 2, 7, 0.35);
-`;
-const Cardlayout = styled.div`
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-row-gap: 1em;
-  margin-top: 28px;
-`;
-
 const CardContent = styled.div`
   display: grid;
   display: grid;
@@ -143,96 +129,92 @@ const ButtonContainerPlay = styled.div`
   justify-self: end;
 `;
 
-const PlayLottoNumbers = () => (
-  <Cardlayout>
-    <Cardcontainer>
-      <CardContent>
-        <CardLabel>
-          <LabelText>DAILY DRAW</LabelText>
-        </CardLabel>
-        <ConentContainer>
-          <div>
-            <NumberInputContainer>
-              <SubNumberText>
-                Select your numbers and play simple right?
-              </SubNumberText>
-              <NumbersContainer>
-                <LottoNumberContainer>
-                  <Numbers>34</Numbers>
-                </LottoNumberContainer>
-                <LottoNumberContainer>
-                  <Numbers>4</Numbers>
-                </LottoNumberContainer>
-                <LottoNumberContainer>
-                  <Numbers>14</Numbers>
-                </LottoNumberContainer>
-                <LottoNumberContainer>
-                  <Numbers>44</Numbers>
-                </LottoNumberContainer>
-                <LottoNumberContainer>
-                  <Numbers>84</Numbers>
-                </LottoNumberContainer>
-                <LottoNumberContainer>
-                  <Numbers>9</Numbers>
-                </LottoNumberContainer>
-                <RefreshContainer>
-                  <Refresh src={require("./images/refresh.svg")} />
-                </RefreshContainer>
-              </NumbersContainer>
-              <ButtonContainer>
-                <Clear>Clear</Clear>
-              </ButtonContainer>
-            </NumberInputContainer>
-            <NumberButtonsContainer>
-              <NumberButton>1</NumberButton>
-              <NumberButton>2</NumberButton>
-              <NumberButton>3</NumberButton>
-              <NumberButton>4</NumberButton>
-              <NumberButton>5</NumberButton>
-              <NumberButton>6</NumberButton>
-              <NumberButton>7</NumberButton>
-              <NumberButton>8</NumberButton>
-              <NumberButton>9</NumberButton>
-              <NumberButton>10</NumberButton>
-              <NumberButton>1</NumberButton>
-              <NumberButton>2</NumberButton>
-              <NumberButton>3</NumberButton>
-              <NumberButton>4</NumberButton>
-              <NumberButton>5</NumberButton>
-              <NumberButton>6</NumberButton>
-              <NumberButton>7</NumberButton>
-              <NumberButton>8</NumberButton>
-              <NumberButton>9</NumberButton>
-              <NumberButton>10</NumberButton>
-              <NumberButton>1</NumberButton>
-              <NumberButton>2</NumberButton>
-              <NumberButton>3</NumberButton>
-              <NumberButton>4</NumberButton>
-              <NumberButton>5</NumberButton>
-              <NumberButton>6</NumberButton>
-              <NumberButton>7</NumberButton>
-              <NumberButton>8</NumberButton>
-              <NumberButton>9</NumberButton>
-              <NumberButton>10</NumberButton>
-              <NumberButton>1</NumberButton>
-              <NumberButton>2</NumberButton>
-              <NumberButton>3</NumberButton>
-              <NumberButton>4</NumberButton>
-              <NumberButton>5</NumberButton>
-              <NumberButton>6</NumberButton>
-              <NumberButton>7</NumberButton>
-              <NumberButton>8</NumberButton>
-              <NumberButton>9</NumberButton>
-              <NumberButton>10</NumberButton>
-            </NumberButtonsContainer>
-          </div>
-          <ButtonContainerPlay>
-            <Play>Play</Play>
-          </ButtonContainerPlay>
-        </ConentContainer>
-      </CardContent>
-    </Cardcontainer>
-  </Cardlayout>
+const PlayLottoNumbers = ({ onClick }) => (
+  <CardContent>
+    <CardLabel>
+      <LabelText>DAILY DRAW</LabelText>
+    </CardLabel>
+    <ConentContainer>
+      <div>
+        <NumberInputContainer>
+          <SubNumberText>
+            Select your numbers and play simple right?
+          </SubNumberText>
+          <NumbersContainer>
+            <LottoNumberContainer>
+              <Numbers>34</Numbers>
+            </LottoNumberContainer>
+            <LottoNumberContainer>
+              <Numbers>4</Numbers>
+            </LottoNumberContainer>
+            <LottoNumberContainer>
+              <Numbers>14</Numbers>
+            </LottoNumberContainer>
+            <LottoNumberContainer>
+              <Numbers>44</Numbers>
+            </LottoNumberContainer>
+            <LottoNumberContainer>
+              <Numbers>84</Numbers>
+            </LottoNumberContainer>
+            <LottoNumberContainer>
+              <Numbers>9</Numbers>
+            </LottoNumberContainer>
+            <RefreshContainer>
+              <Refresh src={require("./images/refresh.svg")} />
+            </RefreshContainer>
+          </NumbersContainer>
+          <ButtonContainer>
+            <Clear>Clear</Clear>
+          </ButtonContainer>
+        </NumberInputContainer>
+        <NumberButtonsContainer>
+          <NumberButton>1</NumberButton>
+          <NumberButton>2</NumberButton>
+          <NumberButton>3</NumberButton>
+          <NumberButton>4</NumberButton>
+          <NumberButton>5</NumberButton>
+          <NumberButton>6</NumberButton>
+          <NumberButton>7</NumberButton>
+          <NumberButton>8</NumberButton>
+          <NumberButton>9</NumberButton>
+          <NumberButton>10</NumberButton>
+          <NumberButton>1</NumberButton>
+          <NumberButton>2</NumberButton>
+          <NumberButton>3</NumberButton>
+          <NumberButton>4</NumberButton>
+          <NumberButton>5</NumberButton>
+          <NumberButton>6</NumberButton>
+          <NumberButton>7</NumberButton>
+          <NumberButton>8</NumberButton>
+          <NumberButton>9</NumberButton>
+          <NumberButton>10</NumberButton>
+          <NumberButton>1</NumberButton>
+          <NumberButton>2</NumberButton>
+          <NumberButton>3</NumberButton>
+          <NumberButton>4</NumberButton>
+          <NumberButton>5</NumberButton>
+          <NumberButton>6</NumberButton>
+          <NumberButton>7</NumberButton>
+          <NumberButton>8</NumberButton>
+          <NumberButton>9</NumberButton>
+          <NumberButton>10</NumberButton>
+          <NumberButton>1</NumberButton>
+          <NumberButton>2</NumberButton>
+          <NumberButton>3</NumberButton>
+          <NumberButton>4</NumberButton>
+          <NumberButton>5</NumberButton>
+          <NumberButton>6</NumberButton>
+          <NumberButton>7</NumberButton>
+          <NumberButton>8</NumberButton>
+          <NumberButton>9</NumberButton>
+          <NumberButton>10</NumberButton>
+        </NumberButtonsContainer>
+      </div>
+      <ButtonContainerPlay>
+        <Play onClick={onClick}>Play</Play>
+      </ButtonContainerPlay>
+    </ConentContainer>
+  </CardContent>
 );
 
 export default PlayLottoNumbers;

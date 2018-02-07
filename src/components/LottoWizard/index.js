@@ -1,6 +1,7 @@
 import React from "react";
 import { Wizard, Steps, Step } from "react-albus";
 import AdvertCard from "../AdvertCard";
+import PlayLottoNumbers from "../PlayLottoNumbers";
 
 const LottoWizard = () => (
   <Wizard>
@@ -17,8 +18,7 @@ const LottoWizard = () => (
         id="gandalf"
         render={({ next, previous }) => (
           <div>
-            <h1>Lotto input / send / change state to next/ validation</h1>
-            <button onClick={next}>Next</button>
+            <PlayLottoNumbers onClick={next} />
           </div>
         )}
       />
