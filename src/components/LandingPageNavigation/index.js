@@ -51,33 +51,29 @@ const LandingNavLink = styled(NavLink)`
   }
 `;
 
-class LandingPageNavigation extends Component {
-  render() {
-    return (
-      <div>
-        <Nav>
-          <BrandImg src={require("./images/logo.svg")} />
-          <ListNavigation>
-            <LandingNavLink to="/personalaccount" exact>
-              Login
-            </LandingNavLink>
-          </ListNavigation>
-          <ListNavigation>
-            <Tablinks>Blog</Tablinks>
-          </ListNavigation>
-          <ListNavigation>
-            <Tablinks>How it works</Tablinks>
-          </ListNavigation>
-          <ListNavigation>
-            <Tablinks>For business</Tablinks>
-          </ListNavigation>
-          <ListNavigation>
-            <Tablinks>How it works</Tablinks>
-          </ListNavigation>
-        </Nav>
-      </div>
-    );
-  }
-}
+const LandingPageNavigation = () => (
+  <div>
+    <Nav>
+      <BrandImg src={require("./images/logo.svg")} />
+      <ListNavigation>
+        <LandingNavLink to="/login" exact>
+          Login
+        </LandingNavLink>
+      </ListNavigation>
+      <ListNavigation>
+        <Tablinks>Blog</Tablinks>
+      </ListNavigation>
+      <ListNavigation>
+        <Tablinks>How it works</Tablinks>
+      </ListNavigation>
+      <ListNavigation>
+        <Tablinks>For business</Tablinks>
+      </ListNavigation>
+      <ListNavigation>
+        <Tablinks>How it works</Tablinks>
+      </ListNavigation>
+    </Nav>
+  </div>
+);
 
 export default LandingPageNavigation;

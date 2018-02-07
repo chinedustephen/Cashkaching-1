@@ -72,7 +72,9 @@ const RegisterForm = ({ onSubmit, onChange, errors, user }) => (
     <AuthenticationContianer>
       <CancelContainer>
         <Cancel>
-          <CancelImg src={Logo} />
+          <a href="/register">
+            <CancelImg src={Logo} />
+          </a>
         </Cancel>
       </CancelContainer>
       <BrandContianer>
@@ -123,7 +125,9 @@ const RegisterForm = ({ onSubmit, onChange, errors, user }) => (
           />
         </FormControl>
         <div>
-          <Button type="submit" name="REGISTER" />
+          <Link to="/personalaccount">
+            <Button type="submit" name="REGISTER" />
+          </Link>
         </div>
         <div>
           <SubFormText>

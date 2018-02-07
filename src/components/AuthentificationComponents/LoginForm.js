@@ -72,7 +72,9 @@ const LoginForm = ({ onSubmit, onChange, errors, user }) => (
     <AuthenticationContianer>
       <CancelContainer>
         <Cancel>
-          <CancelImg src={Logo} />
+          <a href="/login">
+            <CancelImg src={Logo} />
+          </a>
         </Cancel>
       </CancelContainer>
       <BrandContianer>
@@ -111,7 +113,9 @@ const LoginForm = ({ onSubmit, onChange, errors, user }) => (
           />
         </FormControl>
         <div>
-          <Button type="submit" name="REGISTER" />
+          <Link to="/personalaccount">
+            <Button type="submit" name="REGISTER" />
+          </Link>
         </div>
         <div>
           <SubFormText>

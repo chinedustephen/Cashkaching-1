@@ -1,5 +1,6 @@
-import React, { Component } from "react";
+import React from "react";
 import styled, { css } from "styled-components";
+import { Link } from "react-router-dom";
 import BrandLogo from "../../components/BrandImg";
 
 const AuthenticationContianer = styled.div`
@@ -90,46 +91,46 @@ const CancelContainer = styled.div`
 const Cancel = styled.div``;
 const CancelImg = styled.img``;
 
-class RegisterPage extends Component {
-  render() {
-    return (
-      <AuthenticationContianer>
-        <CancelContainer>
-          <Cancel>
-            <CancelImg src={require("../../components/Icons/Cancel.svg")} />
-          </Cancel>
-        </CancelContainer>
-        <BrandContianer>
-          <BrandLogo />
-        </BrandContianer>
-        <div>
-          <Header>LogIn</Header>
-        </div>
-        <ButtonContainer>
-          <ButtonLanding primary>
-            <Icon src={require("../../components/Icons/Mail.svg")} />
-            <MailText>MAIL</MailText>
-          </ButtonLanding>
-          <ButtonLanding google>
-            <Icon src={require("../../components/Icons/Google.svg")} />
-            <MailText>GOOGLE</MailText>
-          </ButtonLanding>
-          <ButtonLanding facebook>
-            <Icon src={require("../../components/Icons/Facebook.svg")} />
-            <MailText>FACEBOOK</MailText>
-          </ButtonLanding>
-          <div>
-            <SubFormText>
-              Not registered yet <span>register here</span>
-            </SubFormText>
-            <Terms>
-              By contining, you accept the terms of use and Privacy Policy
-            </Terms>
-          </div>
-        </ButtonContainer>
-      </AuthenticationContianer>
-    );
-  }
-}
+const RegisterPage = () => (
+  <AuthenticationContianer>
+    <CancelContainer>
+      <Cancel>
+        <a href="/">
+          <CancelImg src={require("../../components/Icons/Cancel.svg")} />
+        </a>
+      </Cancel>
+    </CancelContainer>
+    <BrandContianer>
+      <BrandLogo />
+    </BrandContianer>
+    <div>
+      <Header>LogIn</Header>
+    </div>
+    <ButtonContainer>
+      <a href="/emaillogin">
+        <ButtonLanding primary>
+          <Icon src={require("../../components/Icons/Mail.svg")} />
+          <MailText>MAIL</MailText>
+        </ButtonLanding>
+      </a>
+      <ButtonLanding google>
+        <Icon src={require("../../components/Icons/Google.svg")} />
+        <MailText>GOOGLE</MailText>
+      </ButtonLanding>
+      <ButtonLanding facebook>
+        <Icon src={require("../../components/Icons/Facebook.svg")} />
+        <MailText>FACEBOOK</MailText>
+      </ButtonLanding>
+      <div>
+        <SubFormText>
+          Not registered yet <span>register here</span>
+        </SubFormText>
+        <Terms>
+          By contining, you accept the terms of use and Privacy Policy
+        </Terms>
+      </div>
+    </ButtonContainer>
+  </AuthenticationContianer>
+);
 
 export default RegisterPage;
