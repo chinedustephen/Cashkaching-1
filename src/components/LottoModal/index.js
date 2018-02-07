@@ -3,7 +3,6 @@ import styled from "styled-components";
 
 //Backdrop style
 const BackdropStyle = styled.div`
-  display: grid;
   position: fixed;
   top: 0;
   bottom: 0;
@@ -12,6 +11,8 @@ const BackdropStyle = styled.div`
   background-color: rgba(0, 0, 0, 0.3);
   padding: 50px;
   z-index: 30;
+  display: grid;
+  grid-template-rows: 5% 80%;
 `;
 
 // The modal "window"
@@ -24,21 +25,22 @@ const ModalStyle = styled.div`
   padding: 30px;
 `;
 const Cardcontainer = styled.div`
+  justify-self: center;
   background: #6ca516;
   border-radius: 4px;
   border-bottom: 8px solid #5e8a1c;
   box-shadow: 0 9px 16px 0 rgba(5, 2, 7, 0.35);
   width: 736px;
   height: auto;
+  min-height: 360px;
+  max-height: 412px;
   justify-self: center;
 `;
-/**const Cardlayout = styled.div`
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-auto-rows: minmax(300px, auto);
-  grid-row-gap: 1em;
-  margin-top: 28px;
-`; **/
+
+const Close = styled.div`
+  height: 20px;
+  justify-self: end;
+`;
 
 class Modal extends React.Component {
   render() {
@@ -49,10 +51,10 @@ class Modal extends React.Component {
 
     return (
       <BackdropStyle>
+        <Close>
+          <button onClick={this.props.onClose}>close</button>
+        </Close>
         <Cardcontainer>{this.props.children}</Cardcontainer>
-        <div className="footer">
-          <button onClick={this.props.onClose}>Close</button>
-        </div>
       </BackdropStyle>
     );
   }

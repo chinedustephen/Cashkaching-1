@@ -2,6 +2,8 @@ import React from "react";
 import { Wizard, Steps, Step } from "react-albus";
 import AdvertCard from "../AdvertCard";
 import PlayLottoNumbers from "../PlayLottoNumbers";
+import NumberConfirmationCard from "../NumberConfirmationCard";
+import ShareCard from "../ShareCard";
 
 const LottoWizard = () => (
   <Wizard>
@@ -24,9 +26,17 @@ const LottoWizard = () => (
       />
       <Step
         id="dumbledore"
-        render={({ previous }) => (
+        render={({ next, previous }) => (
           <div>
-            <h1>Confirmed/ request number/ </h1>
+            <NumberConfirmationCard onClick={next} />
+          </div>
+        )}
+      />
+      <Step
+        id="dumbledo2"
+        render={({ next, previous }) => (
+          <div>
+            <ShareCard />
           </div>
         )}
       />

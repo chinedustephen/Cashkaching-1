@@ -5,9 +5,6 @@ import LottoCard from "../../components/LottoCard";
 import PlayedLottoCard from "../../components/PlayedLottoCard";
 import CountDownLottoCard from "../../components/CountDownLotto";
 import CongratulationsLottoCard from "../../components/CongratulationsLottoCard";
-import PlayLottoNumbers from "../../components/PlayLottoNumbers";
-import AdvertCard from "../../components/AdvertCard";
-import NumberConfirmationCard from "../../components/NumberConfirmationCard";
 import ShareCard from "../../components/ShareCard";
 import BonusNaira from "../../components/BonusNaira";
 
@@ -55,11 +52,6 @@ const Lotto = () => (
       <PlayedLottoCard />
       <CountDownLottoCard />
       <CongratulationsLottoCard />
-
-      <AdvertCard />
-      <PlayLottoNumbers />
-      <NumberConfirmationCard />
-      <ShareCard />
     </Mainpanel>
   </div>
 );
