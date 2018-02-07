@@ -190,11 +190,11 @@ class LottoCard extends Component {
     this.state = { isOpen: false };
   }
 
-  toggleModal = () => {
+  toggleModal() {
     this.setState({
       isOpen: !this.state.isOpen
     });
-  };
+  }
   render() {
     return (
       <Cardlayout>
@@ -217,14 +217,19 @@ class LottoCard extends Component {
                 <TimerImg src={require("./images/timeer.svg")} />
                 <Counter>4:30:1</Counter>
 
-                <ButtonMain onClick={this.toggleModal}>PLAY NOW</ButtonMain>
+                <ButtonMain onClick={() => this.toggleModal()}>
+                  PLAY NOW
+                </ButtonMain>
               </CardTimerContainer>
             </CardTimer>
           </CardContent>
         </Cardcontainer>
-        <Modal show={this.state.isOpen} onClose={this.toggleModal}>
+        <Modal show={this.state.isOpen} onClose={() => this.toggleModal()}>
           `Here's some content for the modal`
-          <LottoWizard show={this.state.isOpen} onClose={this.toggleModal} />
+          <LottoWizard
+            show={this.state.isOpen}
+            onClose={() => this.toggleModal()}
+          />
         </Modal>
       </Cardlayout>
     );

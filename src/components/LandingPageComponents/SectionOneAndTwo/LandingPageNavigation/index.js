@@ -46,7 +46,7 @@ const LandingNavLink = styled(NavLink)`
 
 const LandingLinks = {
   Login: {
-    link: "/personalaccount",
+    link: "/login",
     text: "Login"
   }
 };

@@ -1,6 +1,5 @@
 import React from "react";
 import styled, { css } from "styled-components";
-import { Link } from "react-router-dom";
 import BrandLogo from "../../components/BrandImg";
 
 const AuthenticationContianer = styled.div`
