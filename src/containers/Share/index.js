@@ -1,9 +1,9 @@
 import React from "react";
-import ShareCard from "../../components/ShareCard";
+import ShareSectionCard from "../../components/Share";
 
 const ShareCardPage = () => (
   <div>
-    <ShareCard />
+    <ShareSectionCard />
   </div>
 );
 
