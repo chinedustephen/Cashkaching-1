@@ -225,7 +225,6 @@ class LottoCard extends Component {
           </CardContent>
         </Cardcontainer>
         <Modal show={this.state.isOpen} onClose={() => this.toggleModal()}>
-          `Here's some content for the modal`
           <LottoWizard
             show={this.state.isOpen}
             onClose={() => this.toggleModal()}

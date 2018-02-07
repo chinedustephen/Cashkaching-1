@@ -127,52 +127,48 @@ const BadgeContainer = styled.div`
 
 `;
 
-const AdvertCard = () => (
-  <Cardlayout>
-    <Cardcontainer>
-      <CardContent>
-        <CardLabel>
-          <div>
-            <SponsoredText>Sponsored Ad</SponsoredText>
-          </div>
-          <SkipAdContianer>
-            <SkipText>Skip to free Lotto</SkipText>
-            <NextContainer>
-              <Next src={require("./images/next.svg")} />
-            </NextContainer>
-          </SkipAdContianer>
-        </CardLabel>
-        <ConentContainer>
-          <div>
-            <div>
-              <AdImage src={require("./images/img.svg")} />
-            </div>
-          </div>
-          <AdTextContianer>
-            <BonusPointsContainer>
-              <TextContainer>
-                <AdBonusText>Play this sponsord ad and earn</AdBonusText>
-              </TextContainer>
-              <BadgeContainer>
-                <BonusBadge>
-                  <BonusFigure>+ N 50</BonusFigure>
-                </BonusBadge>
-              </BadgeContainer>
-            </BonusPointsContainer>
-            <div>
-              <AdText>
-                Like what you see dont wait For more information please vist
-                Learn more.
-              </AdText>
-            </div>
-            <div>
-              <TermsConditions>Terms and conditions apply</TermsConditions>
-            </div>
-          </AdTextContianer>
-        </ConentContainer>
-      </CardContent>
-    </Cardcontainer>
-  </Cardlayout>
+const AdvertCard = ({ onClick }) => (
+  <CardContent>
+    <CardLabel>
+      <div>
+        <SponsoredText>Sponsored Ad</SponsoredText>
+      </div>
+      <SkipAdContianer>
+        <SkipText onClick={onClick}>Skip to free Lotto</SkipText>
+        <NextContainer>
+          <Next src={require("./images/next.svg")} />
+        </NextContainer>
+      </SkipAdContianer>
+    </CardLabel>
+    <ConentContainer>
+      <div>
+        <div>
+          <AdImage src={require("./images/img.svg")} />
+        </div>
+      </div>
+      <AdTextContianer>
+        <BonusPointsContainer>
+          <TextContainer>
+            <AdBonusText>Play this sponsord ad and earn</AdBonusText>
+          </TextContainer>
+          <BadgeContainer>
+            <BonusBadge>
+              <BonusFigure>+ N 50</BonusFigure>
+            </BonusBadge>
+          </BadgeContainer>
+        </BonusPointsContainer>
+        <div>
+          <AdText>
+            Like what you see dont wait For more information please vist Learn
+            more.
+          </AdText>
+        </div>
+        <div>
+          <TermsConditions>Terms and conditions apply</TermsConditions>
+        </div>
+      </AdTextContianer>
+    </ConentContainer>
+  </CardContent>
 );
 
 export default AdvertCard;
