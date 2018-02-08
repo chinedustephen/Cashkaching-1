@@ -45,6 +45,7 @@ const LottoCards = [
     bkcolour: "#6ca516",
     border: "8px solid #5e8a1c",
     tablabelStyle: "#5e8a1c",
+    second: "#639A11",
     status: true
   },
   {
@@ -72,6 +73,7 @@ const FiteredCards1 = LottoCards.filter(lotto => lotto.status === true).map(
       bg={list.bkcolour}
       brb={list.border}
       bglabel={list.tablabelStyle}
+      secbk={list.second}
     />
   )
 );

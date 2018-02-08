@@ -31,7 +31,11 @@ const LottoWizard = props => (
         id="dumbledore"
         render={({ next, previous }) => (
           <div>
-            <NumberConfirmationCard onClick={next} />
+            <NumberConfirmationCard
+              bglabel={props.bglabel}
+              secbk={props.secbk}
+              onClick={next}
+            />
           </div>
         )}
       />

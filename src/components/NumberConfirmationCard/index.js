@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import NumberSvg from "./images/Number";
 
 const CardContent = styled.div`
   display: grid;
@@ -61,12 +62,15 @@ const NumberText = styled.p`
   margin: 0px;
   padding: 0px;
 `;
-const NumberImg = styled.img`
+const NumberImg = styled(NumberSvg)``;
+
+const B = styled.div`
   grid-row-start: 1;
   grid-row-end: 2;
   grid-column-start: 1;
   z-index: 2;
 `;
+
 const GotIt = styled.button`
   background: #ffffff;
   border-radius: 4px;
@@ -90,7 +94,9 @@ const Sentcontianer = styled.div`
   margin-bottom: 24px;
 `;
 
-const NumberConfirmationCard = ({ onClick }) => (
+const PlayedNumbers = [1, 1, 23, 23, 22, 22];
+
+const NumberConfirmationCard = props => (
   <CardContent>
     <TextInfoContainer>
       <BonusTextInfo>
@@ -103,57 +109,21 @@ const NumberConfirmationCard = ({ onClick }) => (
       </NumbersSent>
     </Sentcontianer>
     <Numbers>
-      <div>
-        <NumberBubble>
-          <NumberImg src={require("./images/NumberImg.svg")} />
-          <LottoNumber>
-            <NumberText>1</NumberText>
-          </LottoNumber>
-        </NumberBubble>
-      </div>
-      <div>
-        <NumberBubble>
-          <NumberImg src={require("./images/NumberImg.svg")} />
-          <LottoNumber>
-            <NumberText>34</NumberText>
-          </LottoNumber>
-        </NumberBubble>
-      </div>
-      <div>
-        <NumberBubble>
-          <NumberImg src={require("./images/NumberImg.svg")} />
-          <LottoNumber>
-            <NumberText>2</NumberText>
-          </LottoNumber>
-        </NumberBubble>
-      </div>
-      <div>
-        <NumberBubble>
-          <NumberImg src={require("./images/NumberImg.svg")} />
-          <LottoNumber>
-            <NumberText>1</NumberText>
-          </LottoNumber>
-        </NumberBubble>
-      </div>
-      <div>
-        <NumberBubble>
-          <NumberImg src={require("./images/NumberImg.svg")} />
-          <LottoNumber>
-            <NumberText>33</NumberText>
-          </LottoNumber>
-        </NumberBubble>
-      </div>
-      <div>
-        <NumberBubble>
-          <NumberImg src={require("./images/NumberImg.svg")} />
-          <LottoNumber>
-            <NumberText>1</NumberText>
-          </LottoNumber>
-        </NumberBubble>
-      </div>
+      {PlayedNumbers.map(number => (
+        <div>
+          <NumberBubble>
+            <B>
+              <NumberImg bglabel={props.bglabel} secbk={props.secbk} />
+            </B>
+            <LottoNumber>
+              <NumberText>{number}</NumberText>
+            </LottoNumber>
+          </NumberBubble>
+        </div>
+      ))}
     </Numbers>
     <ButtonContianer>
-      <GotIt onClick={onClick}>Got it</GotIt>
+      <GotIt onClick={props.onClick}>Got it</GotIt>
     </ButtonContianer>
   </CardContent>
 );
