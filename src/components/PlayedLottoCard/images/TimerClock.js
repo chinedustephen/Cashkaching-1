@@ -105,9 +105,9 @@ const NumberSvg = props => (
     <g
       id="Main-Expeiance"
       stroke="none"
-      stroke-width="1"
+      strokeWidth="1"
       fill="none"
-      fill-rule="evenodd"
+      fillRule="evenodd"
     >
       <g
         id="Desktop_PlayedCard"
@@ -127,20 +127,20 @@ const NumberSvg = props => (
               <g id="Rectangle-6-Copy">
                 <use
                   fill="black"
-                  fill-opacity="1"
+                  fillOpacity="1"
                   filter="url(#filter-2)"
                   xlinkHref="#path-1"
                 />
-                <use fill={props.mid} fill-rule="evenodd" xlinkHref="#path-1" />
+                <use fill={props.mid} fillRule="evenodd" xlinkHref="#path-1" />
               </g>
               <g id="Rectangle-6-Copy-2">
                 <use
                   fill="black"
-                  fill-opacity="1"
+                  fillOpacity="1"
                   filter="url(#filter-4)"
                   xlinkHref="#path-3"
                 />
-                <use fill={props.top} fill-rule="evenodd" xlinkHref="#path-3" />
+                <use fill={props.top} fillRule="evenodd" xlinkHref="#path-3" />
               </g>
             </g>
           </g>

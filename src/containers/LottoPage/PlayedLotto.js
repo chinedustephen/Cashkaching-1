@@ -49,6 +49,7 @@ const PlayedLottoCardsList = () => (
         bg={card.bkcolour}
         brb={card.border}
         bglabel={card.tablabelStyle}
+        // timer
         outer={card.outer}
         mid={card.mid}
         top={card.top}
