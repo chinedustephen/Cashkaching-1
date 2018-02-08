@@ -250,6 +250,7 @@ class LottoCard extends Component {
         </Cardcontainer>
         <Modal
           bg={this.props.bg}
+          brb={this.props.brb}
           show={this.state.isOpen}
           onClose={() => this.toggleModal()}
         >

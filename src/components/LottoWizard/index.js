@@ -43,7 +43,7 @@ const LottoWizard = props => (
         id="dumbledo2"
         render={({ next, previous }) => (
           <div>
-            <ShareCard />
+            <ShareCard bglabel={props.bglabel} />
           </div>
         )}
       />

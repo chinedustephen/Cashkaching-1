@@ -54,6 +54,7 @@ const LottoCards = [
     bkcolour: "#5C0D3C",
     border: "8px solid #42092B",
     tablabelStyle: "#42092B",
+    second: "#5C0D3C",
     status: true
   },
   {
@@ -62,6 +63,7 @@ const LottoCards = [
     bkcolour: "#EF8A17",
     border: "8px solid #CC740E",
     tablabelStyle: "#CC740E",
+    second: "#EF8A17",
     status: true
   }
 ];

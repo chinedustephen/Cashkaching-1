@@ -29,12 +29,13 @@ const Cardcontainer = styled.div.attrs({
   // we can define static props
 
   // or we can define dynamic ones
-  background: props => props.bg
+  background: props => props.bg,
+  borderbottom: props => props.brb
 })`
   justify-self: center;
 
   border-radius: 4px;
-  border-bottom: 8px solid #5e8a1c;
+
   box-shadow: 0 9px 16px 0 rgba(5, 2, 7, 0.35);
   width: 736px;
   height: auto;
@@ -44,6 +45,7 @@ const Cardcontainer = styled.div.attrs({
 
   /* here we use the dynamically computed props */
   background: ${props => props.background};
+  border-bottom: ${props => props.borderbottom};
 `;
 
 const Close = styled.div`
@@ -63,7 +65,9 @@ class Modal extends React.Component {
         <Close>
           <button onClick={this.props.onClose}>close</button>
         </Close>
-        <Cardcontainer bg={this.props.bg}>{this.props.children}</Cardcontainer>
+        <Cardcontainer bg={this.props.bg} brb={this.props.brb}>
+          {this.props.children}
+        </Cardcontainer>
       </BackdropStyle>
     );
   }

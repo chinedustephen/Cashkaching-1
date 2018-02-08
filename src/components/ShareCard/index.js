@@ -33,14 +33,24 @@ const CopyText = styled.p`
   color: #fafafa;
   letter-spacing: 0.13px;
 `;
-const ShareContainer = styled.div`
-  /* Rectangle 17: */
-  background: #5e8a1c;
+
+const ShareContainer = styled.div.attrs({
+  // we can define static props
+
+  // or we can define dynamic ones
+  background: props => props.bglabel
+})`
+  justify-self: center;
+
   border: 1px dashed #fafafa;
   border-radius: 4px;
   width: 254px;
   padding-left: 25px;
+
+  /* here we use the dynamically computed props */
+  background: ${props => props.bglabel};
 `;
+
 const ShareLink = styled.p`
   font-family: Roboto-Regular;
   font-size: 12px;
@@ -92,7 +102,7 @@ const ImgContainer = styled.div`
   align-self: center;
 `;
 
-const ShareCard = () => (
+const ShareCard = props => (
   <CardContent>
     <ContentContianer>
       <ImgContainer>
@@ -123,7 +133,7 @@ const ShareCard = () => (
         </div>
         <div>
           <CopyText>Copy link below or go share using the links below</CopyText>
-          <ShareContainer>
+          <ShareContainer bglabel={props.bglabel}>
             <ShareLink>http://nftletsshare.com/gideon</ShareLink>
           </ShareContainer>
         </div>
