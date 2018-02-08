@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Reset from "./images/refresh.svg";
 
 const SubNumberText = styled.p`
   font-family: Campton-ExtraLight;
@@ -84,17 +85,33 @@ const LottoNumberContainer = styled.div`
 class NumberInput extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { displayValue: "Enter you number" };
+    this.state = { displayValue: "Enter your number" };
   }
 
-  //State changers
+  // State changers
   inputDigit(digit) {
     const { displayValue } = this.state;
     this.setState({
       displayValue:
-        displayValue === "Enter you number"
+        displayValue === "Enter your number"
           ? String(digit)
           : displayValue + digit
+    });
+  }
+
+  refresh() {
+    this.setState({
+      displayValue: "Enter your number"
+    });
+  }
+
+  clear() {
+    const { displayValue } = this.state;
+    this.setState({
+      displayValue:
+        displayValue === "Enter your number"
+          ? displayValue
+          : displayValue.slice(0, -1)
     });
   }
 
@@ -111,11 +128,13 @@ class NumberInput extends React.Component {
               <Numbers>{displayValue}</Numbers>
             </LottoNumberContainer>
             <RefreshContainer>
-              <Refresh src={require("./images/refresh.svg")} />
+              <Refresh src={Reset} onClick={() => this.refresh()} />
             </RefreshContainer>
           </NumbersContainer>
           <ButtonContainer>
-            <Clear>Clear</Clear>
+            <Clear src={Reset} onClick={() => this.clear()}>
+              Clear
+            </Clear>
           </ButtonContainer>
         </NumberInputContainer>
         <NumberButtonsContainer>
