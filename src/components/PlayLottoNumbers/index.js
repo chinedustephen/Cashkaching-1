@@ -13,15 +13,18 @@ const CardContent = styled.div`
 
 const CardLabel = styled.div``;
 
-const LabelText = styled.div`
-  background: #5e8a1c;
+const LabelText = styled.div.attrs({
+  // we can define static props
+
+  // or we can define dynamic ones
+  background: props => props.bglabel
+})`
+  justify-self: center;
+
   display: inline-block;
   font-family: Campton-BoldDEMO;
   font-size: 11px;
   color: #ffffff;
-  -webkit-letter-spacing: 0.8px;
-  -moz-letter-spacing: 0.8px;
-  -ms-letter-spacing: 0.8px;
   letter-spacing: 0.8px;
   height: 15px;
   padding-top: 6px;
@@ -30,6 +33,9 @@ const LabelText = styled.div`
   border-bottom-right-radius: 4px;
   border-bottom-left-radius: 4px;
   margin-left: 40px;
+
+  /* here we use the dynamically computed props */
+  background: ${props => props.bglabel};
 `;
 
 const ConentContainer = styled.div`
@@ -57,15 +63,19 @@ const ButtonContainerPlay = styled.div`
   justify-self: end;
 `;
 
-const PlayLottoNumbers = ({ onClick }) => (
+const LabelT = props => (
+  <LabelText bglabel={props.bglabel}>DAILY DRAW</LabelText>
+);
+
+const PlayLottoNumbers = props => (
   <CardContent>
     <CardLabel>
-      <LabelText>DAILY DRAW</LabelText>
+      <LabelT bglabel={props.bglabel} />
     </CardLabel>
     <ConentContainer>
       <NumberInput />
       <ButtonContainerPlay>
-        <Play onClick={onClick}>Play</Play>
+        <Play onClick={props.onClick}>Play</Play>
       </ButtonContainerPlay>
     </ConentContainer>
   </CardContent>

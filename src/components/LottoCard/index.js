@@ -7,12 +7,30 @@ import styled from "styled-components";
 import Modal from "../LottoModal";
 import LottoWizard from "../LottoWizard";
 
-const Cardcontainer = styled.div`
+/**const Cardcontainer = styled.div`
   background: #6ca516;
   border-radius: 4px;
   border-bottom: 8px solid #5e8a1c;
   box-shadow: 0 9px 16px 0 rgba(5, 2, 7, 0.35);
+`;**/
+
+const Cardcontainer = styled.div.attrs({
+  // we can define static props
+
+  // or we can define dynamic ones
+  background: props => props.bg,
+  borderbottom: props => props.brb
+})`
+  border-radius: 4px;
+  border-bottom-style: solid;
+  border-bottom: 8px;
+  box-shadow: 0 9px 16px 0 rgba(5, 2, 7, 0.35);
+
+  /* here we use the dynamically computed props */
+  background: ${props => props.background};
+  border-bottom: ${props => props.borderbottom};
 `;
+
 const Cardlayout = styled.div`
   display: grid;
   grid-template-columns: 1fr;
@@ -40,15 +58,16 @@ const CardDescription = styled.div`
 
 const CardTimer = styled.div``;
 
-const LabelText = styled.div`
-  background: #5e8a1c;
+const LabelText = styled.div.attrs({
+  // we can define static props
+
+  // or we can define dynamic ones
+  background: props => props.bglabel
+})`
   display: inline-block;
   font-family: Campton-BoldDEMO;
   font-size: 11px;
   color: #ffffff;
-  -webkit-letter-spacing: 0.8px;
-  -moz-letter-spacing: 0.8px;
-  -ms-letter-spacing: 0.8px;
   letter-spacing: 0.8px;
   height: 15px;
   padding-top: 6px;
@@ -57,6 +76,9 @@ const LabelText = styled.div`
   border-bottom-right-radius: 4px;
   border-bottom-left-radius: 4px;
   margin-left: 40px;
+
+  /* here we use the dynamically computed props */
+  background: ${props => props.background};
 `;
 
 const CardDescriptionText = styled.p`
@@ -198,10 +220,12 @@ class LottoCard extends Component {
   render() {
     return (
       <Cardlayout>
-        <Cardcontainer>
+        <Cardcontainer bg={this.props.bg} brb={this.props.brb}>
           <CardContent>
             <CardLabel>
-              <LabelText>DAILY DRAW</LabelText>
+              <LabelText bglabel={this.props.bglabel}>
+                {this.props.type}
+              </LabelText>
             </CardLabel>
             <CardDescription>
               <CardDescriptionText>
@@ -224,8 +248,13 @@ class LottoCard extends Component {
             </CardTimer>
           </CardContent>
         </Cardcontainer>
-        <Modal show={this.state.isOpen} onClose={() => this.toggleModal()}>
+        <Modal
+          bg={this.props.bg}
+          show={this.state.isOpen}
+          onClose={() => this.toggleModal()}
+        >
           <LottoWizard
+            bglabel={this.props.bglabel}
             show={this.state.isOpen}
             onClose={() => this.toggleModal()}
           />

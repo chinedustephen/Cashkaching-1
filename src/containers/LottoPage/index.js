@@ -38,6 +38,44 @@ const Nested = styled.div`
   }
 `;
 
+const LottoCards = [
+  {
+    id: 1,
+    lottotype: "DAILY DRAW",
+    bkcolour: "#6ca516",
+    border: "8px solid #5e8a1c",
+    tablabelStyle: "#5e8a1c",
+    status: true
+  },
+  {
+    id: 2,
+    lottotype: "WEEKLY DRAW",
+    bkcolour: "#5C0D3C",
+    border: "8px solid #42092B",
+    tablabelStyle: "#42092B",
+    status: true
+  },
+  {
+    id: 3,
+    lottotype: "MONTHLY DRAW",
+    bkcolour: "#EF8A17",
+    border: "8px solid #CC740E",
+    tablabelStyle: "#CC740E",
+    status: true
+  }
+];
+const FiteredCards1 = LottoCards.filter(lotto => lotto.status === true).map(
+  list => (
+    <LottoCard
+      key={list.id}
+      type={list.lottotype}
+      bg={list.bkcolour}
+      brb={list.border}
+      bglabel={list.tablabelStyle}
+    />
+  )
+);
+
 const Lotto = () => (
   <div>
     <Mainpanel>
@@ -48,7 +86,7 @@ const Lotto = () => (
         <UnlockDrawsCard />
       </Nested>
 
-      <LottoCard />
+      {FiteredCards1}
       <PlayedLottoCard />
       <CountDownLottoCard />
       <CongratulationsLottoCard />

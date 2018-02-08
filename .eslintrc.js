@@ -7,7 +7,8 @@ module.exports = {
     "react/prop-types": 0,
     "comma-dangle": 0,
     "object-curly-newline": 0,
-    "arrow-parens": 0
+    "arrow-parens": 0,
+    "function-paren-newline": 0
   },
   globals: {
     document: 1

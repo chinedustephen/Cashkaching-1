@@ -5,14 +5,14 @@ import PlayLottoNumbers from "../PlayLottoNumbers";
 import NumberConfirmationCard from "../NumberConfirmationCard";
 import ShareCard from "../ShareCard";
 
-const LottoWizard = () => (
+const LottoWizard = props => (
   <Wizard>
     <Steps>
       <Step
         id="merlin"
         render={({ next }) => (
           <div>
-            <AdvertCard onClick={next} />
+            <AdvertCard bg={props.bg} onClick={next} />
           </div>
         )}
       />
@@ -20,7 +20,10 @@ const LottoWizard = () => (
         id="gandalf"
         render={({ next, previous }) => (
           <div>
-            <PlayLottoNumbers onClick={next} />
+            <PlayLottoNumbers bglabel={props.bglabel} onClick={next}>
+              {props.children}
+              {console.log(props.bglabel)}
+            </PlayLottoNumbers>
           </div>
         )}
       />

@@ -107,16 +107,24 @@ class NumberInput extends React.Component {
 
   clear() {
     const { displayValue } = this.state;
-    this.setState({
-      displayValue:
-        displayValue === "Enter your number"
-          ? displayValue
-          : displayValue.slice(0, -1)
-    });
+
+    if (displayValue.length <= 1) {
+      this.setState({
+        displayValue: "Enter your number"
+      });
+    } else {
+      this.setState({
+        displayValue:
+          displayValue === "Enter your number"
+            ? displayValue
+            : displayValue.slice(0, -1)
+      });
+    }
   }
 
   render() {
     const { displayValue } = this.state;
+
     return (
       <div>
         <NumberInputContainer>
