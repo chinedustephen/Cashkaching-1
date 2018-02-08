@@ -6,6 +6,7 @@ import CountDownLottoCard from "../../components/CountDownLotto";
 import CongratulationsLottoCard from "../../components/CongratulationsLottoCard";
 import BonusNaira from "../../components/BonusNaira";
 import LottoCardsList from "./LottoCard";
+import PlayedLottoCardsList from "./PlayedLotto";
 
 const Mainpanel = styled.div`
   margin-top: 30px;
@@ -48,7 +49,7 @@ const Lotto = () => (
       </Nested>
 
       <LottoCardsList />
-      <PlayedLottoCard />
+      <PlayedLottoCardsList />
       <CountDownLottoCard />
       <CongratulationsLottoCard />
     </Mainpanel>

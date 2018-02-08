@@ -1,12 +1,23 @@
 import React from "react";
 import styled from "styled-components";
 import CardLabel from "./CardLabel";
+import TimerSvg from "./images/TimerClock";
 
-const Cardcontainer = styled.div`
-  background: #6ca516;
+const Cardcontainer = styled.div.attrs({
+  // we can define static props
+
+  // or we can define dynamic ones
+  background: props => props.bg,
+  borderbottom: props => props.brb
+})`
   border-radius: 4px;
-  border-bottom: 8px solid #5e8a1c;
+  border-bottom-style: solid;
+  border-bottom: 8px;
   box-shadow: 0 9px 16px 0 rgba(5, 2, 7, 0.35);
+
+  /* here we use the dynamically computed props */
+  background: ${props => props.background};
+  border-bottom: ${props => props.borderbottom};
 `;
 const Cardlayout = styled.div`
   display: grid;
@@ -66,7 +77,7 @@ const DrawAmount = styled.p`
   margin-bottom: 24px;
 `;
 
-const TimerImg = styled.img`
+const TimerImg = styled.div`
   grid-column-start: 1;
   grid-column-end: 4;
   grid-row-start: 2;
@@ -144,11 +155,11 @@ const RewardContianer = styled.div`
   margin-left: 24px;
 `;
 
-const PlayedLottoCard = () => (
+const PlayedLottoCard = props => (
   <Cardlayout>
-    <Cardcontainer>
+    <Cardcontainer bg={props.bg} brb={props.brb}>
       <CardContent>
-        <CardLabel />
+        <CardLabel cardLabel={props.cardLabel} bglabel={props.bglabel} />
         <CardDescription>
           <HeaderContainer>
             <ImgContainer>
@@ -159,10 +170,7 @@ const PlayedLottoCard = () => (
             </div>
           </HeaderContainer>
           <DecscritpionContianer>
-            <CardDescriptionText>
-              Your dashboard is updated daily so remeber to keep an eye on it.
-              Click Play to enter the monthly draw
-            </CardDescriptionText>
+            <CardDescriptionText>{props.joke}</CardDescriptionText>
             <HashTag>#CashkachingJokes</HashTag>
           </DecscritpionContianer>
           <RewardContianer>
@@ -172,7 +180,9 @@ const PlayedLottoCard = () => (
         </CardDescription>
         <CardTimer>
           <CardTimerContainer>
-            <TimerImg src={require("./images/TimerPatient.svg")} />
+            <TimerImg>
+              <TimerSvg outer={props.outer} mid={props.mid} top={props.top} />
+            </TimerImg>
             <Counter>4:30:1</Counter>
             <CashDrawText>Till cash draw</CashDrawText>
           </CardTimerContainer>
