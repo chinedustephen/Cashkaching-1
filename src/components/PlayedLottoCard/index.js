@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import CardLabel from "./CardLabel";
 import TimerSvg from "./images/TimerClock";
+import GirlSvg from "./images/Girl";
 
 const Cardcontainer = styled.div.attrs({
   // we can define static props
@@ -163,7 +164,7 @@ const PlayedLottoCard = props => (
         <CardDescription>
           <HeaderContainer>
             <ImgContainer>
-              <GirlImg src={require("./images/Girl.svg")} />
+              <GirlSvg outer={props.outer} top={props.top} />
             </ImgContainer>
             <div>
               <PlayedHeader>PATIENCE!</PlayedHeader>
