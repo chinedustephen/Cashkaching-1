@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import NumberSvg from "./images/Number";
+import LottoNumbers from "../NumberList";
 
 const CardContent = styled.div`
   display: grid;
@@ -108,20 +109,7 @@ const NumberConfirmationCard = props => (
         These are your numbers we will send you an email for your own records
       </NumbersSent>
     </Sentcontianer>
-    <Numbers>
-      {PlayedNumbers.map(number => (
-        <div>
-          <NumberBubble>
-            <B>
-              <NumberImg bglabel={props.bglabel} secbk={props.secbk} />
-            </B>
-            <LottoNumber>
-              <NumberText>{number}</NumberText>
-            </LottoNumber>
-          </NumberBubble>
-        </div>
-      ))}
-    </Numbers>
+    <LottoNumbers bglabel={props.bglabel} secbk={props.secbk} />
     <ButtonContianer>
       <GotIt onClick={props.onClick}>Got it</GotIt>
     </ButtonContianer>

@@ -1,12 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import UnlockDrawsCard from "../../components/UnlockDrawsCard";
-import PlayedLottoCard from "../../components/PlayedLottoCard";
-import CountDownLottoCard from "../../components/CountDownLotto";
 import CongratulationsLottoCard from "../../components/CongratulationsLottoCard";
 import BonusNaira from "../../components/BonusNaira";
 import LottoCardsList from "./LottoCard";
 import PlayedLottoCardsList from "./PlayedLotto";
+import CountDownLottoCardsList from "./CountDownLottoCard";
 
 const Mainpanel = styled.div`
   margin-top: 30px;
@@ -50,7 +49,7 @@ const Lotto = () => (
 
       <LottoCardsList />
       <PlayedLottoCardsList />
-      <CountDownLottoCard />
+      <CountDownLottoCardsList />
       <CongratulationsLottoCard />
     </Mainpanel>
   </div>
