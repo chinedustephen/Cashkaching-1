@@ -11,7 +11,7 @@ const CongratulationsCards = [
     border: "8px solid #5e8a1c",
     tablabelStyle: "#5e8a1c",
     second: "#639A11",
-    status: true,
+    status: false,
     outer: "#5E8A1C",
     mid: "#689F15",
     top: "#6CA516"
@@ -25,7 +25,7 @@ const CongratulationsCards = [
     border: "8px solid #42092B",
     tablabelStyle: "#42092B",
     second: "#5C0D3C",
-    status: true,
+    status: false,
     outer: "#42092B",
     mid: "#530B35",
     top: "#5C0D3C"
