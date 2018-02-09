@@ -7,7 +7,7 @@ const ProfileImg = styled.div`
   border-radius: 50%;
   width: 139.06px;
   height: 135.07px;
-  background: #5e8a1c;
+
   justify-self: end;
   align-self: end;
   background-image: url(${Dp});
@@ -21,25 +21,34 @@ const Container = styled.div`
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
 `;
-const ProfileCirlce = styled.div`
+
+const ProfileCirlce = styled.div.attrs({
+  // we can define static props
+
+  // or we can define dynamic ones
+  background: props => props.bglabel
+})`
   border-radius: 50%;
   width: 139.06px;
   height: 135.07px;
   /* Oval 5 Copy 2: */
   opacity: 0.43;
-  background: #5e8a1c;
   grid-row-start: 1;
   z-index: 1;
   grid-column-start: 1;
+
+  /* here we use the dynamically computed props */
+  background: ${props => props.background};
 `;
+
 const ButtonContainer = styled.div`
   justify-self: center;
   margin-top: 17px;
 `;
 
-const Profile = () => (
+const Profile = props => (
   <Container>
-    <ProfileCirlce />
+    <ProfileCirlce bglabel={props.bglabel} />
     <ProfileImg />
     <ButtonContainer>
       <Button name="CASH OUT" />

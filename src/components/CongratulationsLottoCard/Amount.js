@@ -23,14 +23,14 @@ const Naira = styled.img`
 `;
 const Line = styled.img``;
 
-const Amount = () => (
+const Amount = props => (
   <div>
     <Container>
       <Sign>
         <Naira src={require("./images/Naira.svg")} />
       </Sign>
       <Digit>
-        <P>100,000 </P>
+        <P>{props.ammount} </P>
       </Digit>
     </Container>
     <Line src={require("./images/Line.svg")} />

@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Amount from "./Amount";
+import WinnerSvg from "./images/Winner";
 
 const Container = styled.div`
   display: grid;
@@ -8,7 +9,6 @@ const Container = styled.div`
   grid-template-rows: 1fr;
 `;
 
-const WinnerImg = styled.img``;
 const SubText = styled.p`
   font-family: Campton-SemiBold;
   font-size: 12px;
@@ -29,14 +29,14 @@ const SecondContainer = styled.div`
   margin-top: 33px;
 `;
 
-const AwardDetails = () => (
+const AwardDetails = props => (
   <Container>
     <FirstContainer>
-      <WinnerImg src={require("./images/Winner.svg")} />
+      <WinnerSvg bglabel={props.bglabel} />
     </FirstContainer>
     <SecondContainer>
       <SubText>I HAVE JUST WON</SubText>
-      <Amount />
+      <Amount ammount={props.ammount} />
     </SecondContainer>
   </Container>
 );

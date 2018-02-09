@@ -7,15 +7,25 @@ import styled from "styled-components";
 import Congratulations from "./Congratulations";
 import Profile from "./Profile";
 import AwardDetails from "./AwardDetails";
-import CardLabel from "./CardLabel";
+import CardLabel from "../CardLabel";
 
-const Cardcontainer = styled.div`
-  display: grid;
-  background: #6ca516;
+const Cardcontainer = styled.div.attrs({
+  // we can define static props
+
+  // or we can define dynamic ones
+  background: props => props.bg,
+  borderbottom: props => props.brb
+})`
   border-radius: 4px;
-  border-bottom: 8px solid #5e8a1c;
+  border-bottom-style: solid;
+  border-bottom: 8px;
   box-shadow: 0 9px 16px 0 rgba(5, 2, 7, 0.35);
+
+  /* here we use the dynamically computed props */
+  background: ${props => props.background};
+  border-bottom: ${props => props.borderbottom};
 `;
+
 const Cardlayout = styled.div`
   display: grid;
   grid-template-columns: 1fr;
@@ -26,7 +36,7 @@ const Cardlayout = styled.div`
 
 const CardContent = styled.div`
   display: grid;
-  justify-self: center;
+  justify-items: center;
   margin-bottom: 24px;
 `;
 
@@ -48,10 +58,10 @@ const CongratulationsContainer = styled.div`
   z-index: 1;
 `;
 
-const CongratulationsLottoCard = () => (
+const CongratulationsLottoCard = props => (
   <Cardlayout>
-    <Cardcontainer>
-      <CardLabel />
+    <Cardcontainer bg={props.bg} brb={props.brb}>
+      <CardLabel cardLabel={props.cardLabel} bglabel={props.bglabel} />
       <CardContent>
         <ConentContainer>
           <CongratulationsContainer>
@@ -59,10 +69,10 @@ const CongratulationsLottoCard = () => (
           </CongratulationsContainer>
           <WinnerContainer>
             <div>
-              <Profile />
+              <Profile bglabel={props.bglabel} />
             </div>
             <div>
-              <AwardDetails />
+              <AwardDetails bglabel={props.bglabel} ammount={props.ammount} />
             </div>
           </WinnerContainer>
         </ConentContainer>
