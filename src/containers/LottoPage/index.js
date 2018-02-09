@@ -1,12 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import UnlockDrawsCard from "../../components/UnlockDrawsCard";
-import CongratulationsLottoCard from "../../components/CongratulationsLottoCard";
 import BonusNaira from "../../components/BonusNaira";
 import LottoCardsList from "./LottoCard";
 import PlayedLottoCardsList from "./PlayedLotto";
 import CountDownLottoCardsList from "./CountDownLottoCard";
 import CongratulationsLottoCardsList from "./CongratulationsLottoCard";
+import UnlockedLottoCardsList from "./UnlockedDraws";
 
 const Mainpanel = styled.div`
   margin-top: 30px;
@@ -28,25 +27,13 @@ const Headercontent = styled.h1`
   letter-spacing: 0.43px;
 `;
 
-const Nested = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-auto-rows: minmax(93px, auto);
-  grid-gap: 1em;
-  @media only screen and (max-width: 724px) {
-    grid-template-columns: 1fr;
-  }
-`;
-
 const Lotto = () => (
   <div>
     <Mainpanel>
       <BonusNaira />
       <Headercontent>Lotto</Headercontent>
-      <Nested>
-        <UnlockDrawsCard />
-        <UnlockDrawsCard />
-      </Nested>
+
+      <UnlockedLottoCardsList />
 
       <LottoCardsList />
       <PlayedLottoCardsList />
