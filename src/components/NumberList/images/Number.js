@@ -14,9 +14,9 @@ const NumberSvg = props => (
     <g
       id="Main-Expeiance"
       stroke="none"
-      stroke-width="1"
+      strokeWidth="1"
       fill="none"
-      fill-rule="evenodd"
+      fillRule="evenodd"
     >
       <g
         id="Desktop_CardCountDown"
@@ -35,7 +35,7 @@ const NumberSvg = props => (
               id="Oval-7"
               stroke="#FAFAFA"
               fill={props.secbk}
-              stroke-dasharray="3"
+              strokeDasharray="3"
               cx="50"
               cy="48"
               r="40"

@@ -5,6 +5,7 @@
 import React from "react";
 import styled from "styled-components";
 import CardLabel from "./CardLabel";
+import LottoNumbers from "../NumberList";
 
 const Cardcontainer = styled.div`
   display: grid;
@@ -25,10 +26,6 @@ const CardContent = styled.div`
   display: grid;
 `;
 
-const Numbers = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-`;
 const ContentContainer = styled.div`
   display: grid;
   grid-column-start: 1;
@@ -41,37 +38,6 @@ const ContentContainer = styled.div`
 const TimerTextContainer = styled.div`
   display: grid;
   grid-template-columns: 50% 50%;
-`;
-const NumberBubble = styled.div`
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  width: 90px;
-  height: 88px;
-`;
-const NumberImg = styled.img`
-  grid-row-start: 1;
-  grid-row-end: 2;
-  grid-column-start: 1;
-  z-index: 2;
-`;
-const LottoNumber = styled.div`
-  grid-row-start: 1;
-  grid-row-end: 2;
-  z-index: 2;
-  justify-self: center;
-  align-self: center;
-  grid-column-start: 1;
-  margin-left: 8px;
-  margin-top: 9px;
-`;
-
-const NumberText = styled.p`
-  font-family: Campton-Bold;
-  font-size: 40px;
-  color: #fafafa;
-  letter-spacing: 1.43px;
-  margin: 0px;
-  padding: 0px;
 `;
 
 const TopText = styled.p`
@@ -118,13 +84,7 @@ const TimerSubHeader = styled.p`
   grid-column-start: 1;
   margin-top: 116px;
 `;
-const FirstNumber = styled.div``;
-const LastNumber = styled.div`
-  justify-self: end;
-`;
-const NumberContainer = styled.div`
-  justify-self: center;
-`;
+
 const RewardContianer = styled.div`
   margin-top: 48px;
 `;
@@ -133,62 +93,13 @@ const TimerContainer = styled.div`
   margin-top: 18px;
 `;
 
-const CountDownLottoCard = () => (
+const CountDownLottoCard = props => (
   <Cardlayout>
     <Cardcontainer>
       <CardContent>
         <CardLabel />
         <ContentContainer>
-          <Numbers>
-            <FirstNumber>
-              <NumberBubble>
-                <NumberImg src={require("./images/NumberImg.svg")} />
-                <LottoNumber>
-                  <NumberText>1</NumberText>
-                </LottoNumber>
-              </NumberBubble>
-            </FirstNumber>
-            <NumberContainer>
-              <NumberBubble>
-                <NumberImg src={require("./images/NumberImg.svg")} />
-                <LottoNumber>
-                  <NumberText>23</NumberText>
-                </LottoNumber>
-              </NumberBubble>
-            </NumberContainer>
-            <NumberContainer>
-              <NumberBubble>
-                <NumberImg src={require("./images/NumberImg.svg")} />
-                <LottoNumber>
-                  <NumberText>3</NumberText>
-                </LottoNumber>
-              </NumberBubble>
-            </NumberContainer>
-            <NumberContainer>
-              <NumberBubble>
-                <NumberImg src={require("./images/NumberImg.svg")} />
-                <LottoNumber>
-                  <NumberText>8</NumberText>
-                </LottoNumber>
-              </NumberBubble>
-            </NumberContainer>
-            <NumberContainer>
-              <NumberBubble>
-                <NumberImg src={require("./images/NumberImg.svg")} />
-                <LottoNumber>
-                  <NumberText>55</NumberText>
-                </LottoNumber>
-              </NumberBubble>
-            </NumberContainer>
-            <LastNumber>
-              <NumberBubble>
-                <NumberImg src={require("./images/NumberImg.svg")} />
-                <LottoNumber>
-                  <NumberText>9</NumberText>
-                </LottoNumber>
-              </NumberBubble>
-            </LastNumber>
-          </Numbers>
+          <LottoNumbers bglabel={props.bglabel} secbk={props.secbk} />
           <TimerTextContainer>
             <RewardContianer>
               <TopText>Daily count down</TopText>

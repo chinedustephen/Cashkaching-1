@@ -49,6 +49,7 @@ const CountDownLottoCardsList = () => (
         bg={card.bkcolour}
         brb={card.border}
         bglabel={card.tablabelStyle}
+        secbk={card.second}
         // timer
         outer={card.outer}
         mid={card.mid}
