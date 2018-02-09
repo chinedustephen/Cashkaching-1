@@ -107,8 +107,8 @@ const CountDownLottoCard = props => (
           <LottoNumbers bglabel={props.bglabel} secbk={props.secbk} />
           <TimerTextContainer>
             <RewardContianer>
-              <TopText>Daily count down</TopText>
-              <Figure>N 500, 000</Figure>
+              <TopText>{props.cardType}</TopText>
+              <Figure>{props.ammount}</Figure>
             </RewardContianer>
             <TimerContainer>
               <TimeImgContainer>

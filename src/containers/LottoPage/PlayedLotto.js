@@ -9,7 +9,7 @@ const PlayedLottoCards = [
     border: "8px solid #5e8a1c",
     tablabelStyle: "#5e8a1c",
     second: "#639A11",
-    status: true,
+    status: false,
     outer: "#5E8A1C",
     mid: "#689F15",
     top: "#6CA516"
@@ -33,7 +33,7 @@ const PlayedLottoCards = [
     border: "8px solid #CC740E",
     tablabelStyle: "#CC740E",
     second: "#EF8A17",
-    status: true,
+    status: false,
     outer: "#CC740E",
     mid: "#E57C04",
     top: "#EF8A17"

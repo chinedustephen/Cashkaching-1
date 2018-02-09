@@ -9,7 +9,7 @@ const LottoCards = [
     border: "8px solid #5e8a1c",
     tablabelStyle: "#5e8a1c",
     second: "#639A11",
-    status: true
+    status: false
   },
   {
     id: 2,
@@ -18,7 +18,7 @@ const LottoCards = [
     border: "8px solid #42092B",
     tablabelStyle: "#42092B",
     second: "#5C0D3C",
-    status: true
+    status: false
   },
   {
     id: 3,
