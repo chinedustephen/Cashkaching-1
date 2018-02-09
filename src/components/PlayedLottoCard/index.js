@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import CardLabel from "./CardLabel";
+import CardLabel from "../CardLabel";
 import TimerSvg from "./images/TimerClock";
 import GirlSvg from "./images/Girl";
 
@@ -118,8 +118,6 @@ const HeaderContainer = styled.div`
   display: grid;
   grid-template-columns: 25% 1fr;
 `;
-
-const GirlImg = styled.img``;
 
 const PlayedHeader = styled.p`
   font-family: Campton-Bold;

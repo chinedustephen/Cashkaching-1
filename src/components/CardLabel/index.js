@@ -1,20 +1,22 @@
 import React from "react";
 import styled from "styled-components";
+import ShareSvg from "./images/share.svg";
 
 const CardLabelContainer = styled.div`
   grid-column-start: 1;
   grid-column-end: 4;
 `;
 
-const LabelText = styled.div`
-  background: #5e8a1c;
+const LabelText = styled.div.attrs({
+  // we can define static props
+
+  // or we can define dynamic ones
+  background: props => props.bglabel
+})`
   display: inline-block;
   font-family: Campton-BoldDEMO;
   font-size: 11px;
   color: #ffffff;
-  -webkit-letter-spacing: 0.8px;
-  -moz-letter-spacing: 0.8px;
-  -ms-letter-spacing: 0.8px;
   letter-spacing: 0.8px;
   height: 15px;
   padding-top: 6px;
@@ -23,6 +25,9 @@ const LabelText = styled.div`
   border-bottom-right-radius: 4px;
   border-bottom-left-radius: 4px;
   margin-left: 40px;
+
+  /* here we use the dynamically computed props */
+  background: ${props => props.background};
 `;
 
 const Share = styled.img`
@@ -31,10 +36,10 @@ const Share = styled.img`
   padding-right: 24px;
 `;
 
-const CardLabel = () => (
+const CardLabel = props => (
   <CardLabelContainer>
-    <LabelText>PLAYED DAILY DRAW</LabelText>
-    <Share src={require("./images/share.svg")} />
+    <LabelText bglabel={props.bglabel}>{props.cardLabel}</LabelText>
+    <Share src={ShareSvg} />
   </CardLabelContainer>
 );
 

@@ -1,18 +1,23 @@
-/**
- *
- * App - Lotto Main
- */
 import React from "react";
 import styled from "styled-components";
-import CardLabel from "./CardLabel";
 import LottoNumbers from "../NumberList";
+import CardLabel from "../CardLabel";
 
-const Cardcontainer = styled.div`
-  display: grid;
-  background: #6ca516;
+const Cardcontainer = styled.div.attrs({
+  // we can define static props
+
+  // or we can define dynamic ones
+  background: props => props.bg,
+  borderbottom: props => props.brb
+})`
   border-radius: 4px;
-  border-bottom: 8px solid #5e8a1c;
+  border-bottom-style: solid;
+  border-bottom: 8px;
   box-shadow: 0 9px 16px 0 rgba(5, 2, 7, 0.35);
+
+  /* here we use the dynamically computed props */
+  background: ${props => props.background};
+  border-bottom: ${props => props.borderbottom};
 `;
 const Cardlayout = styled.div`
   display: grid;
@@ -95,9 +100,9 @@ const TimerContainer = styled.div`
 
 const CountDownLottoCard = props => (
   <Cardlayout>
-    <Cardcontainer>
+    <Cardcontainer bg={props.bg} brb={props.brb}>
       <CardContent>
-        <CardLabel />
+        <CardLabel cardLabel={props.cardLabel} bglabel={props.bglabel} />
         <ContentContainer>
           <LottoNumbers bglabel={props.bglabel} secbk={props.secbk} />
           <TimerTextContainer>
