@@ -164,7 +164,7 @@ const PlayedLottoCard = props => (
         <CardDescription>
           <HeaderContainer>
             <ImgContainer>
-              <GirlSvg outer={props.outer} top={props.top} />
+              <GirlSvg outerGirl={props.outerGirl} topGirl={props.topGirl} />
             </ImgContainer>
             <div>
               <PlayedHeader>PATIENCE!</PlayedHeader>

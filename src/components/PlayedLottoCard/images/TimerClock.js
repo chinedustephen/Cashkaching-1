@@ -12,7 +12,7 @@ const NumberSvg = props => (
     <desc>Created with Sketch.</desc>
     <defs>
       <rect
-        id="path-1"
+        id="path-101"
         x="17.3333333"
         y="17.3333333"
         width="121.875"
@@ -25,7 +25,7 @@ const NumberSvg = props => (
         width="228.8%"
         height="231.3%"
         filterUnits="objectBoundingBox"
-        id="filter-2"
+        id="filter-102"
       >
         <feOffset dx="0" dy="19" in="SourceAlpha" result="shadowOffsetOuter1" />
         <feGaussianBlur
@@ -57,7 +57,7 @@ const NumberSvg = props => (
         </feMerge>
       </filter>
       <rect
-        id="path-3"
+        id="path-103"
         x="37.375"
         y="37.375"
         width="81.25"
@@ -70,7 +70,7 @@ const NumberSvg = props => (
         width="293.2%"
         height="296.9%"
         filterUnits="objectBoundingBox"
-        id="filter-4"
+        id="filter-104"
       >
         <feOffset dx="0" dy="19" in="SourceAlpha" result="shadowOffsetOuter1" />
         <feGaussianBlur
@@ -124,23 +124,31 @@ const NumberSvg = props => (
                   />
                 </g>
               </g>
-              <g id="Rectangle-6-Copy">
+              <g id="Second-circle">
                 <use
                   fill="black"
                   fillOpacity="1"
-                  filter="url(#filter-2)"
-                  xlinkHref="#path-1"
+                  filter="url(#filter-102)"
+                  xlinkHref="#path-101"
                 />
-                <use fill={props.mid} fillRule="evenodd" xlinkHref="#path-1" />
+                <use
+                  fill={props.mid}
+                  fillRule="evenodd"
+                  xlinkHref="#path-101"
+                />
               </g>
-              <g id="Rectangle-6-Copy-2">
+              <g id="First-circle">
                 <use
                   fill="black"
                   fillOpacity="1"
-                  filter="url(#filter-4)"
-                  xlinkHref="#path-3"
+                  filter="url(#filter-104)"
+                  xlinkHref="#path-103"
                 />
-                <use fill={props.top} fillRule="evenodd" xlinkHref="#path-3" />
+                <use
+                  fill={props.top}
+                  fillRule="evenodd"
+                  xlinkHref="#path-103"
+                />
               </g>
             </g>
           </g>

@@ -53,6 +53,9 @@ const PlayedLottoCardsList = () => (
         outer={card.outer}
         mid={card.mid}
         top={card.top}
+        // GirlSvg
+        outerGirl={card.outer}
+        topGirl={card.top}
       />
     ))}
   </div>
