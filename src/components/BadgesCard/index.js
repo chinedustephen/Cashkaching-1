@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import Badge from "./Badge";
+import ModalBadge from "./Modal";
 
 const Cardcontainer = styled.div`
   display: grid;
@@ -19,60 +21,16 @@ const Cardlayout = styled.div`
 const CardContent = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 35% 35% 20%;
   justify-items: center;
   align-items: center;
 `;
-const IconContainer = styled.div`
-  width: 72px;
-  height: 72px;
-  border-radius: 50%;
-  border: 6px solid #c1e190;
-  background-color: #6ca516;
-`;
-const Icon = styled.img`
-  margin-left: 15px;
-  margin-top: 15px;
-`;
 
-const BadgesCard = () => (
+const BadgesCard = props => (
   <Cardlayout>
     <Cardcontainer>
       <CardContent>
-        <div>
-          <IconContainer>
-            <Icon src={require("./images/star.svg")} />
-          </IconContainer>
-        </div>
-        <div>
-          <IconContainer>
-            <Icon src={require("./images/star.svg")} />
-          </IconContainer>
-        </div>
-        <div>
-          <IconContainer>
-            <Icon src={require("./images/star.svg")} />
-          </IconContainer>
-        </div>
-        <div>
-          <IconContainer>
-            <Icon src={require("./images/star.svg")} />
-          </IconContainer>
-        </div>
-        <div>
-          <IconContainer>
-            <Icon src={require("./images/star.svg")} />
-          </IconContainer>
-        </div>
-        <div>
-          <IconContainer>
-            <Icon src={require("./images/star.svg")} />
-          </IconContainer>
-        </div>
-        <div>
-          <IconContainer>
-            <Icon src={require("./images/star.svg")} />
-          </IconContainer>
-        </div>
+        <ModalBadge onClick={props.onClick} />
       </CardContent>
     </Cardcontainer>
   </Cardlayout>
