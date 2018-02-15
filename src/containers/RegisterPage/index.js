@@ -90,46 +90,44 @@ const CancelContainer = styled.div`
 const Cancel = styled.div``;
 const CancelImg = styled.img``;
 
-class RegisterPage extends Component {
-  render() {
-    return (
-      <AuthenticationContianer>
-        <CancelContainer>
-          <Cancel>
-            <CancelImg src={require("../../components/Icons/Cancel.svg")} />
-          </Cancel>
-        </CancelContainer>
-        <BrandContianer>
-          <BrandLogo />
-        </BrandContianer>
-        <div>
-          <Header>Register</Header>
-        </div>
-        <ButtonContainer>
-          <ButtonLanding primary>
-            <Icon src={require("../../components/Icons/Mail.svg")} />
-            <MailText>MAIL</MailText>
-          </ButtonLanding>
-          <ButtonLanding google>
-            <Icon src={require("../../components/Icons/Google.svg")} />
-            <MailText>GOOGLE</MailText>
-          </ButtonLanding>
-          <ButtonLanding facebook>
-            <Icon src={require("../../components/Icons/Facebook.svg")} />
-            <MailText>FACEBOOK</MailText>
-          </ButtonLanding>
-          <div>
-            <SubFormText>
-              Already registered please <span>sign me in</span>
-            </SubFormText>
-            <Terms>
-              By contining, you accept the terms of use and Privacy Policy
-            </Terms>
-          </div>
-        </ButtonContainer>
-      </AuthenticationContianer>
-    );
-  }
-}
+const RegisterPage = () => (
+  <AuthenticationContianer>
+    <CancelContainer>
+      <Cancel>
+        <CancelImg src={require("../../components/Icons/Cancel.svg")} />
+      </Cancel>
+    </CancelContainer>
+    <BrandContianer>
+      <BrandLogo />
+    </BrandContianer>
+    <div>
+      <Header>Register</Header>
+    </div>
+    <ButtonContainer>
+      <a href="/emailregister">
+        <ButtonLanding primary>
+          <Icon src={require("../../components/Icons/Mail.svg")} />
+          <MailText>MAIL</MailText>
+        </ButtonLanding>
+      </a>
+      <ButtonLanding google>
+        <Icon src={require("../../components/Icons/Google.svg")} />
+        <MailText>GOOGLE</MailText>
+      </ButtonLanding>
+      <ButtonLanding facebook>
+        <Icon src={require("../../components/Icons/Facebook.svg")} />
+        <MailText>FACEBOOK</MailText>
+      </ButtonLanding>
+      <div>
+        <SubFormText>
+          Already registered please <span>sign me in</span>
+        </SubFormText>
+        <Terms>
+          By contining, you accept the terms of use and Privacy Policy
+        </Terms>
+      </div>
+    </ButtonContainer>
+  </AuthenticationContianer>
+);
 
 export default RegisterPage;

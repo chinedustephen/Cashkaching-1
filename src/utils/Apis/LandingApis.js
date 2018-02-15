@@ -39,4 +39,20 @@ function getStatsData() {
     });
 }
 
-export { getRecentWinnerData, getTestimonialsData, getStatsData };
+function register(name, email, password) {
+  const promise = axios
+    .post("http://cashkaching.com/email-login", {
+      name,
+      email,
+      password
+    })
+    .then(response => {
+      console.log(response);
+    })
+    .catch(error => {
+      console.log(error.response);
+    });
+  console.log(promise);
+}
+
+export { getRecentWinnerData, getTestimonialsData, getStatsData, register };

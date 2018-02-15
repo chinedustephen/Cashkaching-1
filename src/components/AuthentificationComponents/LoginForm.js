@@ -81,7 +81,7 @@ const LoginForm = ({ onSubmit, onChange, errors, user }) => (
         <BrandLogo />
       </BrandContianer>
       <div>
-        <Header>Register</Header>
+        <Header>Login</Header>
       </div>
       <form action="/" onSubmit={onSubmit}>
         <FormControl>
@@ -113,9 +113,7 @@ const LoginForm = ({ onSubmit, onChange, errors, user }) => (
           />
         </FormControl>
         <div>
-          <Link to="/personalaccount">
-            <Button type="submit" name="REGISTER" />
-          </Link>
+          <Button type="submit" name="REGISTER" />
         </div>
         <div>
           <SubFormText>

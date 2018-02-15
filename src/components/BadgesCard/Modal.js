@@ -6,8 +6,15 @@ import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import Badge from "./Badge";
 
 const customContentStyle = {
-  width: "100%",
+  width: "280px",
+  height: "324px",
+  color: "red",
   maxWidth: "none"
+};
+
+const custombodyStyle = {
+  height: "324px",
+  backgroundColor: "red"
 };
 
 /**
@@ -53,9 +60,12 @@ export default class ModalBadge extends React.Component {
               actions={actions}
               modal={true}
               contentStyle={customContentStyle}
+              bodyStyle={custombodyStyle}
               open={this.state.open}
             >
-              This dialog spans the entire width of the screen.
+              By playing any draw twice we award you the Triple Play bagdge.
+              Allows you to be the first one to see on demand bargins around
+              your area. What you waiting for go on Lets play Lotto.
             </Dialog>
           </div>
         </MuiThemeProvider>

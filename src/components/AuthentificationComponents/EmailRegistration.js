@@ -125,9 +125,7 @@ const RegisterForm = ({ onSubmit, onChange, errors, user }) => (
           />
         </FormControl>
         <div>
-          <Link to="/personalaccount">
-            <Button type="submit" name="REGISTER" />
-          </Link>
+          <Button type="submit" name="REGISTER" />
         </div>
         <div>
           <SubFormText>
