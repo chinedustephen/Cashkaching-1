@@ -123,6 +123,19 @@ const RegisterForm = ({ onSubmit, onChange, errors, user }) => (
             inputStyle={InputStyle}
             underlineFocusStyle={UnderlineFocusStyle}
           />
+          <TextField
+            hintText="Confirm your password"
+            floatingLabelText="Confirm password"
+            type="password"
+            name="confirmPassword"
+            onChange={onChange}
+            errorText={errors.confirmPassword}
+            value={user.confirmPassword}
+            hintStyle={HintStyle}
+            floatingLabelStyle={LabelStyle}
+            inputStyle={InputStyle}
+            underlineFocusStyle={UnderlineFocusStyle}
+          />
         </FormControl>
         <div>
           <Button type="submit" name="REGISTER" />

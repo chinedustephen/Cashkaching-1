@@ -1,6 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Redirect } from "react-router-dom";
 import LoginForm from "../../components/AuthentificationComponents/LoginForm";
+import { login } from "../../utils/Apis/LandingApis";
 
 class EmailLoginPage extends React.Component {
   /**
@@ -12,6 +14,7 @@ class EmailLoginPage extends React.Component {
     // set the initial component state
     this.state = {
       errors: {},
+      redirect: false,
       user: {
         email: "",
         password: ""
@@ -31,45 +34,24 @@ class EmailLoginPage extends React.Component {
     // prevent default action. in this case, action is the form submission event
     event.preventDefault();
 
-    // create a string for an HTTP body message
-    const email = encodeURIComponent(this.state.user.email);
-    const password = encodeURIComponent(this.state.user.password);
-    const formData = `email=${email}&password=${password}`;
+    const { email, password } = this.state.user;
 
     // create an AJAX request
-    const xhr = new XMLHttpRequest();
-    xhr.open("post", "http://cashkaching.com/email-login");
-    xhr.setRequestHeader(
-      "Access-Control-Allow-Headers",
-      "Content-type",
-      "application/x-www-form-urlencoded",
-      "Authorization",
-      "Bearer "
-    );
-    xhr.responseType = "json";
-    xhr.addEventListener("load", () => {
-      if (xhr.status === 200) {
-        // success
-
-        // change the component-container state
+    login(email, password).then(resp => {
+      // pass in error response
+      console.log(resp.data);
+      if (resp.data.error) {
         this.setState({
-          errors: {}
+          errors: resp.data.error
         });
-
-        console.log("The form is valid");
-      } else {
-        // failure
-
-        // change the component state
-        const errors = xhr.response.errors ? xhr.response.errors : {};
-        errors.summary = xhr.response.message;
-
+        console.log(this.state.errors);
+      }
+      if (resp.data.success) {
         this.setState({
-          errors
+          redirect: true
         });
       }
     });
-    xhr.send(formData);
   }
 
   /**
@@ -91,6 +73,9 @@ class EmailLoginPage extends React.Component {
    * Render the component.
    */
   render() {
+    if (this.state.redirect) {
+      return <Redirect to="/personalaccount" />;
+    }
     return (
       <LoginForm
         onSubmit={this.processForm}

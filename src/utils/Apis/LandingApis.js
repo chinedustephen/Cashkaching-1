@@ -39,20 +39,55 @@ function getStatsData() {
     });
 }
 
-function register(name, email, password) {
-  const promise = axios
-    .post("http://cashkaching.com/email-login", {
-      name,
-      email,
-      password
-    })
-    .then(response => {
-      console.log(response);
+function handleAuth(promise) {
+  promise
+    .then(resp => {
+      console.log(resp.data.success.token);
+      if (resp.data.success.token) {
+        localStorage.setItem("token", resp.data.success.token);
+      }
     })
     .catch(error => {
-      console.log(error.response);
+      console.log("token error");
     });
-  console.log(promise);
+  return promise;
 }
 
-export { getRecentWinnerData, getTestimonialsData, getStatsData, register };
+function register(name, email, password, confirmPassword) {
+  const promise = axios.post("http://cashkaching.com/email-register", {
+    name,
+    email,
+    password,
+    confirmPassword
+  });
+  handleAuth(promise);
+  return promise;
+}
+
+const config = {
+  headers: { "Content-Type": "application/json" }
+};
+
+function login(email, password) {
+  console.log("login clicked");
+  const url = `${BASE_URL}/email-login`;
+  const promise = axios.post(
+    url,
+    {
+      email,
+      password
+    },
+    config
+  );
+  console.log(promise);
+  handleAuth(promise);
+  return promise;
+}
+
+export {
+  getRecentWinnerData,
+  getTestimonialsData,
+  getStatsData,
+  register,
+  login
+};

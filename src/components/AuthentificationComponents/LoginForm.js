@@ -85,7 +85,9 @@ const LoginForm = ({ onSubmit, onChange, errors, user }) => (
       </div>
       <form action="/" onSubmit={onSubmit}>
         <FormControl>
-          {errors.summary && <p className="error-message">{errors.summary}</p>}
+          {errors.inactiveAccountMessage && (
+            <p className="error-message">{errors.inactiveAccountMessage}</p>
+          )}
           <TextField
             hintText="Confirm your password"
             floatingLabelText="Email"
@@ -111,6 +113,9 @@ const LoginForm = ({ onSubmit, onChange, errors, user }) => (
             inputStyle={InputStyle}
             underlineFocusStyle={UnderlineFocusStyle}
           />
+          {errors.invalidPassword && (
+            <p className="error-message">{errors.invalidPassword}</p>
+          )}
         </FormControl>
         <div>
           <Button type="submit" name="REGISTER" />

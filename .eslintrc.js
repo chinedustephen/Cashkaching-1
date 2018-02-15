@@ -9,7 +9,8 @@ module.exports = {
     "object-curly-newline": 0,
     "arrow-parens": 0,
     "function-paren-newline": 0,
-    "max-len": 0
+    "max-len": 0,
+    "quote-props": 0
   },
   globals: {
     document: 1

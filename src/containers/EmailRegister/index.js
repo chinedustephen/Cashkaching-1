@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import RegisterForm from "../../components/AuthentificationComponents/EmailRegistration";
+import { register } from "../../utils/Apis/LandingApis";
 
 class EmailRegisterPage extends React.Component {
   /**
@@ -15,7 +16,8 @@ class EmailRegisterPage extends React.Component {
       user: {
         email: "",
         name: "",
-        password: ""
+        password: "",
+        confirmPassword: ""
       }
     };
 
@@ -48,14 +50,23 @@ class EmailRegisterPage extends React.Component {
     event.preventDefault();
 
     // create a string for an HTTP body message
-    const name = encodeURIComponent(this.state.user.name);
-    const email = encodeURIComponent(this.state.user.email);
-    const password = encodeURIComponent(this.state.user.password);
-    const formData = `name=${name}&email=${email}&password=${password}`;
+
+    const { name, email, password, confirmPassword } = this.state.user;
 
     // create an AJAX request
+    register(name, email, password, confirmPassword).then(resp => {
+      // pass in error response
+      console.log(resp.data);
+      if (resp.data.error) {
+        this.setState({
+          errors: resp.data.error
+        });
+      }
 
-    console.log(name, email, password);
+      if (resp.data.success) {
+        this.context.router.push({ pathname: "/" });
+      }
+    });
   }
   /**
    * Render the component.
