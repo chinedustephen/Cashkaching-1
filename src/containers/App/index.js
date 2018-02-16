@@ -12,6 +12,7 @@ import EmailRegisterPage from "../EmailRegister";
 const checkAuth = () => {
   const token = localStorage.getItem("token");
   //const refreshToken = localStorage.getItem("refreshToken");
+
   console.log(token);
   if (!token) {
     try {

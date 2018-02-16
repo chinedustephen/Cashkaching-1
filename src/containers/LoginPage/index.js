@@ -122,7 +122,7 @@ const RegisterPage = () => (
       </ButtonLanding>
       <div>
         <SubFormText>
-          Not registered yet <span>register here</span>
+          Not registered yet <a href="/register">register here</a>
         </SubFormText>
         <Terms>
           By contining, you accept the terms of use and Privacy Policy

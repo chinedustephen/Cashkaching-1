@@ -122,7 +122,7 @@ const LoginForm = ({ onSubmit, onChange, errors, user }) => (
         </div>
         <div>
           <SubFormText>
-            Dont have account? <Link to={"/register"}>Register here</Link>
+            Dont have account? <a href="/emailregister">Register here</a>
           </SubFormText>
         </div>
       </form>

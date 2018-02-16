@@ -120,7 +120,7 @@ const RegisterPage = () => (
       </ButtonLanding>
       <div>
         <SubFormText>
-          Already registered please <span>sign me in</span>
+          Already registered please <a href="/login">sign me in</a>
         </SubFormText>
         <Terms>
           By contining, you accept the terms of use and Privacy Policy
