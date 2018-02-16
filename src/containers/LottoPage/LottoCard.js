@@ -47,7 +47,6 @@ class LottoCardsList extends Component {
 
   getLottos() {
     getLottoData().then(response => {
-      console.log(response);
       this.setState({
         activeLottos: [response]
       });
@@ -55,7 +54,7 @@ class LottoCardsList extends Component {
   }
   render() {
     const { activeLottos } = this.state;
-    console.log(activeLottos);
+
     return (
       <div>
         {activeLottos

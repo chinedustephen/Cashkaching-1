@@ -1,6 +1,7 @@
-import React from "react";
+import React, { Component } from "react";
 import styled from "styled-components";
 import UnlockDrawsCard from "../../components/UnlockDrawsCard";
+import { UnlockLottery } from "../../utils/Apis/LottoApi";
 
 const UnlockedLottoCards = [
   {
@@ -35,22 +36,51 @@ const Nested = styled.div`
   }
 `;
 
-const UnlockedLottoCardsList = () => (
-  <div>
-    <Nested>
-      {UnlockedLottoCards.filter(lotto => lotto.status === true).map(card => (
-        <UnlockDrawsCard
-          key={card.id}
-          description={card.description}
-          amount={card.amount}
-          plays={card.plays}
-          played={card.played}
-          iconBk={card.iconBk}
-          bk={card.bk}
-        />
-      ))}
-    </Nested>
-  </div>
-);
+class UnlockedLottoCardsList extends Component {
+  constructor() {
+    super();
+    this.state = { UnlockedLottos: [] };
+  }
+
+  componentDidMount() {
+    const token = localStorage.getItem("token");
+    console.log(token);
+    if (token) {
+      this.getUnlocked(token);
+    }
+  }
+
+  getUnlocked(token) {
+    UnlockLottery(token).then(response => {
+      console.log(response);
+      this.setState({
+        UnlockedLottos: [response]
+      });
+    });
+  }
+
+  render() {
+    const { Unlocked } = this.state;
+    return (
+      <div>
+        <Nested>
+          {UnlockedLottoCards.filter(lotto => lotto.status === true).map(
+            card => (
+              <UnlockDrawsCard
+                key={card.id}
+                description={card.description}
+                amount={card.amount}
+                plays={card.plays}
+                played={card.played}
+                iconBk={card.iconBk}
+                bk={card.bk}
+              />
+            )
+          )}
+        </Nested>
+      </div>
+    );
+  }
+}
 
 export default UnlockedLottoCardsList;
