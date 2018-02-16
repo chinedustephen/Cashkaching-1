@@ -4,8 +4,7 @@
  */
 import React, { Component } from "react";
 import styled from "styled-components";
-import { NavLink } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { NavLink, Link, Redirect } from "react-router-dom";
 
 const Nav = styled.ul`
   list-style-type: none;
@@ -47,7 +46,7 @@ const Tablinks = styled(NavLink)`
   }
 `;
 
-const Logout = styled(Link)`
+const Logout = styled.a`
   float: right;
   font-family: Roboto-Regular;
   font-size: 14px;
@@ -103,7 +102,23 @@ const Brandimg = styled.img`
 `;
 
 class Navigation extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      redirect: false
+    };
+    this.logout = this.logout.bind(this);
+  }
+
+  logout() {
+    localStorage.setItem("token", "");
+    localStorage.clear();
+    this.setState({ redirect: true });
+  }
   render() {
+    if (this.state.redirect) {
+      return <Redirect to="/login" />;
+    }
     return (
       <div>
         <NavBackground>
@@ -111,9 +126,7 @@ class Navigation extends Component {
             <Brandimg src={require("./images/Logo.png")} />
           </NavBrandContainer>
           <NavLogoutcontainer>
-            <Logout to="/" exact>
-              Logout
-            </Logout>
+            <Logout onClick={this.logout}>Logout</Logout>
           </NavLogoutcontainer>
           <NavMainContainer>
             <Nav>
