@@ -15,6 +15,19 @@ function getRecentWinnerData() {
     });
 }
 
+function getLottoData() {
+  const url = `${BASE_URL}/lottery`;
+  return axios
+    .get(url)
+    .then(response => {
+      console.log(response.data);
+      return response.data;
+    })
+    .catch(error => {
+      console.log(error.response);
+    });
+}
+
 function getTestimonialsData() {
   const url = `${BASE_URL}/testimonials/3`;
   return axios
@@ -89,5 +102,6 @@ export {
   getTestimonialsData,
   getStatsData,
   register,
-  login
+  login,
+  getLottoData
 };

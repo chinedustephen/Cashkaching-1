@@ -6,6 +6,7 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import Modal from "../LottoModal";
 import LottoWizard from "../LottoWizard";
+import Countdown from "react-cntdwn";
 
 /**const Cardcontainer = styled.div`
   background: #6ca516;
@@ -153,7 +154,7 @@ const TimerImg = styled.img`
   }
 `;
 
-const Counter = styled.p`
+const Counter = styled.div`
   font-family: Roboto-Regular;
   font-size: 28px;
   color: #ffffff;
@@ -217,7 +218,10 @@ class LottoCard extends Component {
       isOpen: !this.state.isOpen
     });
   }
+
   render() {
+    console.log(this.props.endDate);
+
     return (
       <Cardlayout>
         <Cardcontainer bg={this.props.bg} brb={this.props.brb}>
@@ -239,7 +243,21 @@ class LottoCard extends Component {
               <CardTimerContainer>
                 <TimeLeft>Days left</TimeLeft>
                 <TimerImg src={require("./images/timeer.svg")} />
-                <Counter>4:30:1</Counter>
+                <Counter>
+                  <Countdown
+                    targetDate={new Date(`${this.props.endDate}`)}
+                    startDelay={2000}
+                    interval={1000}
+                    timeSeparator={":"}
+                    leadingZero
+                    format={{
+                      day: "dd",
+                      hour: "hh",
+                      minute: "mm",
+                      second: "ss"
+                    }}
+                  />
+                </Counter>
 
                 <ButtonMain onClick={() => this.toggleModal()}>
                   PLAY NOW
