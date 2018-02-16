@@ -7,7 +7,7 @@ const AuthenticationContianer = styled.div`
   grid-template-rows: 80px 200px 100px 300px;
   justify-items: center;
   background-color: #6ca516;
-  height: 100vh;
+  height: 800px;
 `;
 
 const Header = styled.p`

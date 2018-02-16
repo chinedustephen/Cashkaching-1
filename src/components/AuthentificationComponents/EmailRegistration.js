@@ -10,13 +10,18 @@ import Logo from "../Icons/Cancel.svg";
 
 const AuthenticationContianer = styled.div`
   display: grid;
-
+  grid-template-rows: 100px 100px 100px 1fr;
   justify-items: center;
   background-color: #6ca516;
-  min-height: 768px;
+  min-height: 800px;
   max-height: auto;
 `;
 
+const ButtonContainer = styled.div`
+  display: grid;
+  justify-items: center;
+  margin-top: 30px;
+`;
 const Header = styled.p`
   font-family: Campton-Bold;
   font-size: 24px;
@@ -137,9 +142,9 @@ const RegisterForm = ({ onSubmit, onChange, errors, user }) => (
             underlineFocusStyle={UnderlineFocusStyle}
           />
         </FormControl>
-        <div>
+        <ButtonContainer>
           <Button type="submit" name="REGISTER" />
-        </div>
+        </ButtonContainer>
         <div>
           <SubFormText>
             Aready registered? <Link to={"/login"}>Log in</Link>

@@ -1,13 +1,14 @@
 import React, { Component } from "react";
 import styled, { css } from "styled-components";
 import BrandLogo from "../../components/BrandImg";
+import FacebookLoginButton from "./FacebookRegister";
 
 const AuthenticationContianer = styled.div`
   display: grid;
   grid-template-rows: 80px 200px 100px 300px;
   justify-items: center;
   background-color: #6ca516;
-  height: 100vh;
+  height: 800px;
 `;
 
 const Header = styled.p`
@@ -114,10 +115,7 @@ const RegisterPage = () => (
         <Icon src={require("../../components/Icons/Google.svg")} />
         <MailText>GOOGLE</MailText>
       </ButtonLanding>
-      <ButtonLanding facebook>
-        <Icon src={require("../../components/Icons/Facebook.svg")} />
-        <MailText>FACEBOOK</MailText>
-      </ButtonLanding>
+      <FacebookLoginButton />
       <div>
         <SubFormText>
           Already registered please <a href="/login">sign me in</a>

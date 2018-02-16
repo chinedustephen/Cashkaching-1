@@ -12,6 +12,7 @@
     "react-albus": "^2.0.0",
     "react-cntdwn": "^0.3.0",
     "react-dom": "^16.0.0",
+    "react-facebook-login": "^4.0.0",
     "react-image": "^1.2.0",
     "react-image-file": "^0.1.0",
     "react-router-dom": "^4.2.2",

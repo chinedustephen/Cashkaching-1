@@ -46,8 +46,11 @@ class LottoCardsList extends Component {
   }
 
   getLottos() {
-    getLottoData().then(activeLottos => {
-      this.setState(activeLottos);
+    getLottoData().then(response => {
+      console.log(response);
+      this.setState({
+        activeLottos: [response]
+      });
     });
   }
   render() {
@@ -55,17 +58,19 @@ class LottoCardsList extends Component {
     console.log(activeLottos);
     return (
       <div>
-        {LottoCards.filter(lotto => lotto.status === true).map(list => (
-          <LottoCard
-            key={list.id}
-            type={list.lottotype}
-            bg={list.bkcolour}
-            brb={list.border}
-            bglabel={list.tablabelStyle}
-            secbk={list.second}
-            endDate={list.endDate}
-          />
-        ))}
+        {activeLottos
+          .filter(lotto => lotto.status.status === true)
+          .map(list => (
+            <LottoCard
+              key={list.id}
+              type={list.description.lottotype}
+              bg={list.style.bkColour}
+              brb={list.style.border}
+              bglabel={list.style.tablabelStyle}
+              secbk={list.style.secondBkColour}
+              endDate={list.status.end_date}
+            />
+          ))}
       </div>
     );
   }

@@ -10,10 +10,10 @@ import Logo from "../Icons/Cancel.svg";
 
 const AuthenticationContianer = styled.div`
   display: grid;
-
+  grid-template-rows: 100px 100px 100px 1fr;
   justify-items: center;
   background-color: #6ca516;
-  min-height: 768px;
+  min-height: 800px;
   max-height: auto;
 `;
 
@@ -21,6 +21,12 @@ const Header = styled.p`
   font-family: Campton-Bold;
   font-size: 24px;
   color: #ffffff;
+`;
+
+const ButtonContainer = styled.div`
+  display: grid;
+  justify-items: center;
+  margin-top: 30px;
 `;
 
 const BrandContianer = styled.div`
@@ -117,9 +123,9 @@ const LoginForm = ({ onSubmit, onChange, errors, user }) => (
             <p className="error-message">{errors.invalidPassword}</p>
           )}
         </FormControl>
-        <div>
+        <ButtonContainer>
           <Button type="submit" name="REGISTER" />
-        </div>
+        </ButtonContainer>
         <div>
           <SubFormText>
             Dont have account? <a href="/emailregister">Register here</a>

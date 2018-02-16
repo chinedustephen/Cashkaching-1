@@ -1,55 +1,26 @@
-import axios from "axios";
 
-const authentication = {
-  isAuthenticated() {
-    const token = localStorage.getItem("token");
-    if (token) {
-      return axios.get("http://localhost:3000/api/session", {
-        headers: { Authorization: token }
-      });
-    } else {
-      return new Promise(function(resolve, reject) {
-        reject();
-      });
-    }
+
+
+Lotto [
+  {
+    "id": 88,
+  status:{
+    "status": true
+    "start_date": "2018-02-15 05:54:00",
+    "end_date": "2018-02-16 05:54:00",
+    "reference_id": "Daily-88"
   },
-
-  login(email, password, cb) {
-    const promise = axios.post("http://localhost:3000/api/session", {
-      email: email,
-      password: password
-    });
-    this.handleAuth(promise, cb);
+  description: {
+    lottotype: "DAILY DRAW",
+    "description": "Description",
+    "reward": "10000",
+    "play_reward": "100",
   },
-
-  register(email, password, passwordConfirmation, cb) {
-    const promise = axios.post("http://localhost:3000/api/users", {
-      email: email,
-      password: password,
-      passwordConfirmation: passwordConfirmation
-    });
-    this.handleAuth(promise, cb);
-  },
-
-  logout() {
-    const token = localStorage.getItem("token");
-    localStorage.removeItem("token");
-    axios.delete("http://localhost:3000/api/session", {
-      headers: { Authorization: token }
-    });
-    return true;
-  },
-
-  handleAuth(promise, cb) {
-    promise
-      .then(resp => {
-        if (resp.data.token) {
-          localStorage.setItem("token", resp.data.token);
-          cb(true);
-        }
-      })
-      .catch(error => cb(false));
+  styles: {
+    bkcolour: "#6ca516",
+    border: "8px solid #5e8a1c",
+    tablabelStyle: "#5e8a1c",
+    secondbkcolour: "#639A11",
   }
-};
-
-module.exports = authentication;
+}
+]
