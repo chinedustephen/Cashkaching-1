@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "http://cashkaching.com";
+const BASE_URL = "https://cashkaching.com";
 
 function getRecentWinnerData() {
   const url = `${BASE_URL}/recent-winner`;
