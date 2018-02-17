@@ -29,4 +29,22 @@ function UnlockLottery(token) {
     });
 }
 
-export { UnlockLottery };
+function playLotto(numbers, id, token) {
+  console.log("i am clicked");
+  console.log(token);
+  const url = `${BASE_URL}/play-draw/${id}/${numbers}`;
+  return axios({
+    method: "post",
+    url,
+    headers: { Authorization: "Bearer " + token }
+  })
+    .then(response => {
+      console.log(response);
+      return response;
+    })
+    .catch(error => {
+      console.log(error.response);
+    });
+}
+
+export { UnlockLottery, playLotto };

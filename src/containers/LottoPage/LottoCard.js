@@ -62,6 +62,7 @@ class LottoCardsList extends Component {
           .map(list => (
             <LottoCard
               key={list.id}
+              iD={list.id}
               type={list.description.lottotype}
               bg={list.style.bkColour}
               brb={list.style.border}

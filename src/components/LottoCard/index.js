@@ -276,6 +276,7 @@ class LottoCard extends Component {
             bglabel={this.props.bglabel}
             secbk={this.props.secbk}
             show={this.state.isOpen}
+            iD={this.props.iD}
             onClose={() => this.toggleModal()}
           />
         </Modal>

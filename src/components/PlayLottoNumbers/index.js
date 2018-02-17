@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import styled from "styled-components";
 import NumberInput from "./NumberInput";
 
@@ -67,18 +67,22 @@ const LabelT = props => (
   <LabelText bglabel={props.bglabel}>DAILY DRAW</LabelText>
 );
 
-const PlayLottoNumbers = props => (
-  <CardContent>
-    <CardLabel>
-      <LabelT bglabel={props.bglabel} />
-    </CardLabel>
-    <ConentContainer>
-      <NumberInput />
-      <ButtonContainerPlay>
-        <Play onClick={props.onClick}>Play</Play>
-      </ButtonContainerPlay>
-    </ConentContainer>
-  </CardContent>
-);
+class PlayLottoNumbers extends Component {
+  render() {
+    return (
+      <CardContent>
+        <CardLabel>
+          <LabelT bglabel={this.props.bglabel} />
+        </CardLabel>
+        <ConentContainer>
+          <NumberInput iD={this.props.iD} onClick={this.props.onClick} />
+          <ButtonContainerPlay>
+            <Play onClick={this.props.onClick}>Play</Play>
+          </ButtonContainerPlay>
+        </ConentContainer>
+      </CardContent>
+    );
+  }
+}
 
 export default PlayLottoNumbers;

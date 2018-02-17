@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Reset from "./images/refresh.svg";
+import { playLotto } from "../../utils/Apis/LottoApi";
 
 const SubNumberText = styled.p`
   font-family: Campton-ExtraLight;
@@ -85,7 +86,11 @@ const LottoNumberContainer = styled.div`
 class NumberInput extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { displayValue: "Enter your number" };
+    this.state = {
+      displayValue: "Enter your number",
+      redirect: false
+    };
+    this.processNumbers = this.processNumbers.bind(this);
   }
 
   // State changers
@@ -121,9 +126,45 @@ class NumberInput extends React.Component {
       });
     }
   }
+  /**
+   * Process the form.
+   *
+   * @param {object} event - the JavaScript event object
+   */
+
+  processNumbers(id) {
+    // prevent default action. in this case, action is the form submission event
+
+    const numbers = this.state.displayValue;
+
+    // create an AJAX request
+    if (numbers.length === 6) {
+      const token = localStorage.getItem("token");
+
+      playLotto(numbers, id, token).then(resp => {
+        // pass in error response
+        console.log(resp.request.statusText);
+        if (resp.error) {
+          console.log(resp.error);
+        }
+        if (resp.request.statusText === "OK") {
+          this.setState({
+            redirect: true
+          });
+        }
+      });
+    }
+  }
 
   render() {
     const { displayValue } = this.state;
+    const id = this.props.iD;
+
+    if (this.state.redirect) {
+      const next = this.props.onClick;
+      console.log(next);
+      next();
+    }
 
     return (
       <div>
@@ -187,6 +228,7 @@ class NumberInput extends React.Component {
           <NumberButton>9</NumberButton>
           <NumberButton>10</NumberButton>
         </NumberButtonsContainer>
+        <button onClick={() => this.processNumbers(id)}>send</button>
       </div>
     );
   }

@@ -20,7 +20,11 @@ const LottoWizard = props => (
         id="gandalf"
         render={({ next, previous }) => (
           <div>
-            <PlayLottoNumbers bglabel={props.bglabel} onClick={next}>
+            <PlayLottoNumbers
+              bglabel={props.bglabel}
+              iD={props.iD}
+              onClick={next}
+            >
               {props.children}
               {console.log(props.bglabel)}
             </PlayLottoNumbers>
