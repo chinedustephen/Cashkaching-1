@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import RegisterForm from "../../components/AuthentificationComponents/EmailRegistration";
-import { register } from "../../utils/Apis/LandingApis";
+import { register } from "../../utils/Apis/Authentiaction.js";
 
 class EmailRegisterPage extends React.Component {
   /**

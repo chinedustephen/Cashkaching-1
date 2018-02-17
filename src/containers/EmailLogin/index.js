@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Redirect } from "react-router-dom";
 import LoginForm from "../../components/AuthentificationComponents/LoginForm";
-import { login } from "../../utils/Apis/LandingApis";
+import { login } from "../../utils/Apis/Authentiaction.js";
 
 class EmailLoginPage extends React.Component {
   /**

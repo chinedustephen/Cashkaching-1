@@ -1,6 +1,10 @@
 import React from "react";
 import styled, { css } from "styled-components";
 import BrandLogo from "../../components/BrandImg";
+import MailSvg from "../../components/Icons/Mail.svg";
+import GoogleSvg from "../../components/Icons/Google.svg";
+import FacebookSvg from "../../components/Icons/Facebook.svg";
+import CancelSvg from "../../components/Icons/Cancel.svg";
 
 const AuthenticationContianer = styled.div`
   display: grid;
@@ -83,9 +87,9 @@ const ButtonContainer = styled.div`
 
 const CancelContainer = styled.div`
   display: grid;
-  justify-self: end;
   align-self: center;
-  margin-right: 100px;
+  justify-self: left;
+  margin-left: 100px;
 `;
 const Cancel = styled.div``;
 const CancelImg = styled.img``;
@@ -95,7 +99,7 @@ const RegisterPage = () => (
     <CancelContainer>
       <Cancel>
         <a href="/">
-          <CancelImg src={require("../../components/Icons/Cancel.svg")} />
+          <CancelImg src={CancelSvg} />
         </a>
       </Cancel>
     </CancelContainer>
@@ -108,16 +112,16 @@ const RegisterPage = () => (
     <ButtonContainer>
       <a href="/emaillogin">
         <ButtonLanding primary>
-          <Icon src={require("../../components/Icons/Mail.svg")} />
+          <Icon src={MailSvg} />
           <MailText>MAIL</MailText>
         </ButtonLanding>
       </a>
       <ButtonLanding google>
-        <Icon src={require("../../components/Icons/Google.svg")} />
+        <Icon src={GoogleSvg} />
         <MailText>GOOGLE</MailText>
       </ButtonLanding>
       <ButtonLanding facebook>
-        <Icon src={require("../../components/Icons/Facebook.svg")} />
+        <Icon src={FacebookSvg} />
         <MailText>FACEBOOK</MailText>
       </ButtonLanding>
       <div>

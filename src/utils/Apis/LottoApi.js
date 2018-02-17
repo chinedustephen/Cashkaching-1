@@ -2,13 +2,17 @@ import axios from "axios";
 
 const BASE_URL = "http://cashkaching.com";
 
-function getHeader(token) {
-  return {
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer-${token}`
-    }
-  };
+function getLottoData() {
+  const url = `${BASE_URL}/lottery`;
+  return axios
+    .get(url)
+    .then(response => {
+      console.log(response.data.success);
+      return response.data.success;
+    })
+    .catch(error => {
+      console.log(error.response);
+    });
 }
 
 function UnlockLottery(token) {
@@ -47,4 +51,4 @@ function playLotto(numbers, id, token) {
     });
 }
 
-export { UnlockLottery, playLotto };
+export { UnlockLottery, playLotto, getLottoData };

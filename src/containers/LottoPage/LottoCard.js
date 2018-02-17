@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import LottoCard from "../../components/LottoCard";
-import { getLottoData } from "../../utils/Apis/LandingApis";
+import { getLottoData } from "../../utils/Apis/LottoApi.js";
 
 const LottoCards = [
   {

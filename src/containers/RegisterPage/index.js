@@ -1,7 +1,11 @@
-import React, { Component } from "react";
+import React from "react";
 import styled, { css } from "styled-components";
 import BrandLogo from "../../components/BrandImg";
 import FacebookLoginButton from "./FacebookRegister";
+import MailSvg from "../../components/Icons/Mail.svg";
+import GoogleSvg from "../../components/Icons/Google.svg";
+import FacebookSvg from "../../components/Icons/Facebook.svg";
+import CancelSvg from "../../components/Icons/Cancel.svg";
 
 const AuthenticationContianer = styled.div`
   display: grid;
@@ -95,7 +99,7 @@ const RegisterPage = () => (
   <AuthenticationContianer>
     <CancelContainer>
       <Cancel>
-        <CancelImg src={require("../../components/Icons/Cancel.svg")} />
+        <CancelImg src={CancelSvg} />
       </Cancel>
     </CancelContainer>
     <BrandContianer>
@@ -107,12 +111,12 @@ const RegisterPage = () => (
     <ButtonContainer>
       <a href="/emailregister">
         <ButtonLanding primary>
-          <Icon src={require("../../components/Icons/Mail.svg")} />
+          <Icon src={MailSvg} />
           <MailText>MAIL</MailText>
         </ButtonLanding>
       </a>
       <ButtonLanding google>
-        <Icon src={require("../../components/Icons/Google.svg")} />
+        <Icon src={GoogleSvg} />
         <MailText>GOOGLE</MailText>
       </ButtonLanding>
       <FacebookLoginButton />

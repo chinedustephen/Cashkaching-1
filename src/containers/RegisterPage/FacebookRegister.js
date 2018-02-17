@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import styled, { css } from "styled-components";
 import FacebookLogin from "react-facebook-login";
 import { Redirect } from "react-router-dom";
-import { facebookregister } from "../../utils/Apis/LandingApis";
+import { facebookregister } from "../../utils/Apis/Authentiaction.js";
 
 const ButtonLanding = styled.button`
   display: block;
