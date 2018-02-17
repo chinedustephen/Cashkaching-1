@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-//import Prof from "./images/Prof.png";
+import Prof from "./images/Prof.png";
 
 const ProfileImg = styled.img`
   border-radius: 50%;
@@ -37,7 +37,7 @@ const Profile = props => (
   <ProfileImageContainer>
     <Container>
       <ProfileCirlce />
-      <ProfileImg src={props.recentWinnerImg} />
+      <ProfileImg src={Prof} />
     </Container>
   </ProfileImageContainer>
 );
