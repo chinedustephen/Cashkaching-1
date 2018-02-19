@@ -13,7 +13,7 @@ const TimerLayout = styled.div`
 // Timer section conetent object
 const TimerContent = {
   timerHeader: "Dont miss the next draw register now",
-  time: "40:30",
+  time: "Sat, 28 Feb 2018",
   login: "Login",
   text: " if you have already registered"
 };
